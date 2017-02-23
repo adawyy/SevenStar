@@ -46,19 +46,19 @@ public class ExcelFile {
 	static String prjectPath = System.getProperty("user.dir")+"/";
 	
 	public static void main(String[] args){
-//		System.out.println(prjectPath);
-//		ExcelFile.writeExcel("datapool/GPE_Position.xls", "OEM", "OEMHardware_UAT", "Description", "555");
+		System.out.println(prjectPath);
+		ExcelFile.writeExcel("datapool/GPE_Position.xls", "OEM", "OEMHardware_UAT", "Description", "555");
 //		Data datapool = new Data();
-//		datapool.setExeclInput("datapool/GPE_MRT.xls");
+//		datapool.setExeclInput("src/main/resources/datapool/GPE_MRT.xls");
 //		System.out.println(ExcelFile.readMRT(datapool.getData("Currency", "Get_Currency_B")));
 //		loopMrt("UAT-NV-64");
 //		System.out.println(ExcelFile.getLatestVersion("UAT-NV-64", "Inflation"));
 //		ExcelFile.writeExcel("datapool/MRT_Info.xls", "MRT_Info", 4, 5, "AAA");
 //		ExcelFile.writeExcel("datapool/GPE_Position.xls", "Labor", "IBMBanded", "BCC","121","2");
-//		System.out.println(ExcelFile.readExcel("datapool/GPE_Summary.xls", "Summary", 55));
-//		ExcelFile.writeExcel("datapool/GPE_Summary.xls", "Summary", "IBMBanded", "TotalPrice", "420000");
+//		System.out.println(ExcelFile.readExcel("src/main/resources/datapool/GPE_Summary.xls", "Summary", 0));
+//		ExcelFile.writeExcel("src/main/resources/datapool/GPE_Summary.xls", "Summary", "IBMBanded", "TotalPrice", "420000");
 		
-//		ExcelFile.resetSheetFormula("datapool/GPE_Summary.xls", "Summary");
+//		ExcelFile.resetSheetFormula("src/main/resources/datapool/GPE_Summary.xls", "Summary");
 //		ExcelFile.resetSheetFormula("datapool/GPE_Summary.xls", "ZPTI");
 //		ExcelFile.resetSheetFormula("datapool/GPE_Summary.xls", "Summary");
 		ExcelFile.resetSummarySheetFormula();
@@ -1295,6 +1295,7 @@ public class ExcelFile {
 			FileOutputStream fileOut = new FileOutputStream(fileName);
 			wb.write(fileOut);
 			fileOut.close();
+			System.out.println("Excel File Write success!" );
 
 		} catch (Exception e) {
 			System.out.println("Excel File Write Error: " + e);
