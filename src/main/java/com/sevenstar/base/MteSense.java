@@ -33,7 +33,7 @@ import java.util.concurrent.TimeUnit;
 public class MteSense {
 
     private PropUtil props = new PropUtil("./config/mtesense.properties");
-    private PropUtil projprops = new PropUtil("./config/youribm.properties");
+    private PropUtil projprops = new PropUtil("./config/sevenstar.properties");
 
     public String getSessionId() {
         return sessionId;
