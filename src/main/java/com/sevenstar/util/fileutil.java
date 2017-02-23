@@ -8,11 +8,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class fileutil {
+public class FileUtil {
 
 	private File file = null;
 
-	public fileutil() {
+	public FileUtil() {
 
 	}
 
