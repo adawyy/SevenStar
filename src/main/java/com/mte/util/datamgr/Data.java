@@ -15,44 +15,44 @@ public class Data {
 	 */
 	String ExeclInput;
 	String ExcelVerify;
-	ExcelFile EF;
 
 
 	public static void main(String[] args) {
 		Data datapool = new Data();
-		datapool.setExeclInput("datapool/GPE_Summary.xls");
+		datapool.setExeclInput("datapool/ST_1.xls");
 		ArrayList<Hashtable<String,String>> al;
 
-		al = datapool.getSummaryData("S_Annual Summary");
+		al = datapool.getSummaryData("分批赔率[口口XX]");
 		Hashtable<String,String> ht;
 
 		System.out.println(al.size());
 
 		ht = al.get(0);
-		Iterator<String> key=ht.keySet().iterator();
-
-		ArrayList<String> cols = new ArrayList<String>();
-		ArrayList<String> cols_ = new ArrayList<String>();
-
-		while(key.hasNext()){
-			Object o= key.next();
-			if(!o.toString().contains("Fields")){
-				System.out.println(o.toString());
-				cols.add(o.toString());
-			}
-		}
-//		System.out.println(cols.size());
-		Iterator iter = cols.iterator();
-		while(iter.hasNext())
-		{
-			String col = (String)iter.next();
-//			System.out.println(col);
-			for(int j = 0;j<=7;j++){
-				ht = al.get(j);
-				System.out.println( ht.get("Fields"));
-				System.out.println( ht.get(col));
-			}
-		}
+		System.out.println(ht.get("是否放出"));
+//		Iterator<String> key=ht.keySet().iterator();
+//
+//		ArrayList<String> cols = new ArrayList<String>();
+//		ArrayList<String> cols_ = new ArrayList<String>();
+//
+//		while(key.hasNext()){
+//			Object o= key.next();
+//			if(!o.toString().contains("Fields")){
+//				System.out.println(o.toString());
+//				cols.add(o.toString());
+//			}
+//		}
+////		System.out.println(cols.size());
+//		Iterator iter = cols.iterator();
+//		while(iter.hasNext())
+//		{
+//			String col = (String)iter.next();
+////			System.out.println(col);
+//			for(int j = 0;j<=7;j++){
+//				ht = al.get(j);
+//				System.out.println( ht.get("Fields"));
+//				System.out.println( ht.get(col));
+//			}
+//		}
 
 		// TODO Auto-generated method stub
 //		ExcelFile.writeExcel("E:\\IBM_ADMIN\\IBM\\rationalsdp\\workspace\\GPE Regression Automation\\datapool\\GPE_Position.xls", "OEM", "OEMHardware_UAT", "Description", "555");
@@ -342,7 +342,7 @@ public class Data {
 	    ArrayList<Hashtable<String, String>> al;
 		al = new ArrayList<Hashtable<String, String>>();		
 		try {
-			al = GetData.getGroupData(this.ExeclInput, "Summary", tablename);
+			al = GetData.getGroupData(this.ExeclInput, "赔率设置", tablename);
 	//		ht = al.get(0);
 			if (al.size() > 0) {
 

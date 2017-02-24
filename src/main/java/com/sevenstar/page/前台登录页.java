@@ -8,7 +8,7 @@ import com.mte.base.MteSenseLocator;
 
 public class 前台登录页 extends MteSenseBasePage {
 	
-	MteSenseLocator locator = new MteSenseLocator("object/公共.yaml");
+	MteSenseLocator locator = new MteSenseLocator("object/公共-前台.yaml");
 	
 	private String pageName = this.getClass().getSimpleName();
 

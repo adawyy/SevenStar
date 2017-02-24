@@ -5,11 +5,13 @@ import com.mte.base.MteSenseCore;
 import com.sevenstar.page.前台登录页;
 import org.openqa.selenium.By;
 
-public class 前台登录任务 extends 公用任务 {
+import java.util.Hashtable;
+
+public class 前台公用任务 extends 公用任务 {
 	
 	private 前台登录页 登录页面 = null;
 	
-	public 前台登录任务(MteSenseCore senseCore) {
+	public 前台公用任务(MteSenseCore senseCore) {
 		super(senseCore);
 		登录页面 =new 前台登录页(asCore);
 		// TODO Auto-generated constructor stub
@@ -24,10 +26,18 @@ public class 前台登录任务 extends 公用任务 {
 		asCore.click(登录页面.右下弹框关闭按钮());
 	//	MSAssert.verifyEqual(result, "IBM 中国官方网站", "Check the IBM result");
 	}
+
+	public void 设置录码模式(Hashtable<String,String> ht){
+		String 模式一=ht.get("模式一");
+		String 模式二=ht.get("模式二");
+		String 模式三=ht.get("模式三");
+
+
+
+	}
 	
-	public void VerifyBaiduResultImage(){
-		asCore.sikuli_Exist("BaiduSearch",98,"BaiduSearch IBM result Verify");
-		asCore.sikuli_Click("IBM");
+	public void 快打下注(){
+
 	}
 
 	public static void main(String[] args) {
