@@ -2,61 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ed9d953-dc91-462d-a225-7c4bef380e17" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/mte/util/AutoItUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/mte/util/datamgr/ExcelFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/object/Baidu.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/WebDriverTable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/page/Baidu_SearchPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/Baidu_Task.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/MainTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/SevenStarBaseCase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/Verify_Baidu.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/util/datamgr/Config.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/util/datamgr/Data.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/util/datamgr/Encoder_Convert.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/util/datamgr/ExcelFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/util/datamgr/GetData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/util/fileutil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/util/logutil.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MSAssert.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MSAssert.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MteSense.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSense.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MteSenseAlert.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseAlert.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MteSenseAssistant.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseAssistant.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MteSenseBaseCase.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseBaseCase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MteSenseBasePage.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseBasePage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MteSenseBaseTask.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseBaseTask.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MteSenseCore.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseCore.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MteSenseData.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MteSenseExtent.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseExtent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MteSenseLocator.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseLocator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/AutoItUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/AutoItUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/DataBaseUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/DataBaseUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/DateTimeUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/DateTimeUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/ExcelUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/ExcelUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/HttpClientUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/HttpClientUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/HttpUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/HttpUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/JsonUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/JsonUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/MyX509TrustManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/MyX509TrustManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/PropUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/PropUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/RemoteUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/RemoteUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/StringUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/StringUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/UnicodeHex.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/UnicodeHex.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/YamlUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/YamlUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/datamgr/Config.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/Config.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/datamgr/Data.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/Data.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/datamgr/Encoder_Convert.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/Encoder_Convert.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/datamgr/ExcelFile.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/ExcelFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/datamgr/GetData.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/GetData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/fileutil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/FileUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/util/logutil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/logutil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/page/前台登录页.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/前台登录任务.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datapool/GPE_MRT.xls" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datapool/GPE_Position.xls" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datapool/GPE_Summary.xls" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/page/Baidu_SearchPage.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/Baidu_Task.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/page/Baidu_SearchPage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/task/Baidu_Task.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/task/MainTask.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/testcases/Verify_Baidu.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/object/Baidu.yaml" afterPath="$PROJECT_DIR$/object/公共.yaml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/MainTask.java" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/公用任务.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/SevenStarBaseCase.java" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/七星彩基础用例.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/Verify_Baidu.java" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mte/base/MteSense.class" afterPath="$PROJECT_DIR$/target/classes/com/mte/base/MteSense.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mte/base/MteSenseBaseCase.class" afterPath="$PROJECT_DIR$/target/classes/com/mte/base/MteSenseBaseCase.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mte/base/MteSenseCore.class" afterPath="$PROJECT_DIR$/target/classes/com/mte/base/MteSenseCore.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SevenStar.iml" afterPath="$PROJECT_DIR$/SevenStar.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/sevenstar.properties" afterPath="$PROJECT_DIR$/config/sevenstar.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/mtesense.properties" afterPath="$PROJECT_DIR$/config/mtesense.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ExtentReport.html" afterPath="$PROJECT_DIR$/report/ExtentReport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSense.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSense.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseBaseCase.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseBaseCase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseCore.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseCore.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -88,63 +70,106 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="示例用例.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            <state relative-caret-position="288">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Verify_Baidu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/Verify_Baidu.java">
+      <file leaf-file-name="MteSenseData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MteSenseBaseCase.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseBaseCase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#794#795#0" expanded="false" />
-                <element signature="e#837#838#0" expanded="false" />
-                <element signature="e#873#874#0" expanded="false" />
-                <element signature="e#902#903#0" expanded="false" />
-                <element signature="e#947#948#0" expanded="false" />
-                <element signature="e#991#992#0" expanded="false" />
-                <element signature="e#1232#1233#0" expanded="false" />
-                <element signature="e#1265#1266#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExtentReports.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/ExtentReports.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state relative-caret-position="54">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Report.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/Report.class">
+      <file leaf-file-name="ExcelUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/ExcelUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="433" column="0" lean-forward="false" selection-start-line="433" selection-start-column="0" selection-end-line="433" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Data.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/Data.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/GetData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="136" column="40" lean-forward="true" selection-start-line="136" selection-start-column="40" selection-end-line="136" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="前台登录页.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/page/前台登录页.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+              <folding>
+                <element signature="e#962#963#0" expanded="true" />
+                <element signature="e#1026#1027#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="公用任务.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/公用任务.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-882">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="前台登录任务.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/前台登录任务.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="七星彩基础用例.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/七星彩基础用例.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -155,6 +180,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>youribm</find>
+      <find>click</find>
+      <find>visible</find>
+      <find>present</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,8 +215,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MteSenseBaseTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/base/MteSenseCore.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/util/FileUtil.java" />
-        <option value="$PROJECT_DIR$/config/mtesense.properties" />
-        <option value="$PROJECT_DIR$/config/sevenstar.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/YourIBMBaseCase.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/CopyOfBaidu.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mte/util/WebDriverTable.java" />
@@ -197,10 +223,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/task/Baidu_Task.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/Verify_Feedback.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/SevenStarBaseCase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mte/base/MteSense.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseCore.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/Verify_Baidu.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mte/base/MteSense.java" />
+        <option value="$PROJECT_DIR$/config/mtesense.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/登录用例.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseBaseCase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/page/登录页.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/task/公用任务.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/task/登录任务.java" />
+        <option value="$PROJECT_DIR$/object/公共.yaml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/page/前台登录页.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseCore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/七星彩基础用例.java" />
+        <option value="$PROJECT_DIR$/config/sevenstar.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/task/前台登录任务.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java" />
       </list>
     </option>
   </component>
@@ -408,6 +446,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -688,13 +727,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="object" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SevenStar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SevenStar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datapool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SevenStar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SevenStar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -740,42 +806,22 @@
       <recent name="com.mte.util" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar\driver" />
       <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar\src\main\java\com\sevenstar\testcases" />
       <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar\object" />
       <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar\src\main\java\com\sevenstar\task" />
       <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar\src\main\java\com\sevenstar\page" />
-      <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar\src\main\java\com\sevenstar\util\datamgr" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Verify_Baidu">
-    <configuration default="false" name="Data" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.mte.util.datamgr.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.mte.util.datamgr.Data" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="SevenStar" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Verify_Baidu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration default="false" name="示例用例" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.sevenstar.testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.Verify_Baidu" />
+      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.示例用例" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -788,14 +834,14 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Verify_Baidu (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="示例用例" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.sevenstar.testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.Verify_Baidu" />
+      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.示例用例" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -808,7 +854,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Verify_Baidu" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="示例用例" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.sevenstar.testcases.*" />
@@ -820,7 +866,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.sevenstar.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.Verify_Baidu" />
+      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.示例用例" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -841,7 +887,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="Verify_Baidu.testMain" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="示例用例.testMain" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.sevenstar.testcases.*" />
@@ -853,7 +899,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.sevenstar.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.Verify_Baidu" />
+      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.示例用例" />
       <option name="METHOD_NAME" value="testMain" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
@@ -872,6 +918,26 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="MteSenseBaseCase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.mte.base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.mte.base.MteSenseBaseCase" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SevenStar" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1255,19 +1321,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Data" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Verify_Baidu" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Verify_Baidu (1)" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.Verify_Baidu" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.Verify_Baidu.testMain" />
+      <item index="0" class="java.lang.String" itemvalue="Application.示例用例" />
+      <item index="1" class="java.lang.String" itemvalue="Application.示例用例" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.示例用例" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.示例用例.testMain" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MteSenseBaseCase" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.Verify_Baidu" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.Verify_Baidu.testMain" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Verify_Baidu" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Verify_Baidu (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Data" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.示例用例" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MteSenseBaseCase" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.示例用例.testMain" />
+        <item index="3" class="java.lang.String" itemvalue="Application.示例用例" />
+        <item index="4" class="java.lang.String" itemvalue="Application.示例用例" />
       </list>
     </recent_temporary>
   </component>
@@ -1283,34 +1349,46 @@
       <updated>1487751769250</updated>
       <workItem from="1487751772017" duration="8719000" />
       <workItem from="1487809650765" duration="21080000" />
+      <workItem from="1487842860130" duration="3112000" />
+      <workItem from="1487845989510" duration="668000" />
+      <workItem from="1487897507668" duration="6681000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Verify_Baidu - 2017.02.23 at 17h 09m 53s.xml">
-      <configuration name="Verify_Baidu" configurationId="TestNG" />
+    <history-entry file="示例用例 - 2017.02.24 at 09h 50m 56s.xml">
+      <configuration name="示例用例" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Verify_Baidu - 2017.02.23 at 17h 11m 21s.xml">
-      <configuration name="Verify_Baidu" configurationId="TestNG" />
+    <history-entry file="示例用例 - 2017.02.24 at 09h 57m 52s.xml">
+      <configuration name="示例用例" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Verify_Baidu - 2017.02.23 at 17h 12m 24s.xml">
-      <configuration name="Verify_Baidu" configurationId="TestNG" />
+    <history-entry file="示例用例 - 2017.02.24 at 10h 00m 08s.xml">
+      <configuration name="示例用例" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Verify_Baidu - 2017.02.23 at 17h 16m 29s.xml">
-      <configuration name="Verify_Baidu" configurationId="TestNG" />
+    <history-entry file="示例用例 - 2017.02.24 at 10h 02m 08s.xml">
+      <configuration name="示例用例" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Verify_Baidu - 2017.02.23 at 17h 24m 21s.xml">
-      <configuration name="Verify_Baidu" configurationId="TestNG" />
+    <history-entry file="示例用例 - 2017.02.24 at 10h 02m 36s.xml">
+      <configuration name="示例用例" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Verify_Baidu - 2017.02.23 at 17h 29m 07s.xml">
-      <configuration name="Verify_Baidu" configurationId="TestNG" />
+    <history-entry file="示例用例 - 2017.02.24 at 10h 05m 01s.xml">
+      <configuration name="示例用例" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Verify_Baidu_testMain - 2017.02.23 at 17h 25m 04s.xml">
-      <configuration name="Verify_Baidu.testMain" configurationId="TestNG" />
+    <history-entry file="示例用例 - 2017.02.24 at 10h 05m 33s.xml">
+      <configuration name="示例用例" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="示例用例 - 2017.02.24 at 10h 06m 01s.xml">
+      <configuration name="示例用例" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="示例用例 - 2017.02.24 at 10h 07m 31s.xml">
+      <configuration name="示例用例" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="示例用例 - 2017.02.24 at 10h 07m 49s.xml">
+      <configuration name="示例用例" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29799000" />
+    <option name="totallyTimeSpent" value="40260000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1338,15 +1416,15 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.4736457" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.4736457" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.507109" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19273302" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26061493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1381,33 +1459,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/util/datamgr/XxlsAbstract.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.1.0/selenium-api-3.1.0.jar!/org/openqa/selenium/Alert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/JsonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/logutil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/MyX509TrustManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -1442,40 +1493,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/util/datamgr/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="192" column="5" lean-forward="true" selection-start-line="69" selection-start-column="1" selection-end-line="192" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/util/datamgr/FileUtil.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/Encoder_Convert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
@@ -1488,14 +1506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="237" column="13" lean-forward="false" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/GetData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="136" column="67" lean-forward="false" selection-start-line="136" selection-start-column="67" selection-end-line="136" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -1524,14 +1534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/ExcelUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/HttpClientUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="515">
@@ -1556,16 +1558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseLocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1638">
-          <caret line="111" column="5" lean-forward="false" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/HttpUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4334">
@@ -1578,36 +1570,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
           <caret line="193" column="5" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="193" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#662#663#0" expanded="false" />
-            <element signature="e#719#720#0" expanded="false" />
-            <element signature="e#1406#1433#1" expanded="false" />
-            <element signature="e#3216#3217#0" expanded="false" />
-            <element signature="e#3274#3275#0" expanded="false" />
-            <element signature="e#3557#3584#1" expanded="false" />
-            <element signature="e#3631#3658#1" expanded="false" />
-            <element signature="e#3707#3734#1" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/cmsAuth.au3">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-578">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/w3b.ibm.com.pem">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config/cmsAuth.au3" />
+    <entry file="file://$PROJECT_DIR$/config/w3b.ibm.com.pem" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseAlert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -1642,40 +1609,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/object/Baidu.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/CopyOfBaidu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-639">
-          <caret line="27" column="70" lean-forward="true" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/MainTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/page/Baidu_SearchPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/CopyOfBaidu.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/FileUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1710">
@@ -1724,24 +1658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/Baidu_Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/SevenStarBaseCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/PropUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -1754,204 +1670,218 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/ExtentReports.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/Report.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6120">
+          <caret line="433" column="0" lean-forward="false" selection-start-line="433" selection-start-column="0" selection-end-line="433" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.0.1/selenium-remote-driver-3.0.1.jar!/org/openqa/selenium/interactions/Actions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.10/testng-6.10.jar!/org/testng/SuiteRunnerWorker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSense.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
+        <state relative-caret-position="259">
+          <caret line="91" column="48" lean-forward="true" selection-start-line="91" selection-start-column="48" selection-end-line="91" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseBaseCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="153" column="0" lean-forward="true" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.0.1/selenium-api-3.0.1.jar!/org/openqa/selenium/WebElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.0.1/selenium-api-3.0.1.jar!/org/openqa/selenium/WebDriver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="99" column="14" lean-forward="false" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1179#1180#0" expanded="false" />
-            <element signature="e#1211#1212#0" expanded="false" />
-            <element signature="e#1734#1735#0" expanded="false" />
-            <element signature="e#1769#1770#0" expanded="false" />
-            <element signature="e#1830#1831#0" expanded="false" />
-            <element signature="e#1877#1878#0" expanded="false" />
-            <element signature="e#1941#1942#0" expanded="false" />
-            <element signature="e#1972#1973#0" expanded="false" />
+            <element signature="e#2625#2626#0" expanded="true" />
+            <element signature="e#2669#2670#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseCore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1245">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="177">
+          <caret line="269" column="4" lean-forward="true" selection-start-line="269" selection-start-column="4" selection-end-line="269" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1182#1183#0" expanded="false" />
-            <element signature="e#1211#1212#0" expanded="false" />
-            <element signature="e#1696#1697#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1995#1996#0" expanded="false" />
-            <element signature="e#2026#2027#0" expanded="false" />
-            <element signature="e#2554#2555#0" expanded="false" />
-            <element signature="e#2608#2609#0" expanded="false" />
-            <element signature="e#5086#5087#0" expanded="false" />
-            <element signature="e#5137#5138#0" expanded="false" />
-            <element signature="e#5191#5192#0" expanded="false" />
-            <element signature="e#5245#5246#0" expanded="false" />
-            <element signature="e#6169#6170#0" expanded="false" />
-            <element signature="e#6229#6230#0" expanded="false" />
-            <element signature="e#6626#6627#0" expanded="false" />
-            <element signature="e#6671#6672#0" expanded="false" />
-            <element signature="e#11659#11660#0" expanded="false" />
-            <element signature="e#11701#11702#0" expanded="false" />
-            <element signature="e#12545#12546#0" expanded="false" />
-            <element signature="e#12586#12587#0" expanded="false" />
-            <element signature="e#14029#14030#0" expanded="false" />
-            <element signature="e#14060#14061#0" expanded="false" />
-            <element signature="e#14242#14243#0" expanded="false" />
-            <element signature="e#14273#14274#0" expanded="false" />
-            <element signature="e#14476#14477#0" expanded="false" />
-            <element signature="e#14514#14515#0" expanded="false" />
-            <element signature="e#17004#17005#0" expanded="false" />
-            <element signature="e#17084#17085#0" expanded="false" />
-            <element signature="e#17668#17669#0" expanded="false" />
-            <element signature="e#17696#17697#0" expanded="false" />
-            <element signature="e#19246#19247#0" expanded="false" />
-            <element signature="e#19289#19290#0" expanded="false" />
-            <element signature="e#19353#19354#0" expanded="false" />
-            <element signature="e#19401#19402#0" expanded="false" />
-            <element signature="e#20148#20149#0" expanded="false" />
-            <element signature="e#20197#20198#0" expanded="false" />
-            <element signature="e#22402#22403#0" expanded="false" />
-            <element signature="e#22462#22463#0" expanded="false" />
-            <element signature="e#26831#26839#0" expanded="false" />
-            <element signature="e#29470#29471#0" expanded="false" />
-            <element signature="e#29525#29526#0" expanded="false" />
-            <element signature="e#29608#29609#0" expanded="false" />
-            <element signature="e#29659#29660#0" expanded="false" />
-            <element signature="e#29763#29764#0" expanded="false" />
-            <element signature="e#29813#29814#0" expanded="false" />
-            <element signature="e#32687#32695#0" expanded="false" />
-            <element signature="e#37602#37603#0" expanded="false" />
-            <element signature="e#37639#37640#0" expanded="false" />
-            <element signature="e#38575#38576#0" expanded="false" />
-            <element signature="e#38615#38616#0" expanded="false" />
-            <element signature="e#39555#39556#0" expanded="false" />
-            <element signature="e#39589#39590#0" expanded="false" />
-            <element signature="e#40775#40776#0" expanded="false" />
-            <element signature="e#40821#40822#0" expanded="false" />
-            <element signature="e#41674#41675#0" expanded="false" />
-            <element signature="e#41720#41721#0" expanded="false" />
-            <element signature="e#42636#42637#0" expanded="false" />
-            <element signature="e#42685#42686#0" expanded="false" />
-            <element signature="e#43604#43605#0" expanded="false" />
-            <element signature="e#43647#43648#0" expanded="false" />
-            <element signature="e#44799#44800#0" expanded="false" />
-            <element signature="e#44845#44846#0" expanded="false" />
-            <element signature="e#47384#47385#0" expanded="false" />
-            <element signature="e#47418#47419#0" expanded="false" />
-            <element signature="e#48168#48169#0" expanded="false" />
-            <element signature="e#48204#48205#0" expanded="false" />
-            <element signature="e#48973#48974#0" expanded="false" />
-            <element signature="e#49006#49007#0" expanded="false" />
-            <element signature="e#49790#49791#0" expanded="false" />
-            <element signature="e#49823#49824#0" expanded="false" />
-            <element signature="e#50816#50817#0" expanded="false" />
-            <element signature="e#50859#50860#0" expanded="false" />
-            <element signature="e#51867#51868#0" expanded="false" />
-            <element signature="e#51904#51905#0" expanded="false" />
-            <element signature="e#52981#52982#0" expanded="false" />
-            <element signature="e#53028#53029#0" expanded="false" />
-            <element signature="e#54095#54096#0" expanded="false" />
-            <element signature="e#54143#54144#0" expanded="false" />
-            <element signature="e#55911#55912#0" expanded="false" />
-            <element signature="e#55954#55955#0" expanded="false" />
-            <element signature="e#57752#57753#0" expanded="false" />
-            <element signature="e#57797#57798#0" expanded="false" />
-            <element signature="e#58505#58506#0" expanded="false" />
-            <element signature="e#58544#58545#0" expanded="false" />
-            <element signature="e#59122#59123#0" expanded="false" />
-            <element signature="e#59156#59157#0" expanded="false" />
-            <element signature="e#59716#59717#0" expanded="false" />
-            <element signature="e#59754#59755#0" expanded="false" />
-            <element signature="e#60465#60466#0" expanded="false" />
-            <element signature="e#60504#60505#0" expanded="false" />
-            <element signature="e#64362#64363#0" expanded="false" />
-            <element signature="e#64400#64401#0" expanded="false" />
-            <element signature="e#64446#64447#0" expanded="false" />
-            <element signature="e#64481#64482#0" expanded="false" />
-            <element signature="e#65419#65420#0" expanded="false" />
-            <element signature="e#65450#65451#0" expanded="false" />
-            <marker date="1487841177799" expanded="true" signature="2071:2246" ph="{...}" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#6626#6627#0" expanded="true" />
+            <element signature="e#6671#6672#0" expanded="true" />
+            <element signature="e#12582#12583#0" expanded="true" />
+            <element signature="e#12623#12624#0" expanded="true" />
+            <element signature="e#14279#14280#0" expanded="true" />
+            <element signature="e#14310#14311#0" expanded="true" />
+            <element signature="e#14513#14514#0" expanded="true" />
+            <element signature="e#14551#14552#0" expanded="true" />
+            <element signature="e#17705#17706#0" expanded="true" />
+            <element signature="e#17733#17734#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.properties">
+    <entry file="file://$PROJECT_DIR$/object/公共.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/mtesense.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="504">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/sevenstar.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state relative-caret-position="126">
+          <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/ExtentReports.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/公用任务.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state relative-caret-position="-882">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/Report.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/前台登录任务.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="433" column="0" lean-forward="false" selection-start-line="433" selection-start-column="0" selection-end-line="433" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/Verify_Baidu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseBaseCase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/七星彩基础用例.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state relative-caret-position="234">
+          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/page/前台登录页.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#794#795#0" expanded="false" />
-            <element signature="e#837#838#0" expanded="false" />
-            <element signature="e#873#874#0" expanded="false" />
-            <element signature="e#902#903#0" expanded="false" />
-            <element signature="e#947#948#0" expanded="false" />
-            <element signature="e#991#992#0" expanded="false" />
-            <element signature="e#1232#1233#0" expanded="false" />
-            <element signature="e#1265#1266#0" expanded="false" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/ExcelUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/GetData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="136" column="40" lean-forward="true" selection-start-line="136" selection-start-column="40" selection-end-line="136" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

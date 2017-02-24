@@ -27,7 +27,7 @@ public class MteSenseBaseCase extends MteSenseExtent{
 
 	protected Screen s = new Screen();
 	
-	protected BrowserMobProxy proxy = MteSense.getProxy();
+	//protected BrowserMobProxy proxy = MteSense.getProxy();
     
     public String getSessionId() {
         return sense.getSessionId();
@@ -53,18 +53,23 @@ public class MteSenseBaseCase extends MteSenseExtent{
     }
 
     public void beforeClass(String driverType) {
-    	proxy.start(0);
+  //  	proxy.start(0);
         if (driverType == null) {
             driverType = props.get("mte.test.platform");
         }
         initWebDriver(driverType);
+        if(driver==null){
+            System.out.println("driver initial failed");
+        }
         asBaseCore = new MteSenseCore(driver);
         if(!driverType.equals("ios")&&!driverType.equals("android")){
+            System.out.println("Browser is ready to open");
+            asBaseCore.get("www.baidu.com",2);
             asBaseCore.get(props.get("mte.url"),3);
         }
         sense.setMteSenseCore(asBaseCore);
         
-        proxy.newHar("w3dev.somerslab.ibm.com");        
+//        proxy.newHar("w3dev.somerslab.ibm.com");
         extent = new ExtentReports(props.get("mte.reportFile.path"), NetworkMode.OFFLINE);
     }
 
@@ -79,14 +84,14 @@ public class MteSenseBaseCase extends MteSenseExtent{
             asBaseCore.get(url,3);
         }
         sense.setMteSenseCore(asBaseCore);
-        proxy.start(0);
+  //      proxy.start(0);
         extent = new ExtentReports(props.get("mte.reportFile.path"), NetworkMode.OFFLINE);
     }
     
     public void beforeClass(boolean start){
     	asBaseCore = new MteSenseCore(true);
     	sense.setMteSenseCore(asBaseCore);
-    	proxy.start(0);
+  //  	proxy.start(0);
         extent = new ExtentReports(props.get("mte.reportFile.path"), NetworkMode.OFFLINE);
     }
 
@@ -94,18 +99,23 @@ public class MteSenseBaseCase extends MteSenseExtent{
 
         switch (driverType.trim()) {
             case "IOS":
+                System.out.println("IOS is ready");
                 driver = sense.getIOSDriver();
                 break;
             case "Android":
+                System.out.println("Android is ready");
                 driver = sense.getAndroidDriver();
                 break;
             case "FF":
+                System.out.println("FF is ready");
                 driver = sense.getFirefoxDriver();
                 break;
             case "Chrome":
+                System.out.println("Chrome is ready");
                 driver = sense.getChromeDriver();
                 break;
             case "IE":
+                System.out.println("IE is ready");
                 driver = sense.getIEDriver();
                 break;
             default:
@@ -140,7 +150,7 @@ public class MteSenseBaseCase extends MteSenseExtent{
 
     public void afterClass() {
 
-        driver.quit();
+//        driver.quit();
 
     }
 

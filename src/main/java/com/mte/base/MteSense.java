@@ -61,46 +61,45 @@ public class MteSense {
         this.mteSenseCore = mteBaseCore;
     }
     
-    public void setBrowserMobProxy(BrowserMobProxy proxy){
-    	this.proxy = proxy;
-    }
-    
-    public static synchronized BrowserMobProxy getProxy() {
-        if(proxy == null) {    
-        	proxy = new BrowserMobProxyServer();  
-        }  
-        return proxy;  
-    }
+//    public void setBrowserMobProxy(BrowserMobProxy proxy){
+//    	this.proxy = proxy;
+//    }
+//
+//    public static synchronized BrowserMobProxy getProxy() {
+//        if(proxy == null) {
+//        	proxy = new BrowserMobProxyServer();
+//        }
+//        return proxy;
+//    }
 
 
     public WebDriver getFirefoxDriver() {
+  //      System.setProperty("webdriver.firefox.bin", props.get("mte.firefoxdriver.path"));
         try {
-        	File Firefoxprofile = new File(projprops.get("youribm.FirefoxProfile"));
-            FirefoxProfile profile = new FirefoxProfile(Firefoxprofile);
-    		Proxy seleniumProxy = ClientUtil.createSeleniumProxy(getProxy());
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
-            capabilities.setCapability(FirefoxDriver.PROFILE, profile);
+            DesiredCapabilities capabilities = DesiredCapabilities.firefox();
             capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-            
             driver = new FirefoxDriver(capabilities);
+            System.out.println("Testing the "+driver);
             driver.manage().timeouts()
                     .pageLoadTimeout(pageLoadTimeout, TimeUnit.SECONDS);
+
             driver.manage().timeouts()
                     .implicitlyWait(waitTimeout, TimeUnit.SECONDS);
+
             driver.manage().timeouts()
                     .setScriptTimeout(scriptTimeout, TimeUnit.SECONDS);
+
             driver.manage().window().maximize();
             MteSenseAssistant.setMteSenseDriverMap(MteSenseAssistant.firefox,driver);
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
 
         return driver;
     }
 
     public WebDriver getFirefoxDriver(DesiredCapabilities capabilities) {
-        System.setProperty("webdriver.firefox.bin", props.get("mte.firefoxdriver.path"));
+ //       System.setProperty("webdriver.firefox.bin", props.get("mte.firefoxdriver.path"));
         try {
             driver = new FirefoxDriver(capabilities);
 
@@ -126,10 +125,10 @@ public class MteSense {
  //       System.setProperty("webdriver.chrome.driver", props.get("mte.chromedriver.path"));
 //        System.setProperty("webdriver.chrome.bin", "chrome_dir");
         try {
-        	Proxy seleniumProxy = ClientUtil.createSeleniumProxy(getProxy());
+  //      	Proxy seleniumProxy = ClientUtil.createSeleniumProxy(getProxy());
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
             capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-            capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
+   //         capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
             driver = new ChromeDriver(capabilities);
 
             driver.manage().timeouts()
@@ -180,10 +179,10 @@ public class MteSense {
         try {
             DesiredCapabilities capabilities = DesiredCapabilities
                     .internetExplorer();
-            Proxy seleniumProxy = ClientUtil.createSeleniumProxy(getProxy());
+ //           Proxy seleniumProxy = ClientUtil.createSeleniumProxy(getProxy());
             capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
             capabilities.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
-            capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
+ //           capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
             capabilities
                     .setCapability(
                             InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,

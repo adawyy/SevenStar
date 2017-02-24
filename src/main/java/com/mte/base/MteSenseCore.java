@@ -79,7 +79,7 @@ public class MteSenseCore {
 
     public MteSenseCore(WebDriver driver) {
         this.driver = driver;
-//      actionDriver = new Actions(this.driver);
+        actionDriver = new Actions(this.driver);
         this.sikuliDriver = new Screen();
         region = new Region(0,0,width,height);
     }
@@ -457,6 +457,7 @@ public class MteSenseCore {
                 isSucceed = true;
                 break;
             } catch (Exception e) {
+                e.printStackTrace();
  //               logger.error("findElement error :", e);
             }
             pause(pauseTime);
@@ -466,7 +467,7 @@ public class MteSenseCore {
     }
 
     public WebElement findElement(By by) {
-        return findElement(by, 0);
+        return findElement(by, 5);
     }
 
 
@@ -641,7 +642,7 @@ public class MteSenseCore {
     }
 
     public void click(By by) {
-        click(by, 0);
+        click(by, 5);
     }
 
     /**
