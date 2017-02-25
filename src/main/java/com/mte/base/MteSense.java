@@ -122,7 +122,7 @@ public class MteSense {
     }
 
     public WebDriver getChromeDriver() {
- //       System.setProperty("webdriver.chrome.driver", props.get("mte.chromedriver.path"));
+        System.setProperty("webdriver.chrome.driver", props.get("mte.chromedriver.path"));
 //        System.setProperty("webdriver.chrome.bin", "chrome_dir");
         try {
   //      	Proxy seleniumProxy = ClientUtil.createSeleniumProxy(getProxy());
