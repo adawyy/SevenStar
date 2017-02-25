@@ -696,6 +696,11 @@ public class MteSenseCore {
 
     }
 
+    public String getSelectedText(By by){
+        Select select = new Select(driver.findElement(by));
+        return select.getFirstSelectedOption().getText();
+    }
+
     public void selectByIndex(By by, int index) {
         selectByIndex(by, index, 0);
     }

@@ -1,13 +1,12 @@
 package com.sevenstar.task;
 
-import com.mte.base.MteSenseBaseTask;
 import com.mte.base.MteSenseCore;
 import org.openqa.selenium.By;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-public class 后台公用任务 extends MteSenseBaseTask {
+public class 后台公用任务 extends 公用任务 {
 
 
 	public 后台公用任务(MteSenseCore senseCore) {
@@ -50,6 +49,7 @@ public class 后台公用任务 extends MteSenseBaseTask {
 		//点提交
 		asCore.click(By.xpath("//*[@id='st_handicap']/div[3]/form/div[2]/input"));
 		asCore.click(By.xpath("//input[@type='button' and @value='确定']"));
+		写入总表数据("赔率计算","定盘赔率上限",赔率上限);
 	}
 
 	public void 设置分批数据(ArrayList<Hashtable<String,String>> al){
@@ -63,6 +63,9 @@ public class 后台公用任务 extends MteSenseBaseTask {
 				asCore.sendKeys(By.xpath("//input[@name='end_money"+i+"']"),al.get(i).get("截止金额"));
 			}
 			asCore.sendKeys(By.xpath("//input[@name='odds_limit"+i+"']"),al.get(i).get("赔率上限"));
+			if(i==0){
+				写入总表数据("赔率计算","总监赔率",al.get(i).get("赔率上限"));
+			}
 			i++;
 		}
 		asCore.click(By.xpath("//input[@value='编辑']"));

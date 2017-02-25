@@ -53,9 +53,7 @@ public class ExcelFile {
 	}
 	
 	public static void resetSummarySheetFormula(){
-		resetSheetFormula("datapool/GPE_Summary.xls", "Summary");
-		resetSheetFormula("datapool/GPE_Summary.xls", "ZPTI");
-		resetSheetFormula("datapool/GPE_Summary.xls", "Summary");
+		resetSheetFormula("datapool/ST_汇总.xls", "Summary");
 	}
 	
 	public static void resetSheetFormula(String fileName, String sheetName){
@@ -1280,7 +1278,7 @@ public class ExcelFile {
 			FileOutputStream fileOut = new FileOutputStream(fileName);
 			wb.write(fileOut);
 			fileOut.close();
-			System.out.println("Excel File Write success!" );
+//			System.out.println("Excel File Write success!" );
 
 		} catch (Exception e) {
 			System.out.println("Excel File Write Error: " + e);

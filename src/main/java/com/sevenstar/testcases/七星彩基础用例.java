@@ -15,7 +15,7 @@ import com.mte.util.PropUtil;
 
 public class 七星彩基础用例 extends MteSenseBaseCase {
 
-	Datamgr 输入表 = new Datamgr();
+	Datamgr 用例表 = new Datamgr();
 
     Datamgr 总表 = new Datamgr();
 
@@ -29,9 +29,8 @@ public class 七星彩基础用例 extends MteSenseBaseCase {
 
 
     public 七星彩基础用例(){
-
+        总表.设置数据文件("datapool/ST_汇总.xls");
     }
-
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

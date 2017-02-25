@@ -19,6 +19,23 @@ public class Datamgr {
 		return this.ExeclInput;
 	}
 
+	public ArrayList<Hashtable<String,String>> 获取登录信息(String 表名){
+		ArrayList<Hashtable<String, String>> al;
+		al = new ArrayList<Hashtable<String, String>>();
+		try {
+			al = GetData.getGroupData(this.ExeclInput, "登录信息", 表名);
+			//		ht = al.get(0);
+			if (al.size() > 0) {
+
+			} else {
+				System.out.println("no Data found from excel!");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return al;
+	}
+
 	public ArrayList<Hashtable<String,String>> 获取赔率设置(String 表名){
 		ArrayList<Hashtable<String, String>> al;
 		al = new ArrayList<Hashtable<String, String>>();
