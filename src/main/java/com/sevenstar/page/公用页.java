@@ -1,18 +1,17 @@
 package com.sevenstar.page;
 
-import org.openqa.selenium.WebElement;
-
 import com.mte.base.MteSenseBasePage;
 import com.mte.base.MteSenseCore;
 import com.mte.base.MteSenseLocator;
+import org.openqa.selenium.WebElement;
 
-public class 前台登录页 extends MteSenseBasePage {
-	
-	MteSenseLocator locator = new MteSenseLocator("object/公共-前台.yaml");
-	
+public class 公用页 extends MteSenseBasePage {
+
+	MteSenseLocator locator = new MteSenseLocator("object/公用.yaml");
+
 	private String pageName = this.getClass().getSimpleName();
 
-	public 前台登录页(MteSenseCore asCore) {
+	public 公用页(MteSenseCore asCore) {
 		super(asCore);
 		// TODO Auto-generated constructor stub
 	}
@@ -28,6 +27,10 @@ public class 前台登录页 extends MteSenseBasePage {
     public WebElement 登录按钮(){
     	return asCore.findElement(locator.getLocator("登录按钮"));
     }
+
+	public WebElement 快速进入按钮(){
+		return asCore.findElement(locator.getLocator("快速进入"));
+	}
 
 	public WebElement 同意按钮(){
 		return asCore.findElement(locator.getLocator("同意按钮"));

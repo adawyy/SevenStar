@@ -2,7 +2,6 @@ package com.sevenstar.task;
 
 import com.mte.base.MteSenseBaseTask;
 import com.mte.base.MteSenseCore;
-import com.sevenstar.page.前台登录页;
 import org.openqa.selenium.By;
 
 import java.util.ArrayList;
@@ -10,26 +9,15 @@ import java.util.Hashtable;
 
 public class 后台公用任务 extends MteSenseBaseTask {
 
-	private 前台登录页 登录页面 = null;
 
 	public 后台公用任务(MteSenseCore senseCore) {
 		super(senseCore);
-		登录页面 =new 前台登录页(asCore);
+
 		// TODO Auto-generated constructor stub
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	}
-
-	public void 后台成功登录(String 用户名,String 密码){
-		asCore.sendKeys(登录页面.用户名输入框(), 用户名);
-		asCore.sendKeys(登录页面.密码输入框(), 密码);
-		asCore.click(登录页面.登录按钮());
-		asCore.click(登录页面.同意按钮());
-		asCore.pause(1000);
-		asCore.click(登录页面.右下弹框关闭按钮());
-		//	MSAssert.verifyEqual(result, "IBM 中国官方网站", "Check the IBM result");
 	}
 
 	public void 点击菜单(String 选项){
@@ -66,7 +54,27 @@ public class 后台公用任务 extends MteSenseBaseTask {
 
 	public void 设置分批数据(ArrayList<Hashtable<String,String>> al){
 		int size = al.size();
+		asCore.pause(1000);
+		asCore.click(By.xpath("//*[@id='1']/td[8]/a[2]"));
+		asCore.click(By.xpath("//*[@id='selectAll']"));
+		int i=0;
+		while(i<size){
+			if(!(i==size-1)){
+				asCore.sendKeys(By.xpath("//input[@name='end_money"+i+"']"),al.get(i).get("截止金额"));
+			}
+			asCore.sendKeys(By.xpath("//input[@name='odds_limit"+i+"']"),al.get(i).get("赔率上限"));
+			i++;
+		}
+		asCore.click(By.xpath("//input[@value='编辑']"));
+		asCore.click(By.xpath("//input[@value='确定']"));
+	}
+
+	public void 赔率变动设置(Hashtable<String,String> ht){
 
 	}
+
+
+
+
 
 }
