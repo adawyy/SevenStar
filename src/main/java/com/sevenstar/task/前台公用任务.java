@@ -59,7 +59,7 @@ public class 前台公用任务 extends 公用任务 {
 //		asCore.click(By.xpath("//input[@value='确定']"));
 	}
 
-	public void 设置交易回水(ArrayList<Hashtable<String,String>> al){
+	public void 设置所有交易回水(ArrayList<Hashtable<String,String>> al){
 		int size = al.size();
 		int i = 0;
 		while(i<size){

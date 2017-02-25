@@ -51,11 +51,11 @@ public class 公用任务 extends MteSenseBaseTask {
 	}
 
 	public void 写入总表数据(String sheet名,String 表名,String 列名,String 值){
-		ExcelFile.writeExcel("./datapool/ST_汇总.xls",sheet名,表名,列名,值);
+		写入总表数据("./datapool/ST_汇总.xls",sheet名,表名,列名,值);
 	}
 
 	public void 写入总表数据(String 表名,String 列名,String 值){
-		ExcelFile.writeExcel("./datapool/ST_汇总.xls","Summary",表名,列名,值);
+		写入总表数据("Summary",表名,列名,值);
 	}
 
 	public void 刷新总表数据(){
