@@ -41,7 +41,7 @@ public class 公用任务 extends MteSenseBaseTask {
 		登录(用户名,密码);
 		asCore.click(公用.快速进入按钮());
 		asCore.click(公用.同意按钮());
-		asCore.pause(1000);
+		asCore.pause(1500);
 		asCore.click(公用.右下弹框关闭按钮());
 		asCore.pause(1000);
 	}
