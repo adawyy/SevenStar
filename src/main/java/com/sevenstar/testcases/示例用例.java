@@ -48,7 +48,7 @@ public class 示例用例 extends 七星彩基础用例 {
         ht_录码模式 = al_录码模式.get(0);
     }
 
-    @Test
+    @Test(groups = {"示例用例"})
     public void testMain() throws Exception {
 
         公用.快速登录(ht_登录信息.get("总监"),ht_登录信息.get("总监密码"));
