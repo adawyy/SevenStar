@@ -39,21 +39,30 @@ public class MSAssert{
 	
 	public static void verifyEqual(String actual,String expected,String details){
 		if(actual.equals(expected)){
-			getTest().log(LogStatus.PASS, "<B>"+details+"</B>" + "<br>[Expected]:"+expected+" [Actual]:"+actual);
+			getTest().log(LogStatus.PASS, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [实际]:"+actual);
 		}else{
-			getTest().log(LogStatus.FAIL, "<B>"+details+"</B>" + "<br>[Expected]:"+expected+" [Actual]:"+actual);
+			getTest().log(LogStatus.FAIL, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [实际]:"+actual);
+		}
+		softAssert.assertEquals(actual, expected,details);
+	}
+
+	public static void verifyEqual(Double actual,Double expected,String details){
+		if(actual.equals(expected)){
+			getTest().log(LogStatus.PASS, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [实际]:"+actual);
+		}else{
+			getTest().log(LogStatus.FAIL, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [实际]:"+actual);
 		}
 		softAssert.assertEquals(actual, expected,details);
 	}
 	
 	public static void verifyContains(String main,String expected,String details){
 		if(main==null){
-			getTest().log(LogStatus.FAIL, "<B>"+details+"</B>" + "<br>[Expected]:"+expected+" [Full String]: Null");
+			getTest().log(LogStatus.FAIL, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [全部字符]: Null");
 		}else{
 			if(main.contains(expected)){
-				getTest().log(LogStatus.PASS, "<B>"+details+"</B>" + "<br>[Expected]:"+expected+" [Full String]:"+main);
+				getTest().log(LogStatus.PASS, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [全部字符]:"+main);
 			}else{
-				getTest().log(LogStatus.FAIL, "<B>"+details+"</B>" + "<br>[Expected]:"+expected+" [Full String]:"+main);
+				getTest().log(LogStatus.FAIL, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [全部字符]:"+main);
 			}
 		}
 		softAssert.assertTrue(main.contains(expected));

@@ -1,18 +1,19 @@
 package com.sevenstar.testcases;
 
+import com.sevenstar.task.测试任务;
+import com.sevenstar.task.前台公用任务;
+import com.sevenstar.task.后台公用任务;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.sevenstar.task.*;
-
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-public class 示例用例 extends 七星彩基础用例 {
+public class 测试用例 extends 七星彩基础用例 {
 
     //定义任务
-    private 公用任务 公用;
+    private 测试任务 测试;
 	private 前台公用任务 前台公用任务集;
     private 后台公用任务 后台公用任务集;
 
@@ -30,7 +31,7 @@ public class 示例用例 extends 七星彩基础用例 {
         asBaseCore.initialTest(testCaseName,test);
 
         //任务列初始化
-        公用 =new 公用任务(asBaseCore);
+        测试 =new 测试任务(asBaseCore);
         前台公用任务集 =new 前台公用任务(asBaseCore);
         后台公用任务集 =new 后台公用任务(asBaseCore);
 
@@ -48,24 +49,24 @@ public class 示例用例 extends 七星彩基础用例 {
     }
 
     @Test(groups = {"Demo"})
-    public void 示例方法() throws Exception {
+    public void 测试方法() throws Exception {
 
-        公用.快速登录(ht_登录信息.get("总监"),ht_登录信息.get("总监密码"));
-        后台公用任务集.点击菜单("设置");
-        后台公用任务集.点击设置菜单("定盘");
-        后台公用任务集.设置定盘数据(ht_定盘信息);
-        后台公用任务集.设置分批数据(al_分批赔率);
-        公用.跳转页(前台地址);
-        公用.快速登录(ht_登录信息.get("会员"),ht_登录信息.get("会员密码"));
-        前台公用任务集.点击菜单("会员资料");
-        前台公用任务集.设置录码模式(ht_录码模式);
-        前台公用任务集.设置交易回水(al_赔率设置,"口口XX");
-        前台公用任务集.快打下注(al_下注场景,1);
+        测试.快速登录(ht_登录信息.get("总监"),ht_登录信息.get("总监密码"));
+//        后台公用任务集.点击菜单("设置");
+//        后台公用任务集.点击设置菜单("定盘");
+//        后台公用任务集.设置定盘数据(ht_定盘信息);
+//        后台公用任务集.设置分批数据(al_分批赔率);
+//        公用.跳转页(前台地址);
+//        公用.快速登录(ht_登录信息.get("会员"),ht_登录信息.get("会员密码"));
+//        前台公用任务集.点击菜单("会员资料");
+//        前台公用任务集.设置录码模式(ht_录码模式);
+//        前台公用任务集.设置交易回水(al_赔率设置,"口口XX");
+//        前台公用任务集.快打下注(al_下注场景,1);
     }
 
     @Test(dependsOnMethods = {"示例方法"})
-    public void 示例方法二() throws Exception {
-//        前台公用任务集.快打下注(al_下注场景,2);
+    public void 测试方法二() throws Exception {
+
     }
 
     @AfterTest

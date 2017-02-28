@@ -26,8 +26,7 @@ public class 七星彩基础用例 extends MteSenseBaseCase {
     protected String 前台地址 = 配置文件.get("sevenstar.frontendUrl");
 
     protected String 后台地址 = 配置文件.get("sevenstar.backendUrl");
-
-
+    
     public 七星彩基础用例(){
         总表.设置数据文件("datapool/ST_汇总.xls");
     }

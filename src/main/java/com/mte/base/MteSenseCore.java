@@ -646,6 +646,27 @@ public class MteSenseCore {
     }
 
     /**
+     * rewrite the Skipclick method, click on the element to be find by By
+     *
+     * @param by      the locator you want to find the element
+     * @param timeout second
+     *        There is no exception print for this method
+     */
+
+    public void skipClick(By by, long timeout) {
+        boolean isSucceed = false;
+        try {
+            if (isElementPresent(by, timeout)) {
+                driver.findElement(by).click();
+                isSucceed = true;
+            }
+        } catch (Exception e) {
+
+//            logger.error("click error :", e);
+        }
+    }
+
+    /**
      * rewrite the clear method, clear on the element to be find by By</BR>
      *
      * @param by the locator you want to find the element
@@ -657,6 +678,7 @@ public class MteSenseCore {
             element.clear();
             isSucceed = true;
         } catch (Exception e) {
+            e.printStackTrace();
  //           logger.error("clear error :", e);
         }
     }

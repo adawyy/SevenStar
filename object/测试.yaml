@@ -1,0 +1,21 @@
+用户名:
+  type:id
+  value:"Account"
+密码:
+  type:id
+  value:"Password"
+登录按钮:
+  type:id
+  value:"btn-submit"
+快速进入:
+  type:id
+  value:"btn_quickly"
+同意按钮:
+  type:id
+  value:"agree"
+不同意按钮:
+  type:id
+  value:"disagree"
+右下弹框关闭按钮:
+  type:xpath
+  value:"//*[@id='popup']/div[1]/a[2]"

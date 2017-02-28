@@ -99,10 +99,11 @@ public class 前台公用任务 extends 公用任务 {
 		while(i<次数){
 			asCore.sendKeys(By.xpath("//*[@id='betno']"),下注信息.get(i).get("号码"));
 			asCore.sendKeys(By.xpath("//*[@id='betmoney']"),下注信息.get(i).get("金额"));
-			finalodds = Double.valueOf(asCore.getText(By.xpath("//*[@id='limit_odds']"),1));
+			finalodds = Double.valueOf(asCore.getText(By.xpath("//*[@id='limit_odds']"),5));
+			asCore.click(By.xpath("//input[@value='确认下注']"));
 			asCore.clear(By.xpath("//*[@id='betno']"));
 			asCore.clear(By.xpath("//*[@id='betmoney']"));
-			asCore.click(By.xpath("//input[@value='确认下注']"));
+			asCore.pause(500);
 			System.out.println("用户最终赔率为:"+finalodds);
 			System.out.println("预计用户最终赔率为:"+al_赔率计算.get(0).get("会员最终赔率"));
 			MSAssert.verifyEqual(String.valueOf(finalodds),al_赔率计算.get(0).get("会员最终赔率"),"验证最终赔率是否正确");
