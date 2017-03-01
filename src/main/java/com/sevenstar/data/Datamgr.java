@@ -109,6 +109,7 @@ public class Datamgr {
 
 
 	public static void main(String[] args) {
+		Datamgr dm = new Datamgr();
 		// TODO Auto-generated method stub
 
 	}
