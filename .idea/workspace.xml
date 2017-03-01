@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ed9d953-dc91-462d-a225-7c4bef380e17" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/开关盘用例.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/task/后台公用任务.class" afterPath="$PROJECT_DIR$/target/classes/com/sevenstar/task/后台公用任务.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/testcases/开关盘用例.class" afterPath="$PROJECT_DIR$/target/classes/com/sevenstar/testcases/开关盘用例.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mte/util/DateTimeUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/mte/util/DateTimeUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ExtentReport.html" afterPath="$PROJECT_DIR$/report/ExtentReport.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/开关盘用例.java" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/开关盘用例.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,8 +47,8 @@
       <file leaf-file-name="示例用例.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="1026">
+              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="开关盘用例.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="开关盘用例.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/开关盘用例.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -69,7 +71,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="666">
               <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#682#683#0" expanded="false" />
+                <element signature="e#706#707#0" expanded="false" />
+                <element signature="e#1126#1127#0" expanded="false" />
+                <element signature="e#1172#1173#0" expanded="false" />
+                <element signature="e#1238#1239#0" expanded="false" />
+                <element signature="e#1290#1291#0" expanded="false" />
+                <element signature="e#1342#1343#0" expanded="false" />
+                <element signature="e#1374#1375#0" expanded="false" />
+                <element signature="e#1398#1399#0" expanded="false" />
+                <element signature="e#1441#1442#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,12 +91,21 @@
       <file leaf-file-name="公用页.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/page/公用页.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+            <state relative-caret-position="504">
+              <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#881#882#0" expanded="true" />
-                <element signature="e#925#926#0" expanded="true" />
+                <element signature="e#500#501#0" expanded="false" />
+                <element signature="e#539#540#0" expanded="false" />
+                <element signature="e#563#564#0" expanded="false" />
+                <element signature="e#604#605#0" expanded="false" />
+                <element signature="e#627#628#0" expanded="false" />
+                <element signature="e#673#674#0" expanded="false" />
+                <element signature="e#695#696#0" expanded="false" />
+                <element signature="e#735#736#0" expanded="false" />
+                <element signature="e#755#756#0" expanded="false" />
+                <element signature="e#795#796#0" expanded="false" />
+                <element signature="e#816#817#0" expanded="false" />
+                <element signature="e#857#858#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -92,8 +115,14 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/data/Datamgr.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1170">
-              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding />
+              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#222#223#0" expanded="false" />
+                <element signature="e#250#251#0" expanded="false" />
+                <element signature="e#276#277#0" expanded="false" />
+                <element signature="e#305#306#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,9 +130,13 @@
       <file leaf-file-name="七星彩基础用例.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/七星彩基础用例.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="342">
               <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#794#795#0" expanded="false" />
+                <element signature="e#841#842#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,7 +144,7 @@
       <file leaf-file-name="测试用例.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/测试用例.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
+            <state relative-caret-position="720">
               <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -123,20 +156,29 @@
       <file leaf-file-name="测试任务.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/测试任务.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
+            <state relative-caret-position="792">
               <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#682#683#0" expanded="false" />
+                <element signature="e#706#707#0" expanded="false" />
+                <element signature="e#1209#1210#0" expanded="false" />
+                <element signature="e#1255#1256#0" expanded="false" />
+                <element signature="e#1321#1322#0" expanded="false" />
+                <element signature="e#1373#1374#0" expanded="false" />
+                <element signature="e#1425#1426#0" expanded="false" />
+                <element signature="e#1457#1458#0" expanded="false" />
+                <element signature="e#1481#1482#0" expanded="false" />
+                <element signature="e#1524#1525#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="后台公用任务.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="后台公用任务.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-131">
-              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state relative-caret-position="206">
+              <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -147,7 +189,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
               <caret line="16" column="86" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="86" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#5778#5779#0" expanded="false" />
+                <element signature="e#5843#5844#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -236,8 +282,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/task/公用任务.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/data/Datamgr.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mte/util/DateTimeUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/开关盘用例.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java" />
       </list>
     </option>
   </component>
@@ -443,6 +489,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -471,6 +518,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -759,8 +807,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -792,7 +838,7 @@
       <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DateTimeUtil">
+  <component name="RunManager" selected="TestNG.开关盘用例.关开盘方法">
     <configuration default="false" name="示例用例" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -824,54 +870,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="C:/Users/Dell/Desktop/IdeaProjects/SevenStar/testng.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="SevenStar" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="测试用例" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.sevenstar.testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.测试用例" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="SevenStar" />
-      <envs />
       <method />
     </configuration>
     <configuration default="false" name="测试用例.测试方法" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
@@ -925,6 +923,59 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="SevenStar" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="开关盘用例" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sevenstar.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.开关盘用例" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SevenStar" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="开关盘用例.关开盘方法" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sevenstar.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="SevenStar" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.sevenstar.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.开关盘用例" />
+      <option name="METHOD_NAME" value="关开盘方法" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1331,18 +1382,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="TestNG.示例用例" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.C:/Users/Dell/Desktop/IdeaProjects/SevenStar/testng.xml" />
-      <item index="2" class="java.lang.String" itemvalue="Application.测试用例" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.测试用例.测试方法" />
-      <item index="4" class="java.lang.String" itemvalue="Application.DateTimeUtil" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.测试用例.测试方法" />
+      <item index="2" class="java.lang.String" itemvalue="Application.DateTimeUtil" />
+      <item index="3" class="java.lang.String" itemvalue="Application.开关盘用例" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.开关盘用例.关开盘方法" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.DateTimeUtil" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.示例用例" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.测试用例.测试方法" />
-        <item index="3" class="java.lang.String" itemvalue="Application.测试用例" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.C:/Users/Dell/Desktop/IdeaProjects/SevenStar/testng.xml" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.开关盘用例.关开盘方法" />
+        <item index="1" class="java.lang.String" itemvalue="Application.开关盘用例" />
+        <item index="2" class="java.lang.String" itemvalue="Application.DateTimeUtil" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.示例用例" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.测试用例.测试方法" />
       </list>
     </recent_temporary>
   </component>
@@ -1374,21 +1425,22 @@
       <workItem from="1488261436308" duration="7050000" />
       <workItem from="1488269273508" duration="7893000" />
       <workItem from="1488328634173" duration="4325000" />
+      <workItem from="1488334127794" duration="1055000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="测试用例_测试方法 - 2017.02.28 at 15h 12m 06s.xml">
-      <configuration name="测试用例.测试方法" configurationId="TestNG" />
+    <history-entry file="开关盘用例_关开盘方法 - 2017.03.01 at 10h 17m 53s.xml">
+      <configuration name="开关盘用例.关开盘方法" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="测试用例_测试方法 - 2017.02.28 at 15h 15m 12s.xml">
-      <configuration name="测试用例.测试方法" configurationId="TestNG" />
+    <history-entry file="开关盘用例_关开盘方法 - 2017.03.01 at 10h 19m 33s.xml">
+      <configuration name="开关盘用例.关开盘方法" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="测试用例_测试方法 - 2017.02.28 at 15h 16m 52s.xml">
-      <configuration name="测试用例.测试方法" configurationId="TestNG" />
+    <history-entry file="开关盘用例_关开盘方法 - 2017.03.01 at 10h 21m 41s.xml">
+      <configuration name="开关盘用例.关开盘方法" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="测试用例_测试方法 - 2017.02.28 at 15h 18m 05s.xml">
-      <configuration name="测试用例.测试方法" configurationId="TestNG" />
+    <history-entry file="开关盘用例_关开盘方法 - 2017.03.01 at 10h 22m 12s.xml">
+      <configuration name="开关盘用例.关开盘方法" configurationId="TestNG" />
     </history-entry>
     <history-entry file="测试用例_测试方法 - 2017.02.28 at 15h 19m 04s.xml">
       <configuration name="测试用例.测试方法" configurationId="TestNG" />
@@ -1410,7 +1462,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132682000" />
+    <option name="totallyTimeSpent" value="133737000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1435,7 +1487,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5263543" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36176935" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23064771" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1600,15 +1652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5083">
           <caret line="525" column="24" lean-forward="true" selection-start-line="525" selection-start-column="24" selection-end-line="525" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12582#12583#0" expanded="false" />
-            <element signature="e#12623#12624#0" expanded="false" />
-            <element signature="e#14279#14280#0" expanded="false" />
-            <element signature="e#14310#14311#0" expanded="false" />
-            <element signature="e#17705#17706#0" expanded="false" />
-            <element signature="e#17733#17734#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1616,10 +1659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <element signature="e#2625#2626#0" expanded="false" />
-            <element signature="e#2669#2670#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1628,7 +1667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1636,7 +1674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1644,7 +1681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1652,7 +1688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1660,7 +1695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1735,22 +1769,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#682#683#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#1126#1127#0" expanded="false" />
+            <element signature="e#1172#1173#0" expanded="false" />
+            <element signature="e#1238#1239#0" expanded="false" />
+            <element signature="e#1290#1291#0" expanded="false" />
+            <element signature="e#1342#1343#0" expanded="false" />
+            <element signature="e#1374#1375#0" expanded="false" />
+            <element signature="e#1398#1399#0" expanded="false" />
+            <element signature="e#1441#1442#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/data/Datamgr.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
-          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding />
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#222#223#0" expanded="false" />
+            <element signature="e#250#251#0" expanded="false" />
+            <element signature="e#276#277#0" expanded="false" />
+            <element signature="e#305#306#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="1026">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1759,15 +1811,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/七星彩基础用例.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="342">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#794#795#0" expanded="false" />
+            <element signature="e#841#842#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/测试用例.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
+        <state relative-caret-position="720">
           <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1777,10 +1833,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/测试任务.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
+        <state relative-caret-position="792">
           <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#682#683#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#1209#1210#0" expanded="false" />
+            <element signature="e#1255#1256#0" expanded="false" />
+            <element signature="e#1321#1322#0" expanded="false" />
+            <element signature="e#1373#1374#0" expanded="false" />
+            <element signature="e#1425#1426#0" expanded="false" />
+            <element signature="e#1457#1458#0" expanded="false" />
+            <element signature="e#1481#1482#0" expanded="false" />
+            <element signature="e#1524#1525#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1789,34 +1854,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="16" column="86" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="86" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#5778#5779#0" expanded="false" />
+            <element signature="e#5843#5844#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/page/公用页.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+        <state relative-caret-position="504">
+          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-            <element signature="e#925#926#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="false" />
+            <element signature="e#539#540#0" expanded="false" />
+            <element signature="e#563#564#0" expanded="false" />
+            <element signature="e#604#605#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#673#674#0" expanded="false" />
+            <element signature="e#695#696#0" expanded="false" />
+            <element signature="e#735#736#0" expanded="false" />
+            <element signature="e#755#756#0" expanded="false" />
+            <element signature="e#795#796#0" expanded="false" />
+            <element signature="e#816#817#0" expanded="false" />
+            <element signature="e#857#858#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/开关盘用例.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
           <folding />
         </state>
       </provider>

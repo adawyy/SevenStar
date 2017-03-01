@@ -42,20 +42,15 @@ public class 开关盘用例 extends 七星彩基础用例 {
     }
 
     @Test(groups = {"Demo"})
-    public void 示例方法() throws Exception {
+    public void 关开盘方法() throws Exception {
         公用.快速登录(ht_登录信息.get("总监"),ht_登录信息.get("总监密码"));
-        后台公用任务集.点击菜单("设置");
+
         后台公用任务集.关盘("ccc0000");
         后台公用任务集.开盘("1234567","ccc0000");
 
         公用.跳转页(前台地址);
         公用.快速登录(ht_登录信息.get("会员"),ht_登录信息.get("会员密码"));
 
-    }
-
-    @Test(dependsOnMethods = {"示例方法"})
-    public void 示例方法二() throws Exception {
-//        前台公用任务集.快打下注(al_下注场景,2);
     }
 
     @AfterTest

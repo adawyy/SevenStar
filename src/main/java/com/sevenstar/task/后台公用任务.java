@@ -79,9 +79,14 @@ public class 后台公用任务 extends 公用任务 {
 
 	public void 关盘(String 关盘密码){
 		点击菜单("设置");
-		asCore.click(By.xpath("//input[@name='is_open']"));
+		点击设置菜单("开盘设置");
+		asCore.click(By.xpath("//*[@id='bd_serverinfo']/table/tbody/tr/td[7]/label[2]/input"));
 		asCore.sendKeys(By.xpath("//input[@name='open_pwd']"),关盘密码);
 		asCore.click(By.xpath("//*[@id='btnOpenClose']"));
+		asCore.click(By.xpath("//input[@value='确定']"));
+		if(asCore.isTextContentsDisplayed("当前期尚未开盘，不能进行关盘")){
+			asCore.click(By.xpath("//input[@value='确定']"));
+		}
 	}
 
 	public void 开盘(String 七位号码,String 开盘密码){
@@ -91,13 +96,13 @@ public class 后台公用任务 extends 公用任务 {
 
 	public void 设置开奖号码(String 七位号码){
 		点击菜单("开奖号码");
-		asCore.sendKeys(By.xpath("//*[@id='thousand_no']"),"5");
-		asCore.sendKeys(By.xpath("//*[@id='hundred_no']"),"5");
-		asCore.sendKeys(By.xpath("//*[@id='ten_no']"),"5");
-		asCore.sendKeys(By.xpath("//*[@id='one_no']"),"5");
-		asCore.sendKeys(By.xpath("//*[@id='ball5']"),"5");
-		asCore.sendKeys(By.xpath("//*[@id='ball6']"),"5");
-		asCore.sendKeys(By.xpath("//*[@id='ball7']"),"5");
+		asCore.sendKeys(By.xpath("//*[@id='thousand_no']"),七位号码.substring(0,1));
+		asCore.sendKeys(By.xpath("//*[@id='hundred_no']"),七位号码.substring(1,2));
+		asCore.sendKeys(By.xpath("//*[@id='ten_no']"),七位号码.substring(2,3));
+		asCore.sendKeys(By.xpath("//*[@id='one_no']"),七位号码.substring(3,4));
+		asCore.sendKeys(By.xpath("//*[@id='ball5']"),七位号码.substring(4,5));
+		asCore.sendKeys(By.xpath("//*[@id='ball6']"),七位号码.substring(5,6));
+		asCore.sendKeys(By.xpath("//*[@id='ball7']"),七位号码.substring(6,7));
 		asCore.click(By.xpath("//*[@id='btnCheckout']"));
 		asCore.click(By.xpath("//input[@value='确定']"));
 		asCore.pause(2000);
@@ -120,6 +125,7 @@ public class 后台公用任务 extends 公用任务 {
 		asCore.click(By.xpath("//input[@name='is_open']"));
 		asCore.sendKeys(By.xpath("//*[@id='bd_serverinfo']/table/tbody/tr/td[9]/input"),开盘密码);
 		asCore.click(By.xpath("//*[@id='btnOpenClose']"));
+		asCore.click(By.xpath("//input[@value='确定']"));
 	}
 
 
