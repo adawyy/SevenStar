@@ -1,6 +1,7 @@
 package com.sevenstar.task;
 
 import com.mte.base.MteSenseCore;
+import com.mte.util.DateTimeUtil;
 import org.openqa.selenium.By;
 
 import java.util.ArrayList;
@@ -22,12 +23,16 @@ public class 后台公用任务 extends 公用任务 {
 	public void 点击菜单(String 选项){
 		if(选项.equals("设置")){
 			asCore.click(By.xpath("//*[@id='nav']/li[9]"));
+		}else if(选项.equals("开奖号码")){
+			asCore.click(By.xpath("//*[@id='nav']/li[5]"));
 		}
 	}
 
 	public void 点击设置菜单(String 选项){
 		if(选项.equals("定盘")){
 			asCore.click(By.xpath("//*[@id='guide_setting']/div[2]/a[4]"));
+		}else if(选项.equals("开盘设置")){
+			asCore.click(By.xpath("//*[@id='guide_setting']/div[2]/a[2]"));
 		}
 	}
 
@@ -71,6 +76,53 @@ public class 后台公用任务 extends 公用任务 {
 		asCore.click(By.xpath("//input[@value='编辑']"));
 		asCore.click(By.xpath("//input[@value='确定']"));
 	}
+
+	public void 关盘(String 关盘密码){
+		点击菜单("设置");
+		asCore.click(By.xpath("//input[@name='is_open']"));
+		asCore.sendKeys(By.xpath("//input[@name='open_pwd']"),关盘密码);
+		asCore.click(By.xpath("//*[@id='btnOpenClose']"));
+	}
+
+	public void 开盘(String 七位号码,String 开盘密码){
+		设置开奖号码(七位号码);
+		开盘设置(开盘密码);
+	}
+
+	public void 设置开奖号码(String 七位号码){
+		点击菜单("开奖号码");
+		asCore.sendKeys(By.xpath("//*[@id='thousand_no']"),"5");
+		asCore.sendKeys(By.xpath("//*[@id='hundred_no']"),"5");
+		asCore.sendKeys(By.xpath("//*[@id='ten_no']"),"5");
+		asCore.sendKeys(By.xpath("//*[@id='one_no']"),"5");
+		asCore.sendKeys(By.xpath("//*[@id='ball5']"),"5");
+		asCore.sendKeys(By.xpath("//*[@id='ball6']"),"5");
+		asCore.sendKeys(By.xpath("//*[@id='ball7']"),"5");
+		asCore.click(By.xpath("//*[@id='btnCheckout']"));
+		asCore.click(By.xpath("//input[@value='确定']"));
+		asCore.pause(2000);
+		asCore.click(By.xpath("//input[@value='确定']"));
+		asCore.click(By.xpath("//*[@id='btnShowFrontendPeriod']"));
+		asCore.click(By.xpath("//input[@value='确定']"));
+		asCore.pause(1000);
+		asCore.click(By.xpath("//input[@value='确定']"));
+	}
+
+	public void 开盘设置(String 开盘密码){
+		点击菜单("设置");
+		点击设置菜单("开盘设置");
+		asCore.sendKeys(By.xpath("//*[@id='form2']/table/tbody/tr/td[5]/input"),开盘密码);
+		asCore.click(By.xpath("//*[@id='btnCreatenew']"));
+		asCore.click(By.xpath("//input[@value='确定']"));
+
+		asCore.sendKeys(By.xpath("//input[@name='open_datetime']"), DateTimeUtil.addMinutesByFormatter(1,"yyyy-MM-dd HH:mm:ss"));
+		asCore.sendKeys(By.xpath("//input[@name='close_datetime']"), DateTimeUtil.addDaysByFormatter(1,"yyyy-MM-dd HH:mm:ss"));
+		asCore.click(By.xpath("//input[@name='is_open']"));
+		asCore.sendKeys(By.xpath("//*[@id='bd_serverinfo']/table/tbody/tr/td[9]/input"),开盘密码);
+		asCore.click(By.xpath("//*[@id='btnOpenClose']"));
+	}
+
+
 
 	public void 赔率变动设置(Hashtable<String,String> ht){
 

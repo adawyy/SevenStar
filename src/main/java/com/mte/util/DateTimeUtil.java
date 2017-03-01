@@ -1,5 +1,7 @@
 package com.mte.util;
 
+import org.apache.xpath.SourceTree;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -11,6 +13,10 @@ import java.util.Date;
  */
 public class DateTimeUtil {
 
+    public static void main(String[] args) {
+        System.out.println(DateTimeUtil.addMinutesByFormatter(1,"yyyy-MM-dd HH:mm:ss"));
+
+    }
     /**
      * @return yyyyMMddHHmmss 20110810155638
      */
@@ -58,6 +64,20 @@ public class DateTimeUtil {
     public static String formatedTime(String format) {
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(new Date());
+    }
+
+    /**
+     * get specified time string in specified date format.
+     *
+     * @param minute       days after or before current date, use + and - to add.
+     * @param dateFormat the formatter of date, such as:yyyy-MM-dd HH:mm:ss:SSS.
+     */
+    public static String addMinutesByFormatter(int minute, String dateFormat) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date());
+        cal.add(Calendar.MINUTE, minute);
+        SimpleDateFormat formatter = new SimpleDateFormat(dateFormat);
+        return formatter.format(cal.getTime());
     }
 
     /**
