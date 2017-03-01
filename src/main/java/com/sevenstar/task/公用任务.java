@@ -41,9 +41,10 @@ public class 公用任务 extends MteSenseBaseTask {
 		登录(用户名,密码);
 		asCore.skipClick(公用.快速进入按钮(),2);
 		asCore.click(公用.同意按钮());
-		asCore.pause(1500);
-		asCore.skipClick(公用.右下弹框关闭按钮(),2);
-		asCore.pause(1000);
+//		asCore.pause(1500);
+//		asCore.skipClick(公用.右下弹框关闭按钮(),2);
+//		asCore.pause(1000);
+		asCore.waitClickAbleToClick(公用.右下弹框关闭按钮(),5);
 	}
 
 	public void 写入总表数据(String 文件,String sheet名,String 表名,String 列名,String 值){

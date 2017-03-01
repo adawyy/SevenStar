@@ -19,15 +19,11 @@ public class 前台公用任务 extends 公用任务 {
 	}
 
 	public void 点击菜单(String 选项){
-		if(选项.equals("会员资料")){
-			asCore.click(By.xpath("//*[@id='nav']/li[4]/a"));
-		}
+		asCore.click(By.xpath("//*[@id='nav']//a/span[text()='"+选项+"']"));
 	}
 
 	public void 点击副菜单(String 选项){
-		if(选项.equals("快打")){
-			asCore.click(By.xpath("//*[@id='subnav']/a[2]"));
-		}
+		asCore.click(By.xpath("//*[@id='subnav']/a[text()='"+选项+"']"));
 	}
 
 	public void 设置录码模式(Hashtable<String,String> ht){

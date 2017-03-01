@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [MiniRegression]" parallel="classes">
+  <test name="Default test(failed)" parallel="classes">
+    <classes>
+      <class name="com.sevenstar.testcases.示例用例">
+        <methods>
+          <include name="afterEachTest"/>
+          <include name="afterSuite"/>
+          <include name="示例方法"/>
+          <include name="示例方法二"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.sevenstar.testcases.示例用例 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [MiniRegression] -->

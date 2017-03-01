@@ -15,7 +15,9 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.internal.Coordinates;
 import org.openqa.selenium.internal.Locatable;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Match;
 import org.sikuli.script.Region;
@@ -661,9 +663,14 @@ public class MteSenseCore {
                 isSucceed = true;
             }
         } catch (Exception e) {
-
 //            logger.error("click error :", e);
         }
+    }
+
+    public void waitClickAbleToClick(By by, long timeout){
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        WebElement we = wait.until(ExpectedConditions.elementToBeClickable(by));
+        we.click();
     }
 
     /**

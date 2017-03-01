@@ -21,19 +21,11 @@ public class 后台公用任务 extends 公用任务 {
 	}
 
 	public void 点击菜单(String 选项){
-		if(选项.equals("设置")){
-			asCore.click(By.xpath("//*[@id='nav']/li[9]"));
-		}else if(选项.equals("开奖号码")){
-			asCore.click(By.xpath("//*[@id='nav']/li[5]"));
-		}
+		asCore.click(By.xpath("//*[@id='nav']//a/span[text()='"+选项+"']"));
 	}
 
 	public void 点击设置菜单(String 选项){
-		if(选项.equals("定盘")){
-			asCore.click(By.xpath("//*[@id='guide_setting']/div[2]/a[4]"));
-		}else if(选项.equals("开盘设置")){
-			asCore.click(By.xpath("//*[@id='guide_setting']/div[2]/a[2]"));
-		}
+		asCore.click(By.xpath("//*[@id='guide_setting']/div[2]/a[text()='"+选项+"']"));
 	}
 
 	public void 设置定盘数据(Hashtable<String,String> ht){
