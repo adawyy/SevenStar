@@ -70,17 +70,22 @@ public class 后台公用任务 extends 公用任务 {
 	}
 
 	public void 关盘(String 关盘密码){
-		点击菜单("设置");
-		点击设置菜单("开盘设置");
-		asCore.click(By.xpath("//*[@id='bd_serverinfo']/table/tbody/tr/td[7]/label[2]/input"));
-		asCore.sendKeys(By.xpath("//input[@name='open_pwd']"),关盘密码);
-		asCore.click(By.xpath("//*[@id='btnOpenClose']"));
-		asCore.click(By.xpath("//input[@value='确定']"));
-		if(asCore.isTextContentsDisplayed("当前期尚未开盘，不能进行关盘")){
+		if(asCore.getText(By.xpath("//*[@id='systime']")).equals("已封盘")){
+			//什么都不做
+		}else {
+			点击菜单("设置");
+			点击设置菜单("开盘设置");
+			asCore.click(By.xpath("//*[@id='bd_serverinfo']/table/tbody/tr/td[7]/label[2]/input"));
+			asCore.sendKeys(By.xpath("//input[@name='open_pwd']"), 关盘密码);
+			asCore.click(By.xpath("//*[@id='btnOpenClose']"));
 			asCore.click(By.xpath("//input[@value='确定']"));
+			if (asCore.isTextContentsDisplayed("当前期尚未开盘，不能进行关盘")) {
+				asCore.click(By.xpath("//input[@value='确定']"));
+			}
 		}
 	}
 
+	//默认设置一分钟后开盘
 	public void 开盘(String 七位号码,String 开盘密码){
 		设置开奖号码(七位号码);
 		开盘设置(开盘密码);
@@ -101,17 +106,25 @@ public class 后台公用任务 extends 公用任务 {
 		asCore.click(By.xpath("//input[@value='确定']"));
 		asCore.click(By.xpath("//*[@id='btnShowFrontendPeriod']"));
 		asCore.click(By.xpath("//input[@value='确定']"));
-		asCore.pause(1000);
+		asCore.pause(2000);
 		asCore.click(By.xpath("//input[@value='确定']"));
 	}
 
 	public void 开盘设置(String 开盘密码){
 		点击菜单("设置");
 		点击设置菜单("开盘设置");
+		//提交期号
 		asCore.sendKeys(By.xpath("//*[@id='form2']/table/tbody/tr/td[5]/input"),开盘密码);
+		//等待期号出现
+		asCore.pause(2000);
 		asCore.click(By.xpath("//*[@id='btnCreatenew']"));
 		asCore.click(By.xpath("//input[@value='确定']"));
-
+		//等待新建期号
+		asCore.pause(2000);
+		asCore.click(By.xpath("//input[@value='确定']"));
+		//等待开盘页面出现
+		asCore.pause(4000);
+		//开盘
 		asCore.sendKeys(By.xpath("//input[@name='open_datetime']"), DateTimeUtil.addMinutesByFormatter(1,"yyyy-MM-dd HH:mm:ss"));
 		asCore.sendKeys(By.xpath("//input[@name='close_datetime']"), DateTimeUtil.addDaysByFormatter(1,"yyyy-MM-dd HH:mm:ss"));
 		asCore.click(By.xpath("//input[@name='is_open']"));

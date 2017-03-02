@@ -1,6 +1,7 @@
 package com.mte.base;
 
 import org.testng.asserts.SoftAssert;
+import org.testng.asserts.Assertion;
 
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -26,6 +27,15 @@ public class MSAssert{
 
 	public static void setTest(ExtentTest test) {
 		MSAssert.test = test;
+	}
+
+	public static void AssertTrue(boolean status,String details){
+		if(status == true){
+			getTest().log(LogStatus.PASS, "<B>"+details+"</B>");
+		}else{
+			getTest().log(LogStatus.PASS, "<B>"+details+"</B>");
+		}
+		softAssert.assertTrue(status, details);
 	}
 	
 	public static void verifyTrue(boolean status,String details){
