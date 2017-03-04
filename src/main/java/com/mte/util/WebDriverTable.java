@@ -1,5 +1,6 @@
 package com.mte.util;
 
+import com.mte.base.MteSenseCore;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,70 +8,31 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-/**
- * Project :  mtesense
- * Created :  java
- * Date    :  5/31/15
- *
- * WebTable
- * 1、rowCount--获取指定WebTable的行数；
- * 2、colCount--获取指定WebTable指定行的列数；
- * 3、childItem--获取WebTable指定行、列中指定类型的元素，同类元素如有多个则需要以序号标注，
- * 	    元素类型包含：cell/weblist/webedit/webcheckbox/webbutton/link/image等，可自行扩展；
- * 4、cellText--获取单元格的文本内容。
- *
- * @author Liu Yi
- */
 public class WebDriverTable {
 
     private By tabBy = null;
     private WebElement table = null;
     private List<WebElement> tabRows = null;
+    private List<WebElement> tabCols = null;
+    private List<String> colNames = null;
     private List<WebElement> tables = null;
-    private Logger logger = Logger.getLogger(WebDriverTable.class);
+//    private Logger logger = Logger.getLogger(WebDriverTable.class);
 
-    /**
-     * construct with parameters initialize.
-     *
-     * @param driver
-     *            the WebDriver instance.
-     * @param tabFinder
-     *            the By locator of the table.
-     * @param bodyOrHead
-     *            choice of table body and head to operate.
-     */
-    public WebDriverTable(WebDriver driver, By tabFinder, String bodyOrHead) {
+    public WebDriverTable(MteSenseCore asCore, By tabFinder) {
         this.tabBy = tabFinder;
-        this.tables = driver.findElements(tabBy);
+        this.tables = asCore.findElements(tabBy);
         if (null == tables || tables.size() == 0) {
-            logger.debug("the table " + tabFinder.toString() + "was not found!");
+            //error
         }
         this.table = tables.get(0);
-        this.tabRows = table.findElements(By.tagName(bodyOrHead)).get(0)
+        this.tabRows = table.findElements(By.tagName("tbody")).get(0)
                 .findElements(By.tagName("tr"));
         if (null == tabRows || tabRows.size() == 0) {
-            logger.debug("the table " + tabFinder.toString() + "is empty!");
+            //error
         }
-    }
-
-    /**
-     * construct with parameters initialize.
-     *
-     * @param driver
-     *            the WebDriver instance.
-     * @param tabFinder
-     *            the By locator of the table.
-     */
-    public WebDriverTable(WebDriver driver, By tabFinder) {
-        this.tabBy = tabFinder;
-        this.tables = driver.findElements(tabBy);
-        if (null == tables || tables.size() == 0) {
-            logger.debug("the table " + tabFinder.toString() + "was not found!");
-        }
-        this.table = tables.get(0);
-        this.tabRows = table.findElements(By.tagName("tr"));
-        if (null == tabRows || tabRows.size() == 0) {
-            logger.debug("the table " + tabFinder.toString() + "is empty!");
+        this.tabCols = table.findElements(By.xpath("//thead/tr[2]/td"));
+        if (null == tabCols || tabCols.size() == 0) {
+            //error
         }
     }
 
@@ -121,6 +83,10 @@ public class WebDriverTable {
         return tabRows.get(rowNum - 1).findElements(By.xpath("td")).size();
     }
 
+
+//    public int colIndex(String colName){
+//
+//    }
     /**
      * get the element in the table cell by row and col index.
      *
