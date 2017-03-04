@@ -19,7 +19,7 @@ import org.sikuli.script.Screen;
  */
 public class MteSenseBaseCase extends MteSenseExtent{
 
-    public PropUtil props = new PropUtil("./config/mtesense.properties");
+
 
     protected WebDriver driver = null;
 
@@ -42,12 +42,14 @@ public class MteSenseBaseCase extends MteSenseExtent{
     }
 
     protected MteSenseCore asBaseCore;
-    
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(new MteSenseBaseCase().props.get("mte.test.platform"));
 	}
-    
+
+
+
     public void beforeClass() {
         beforeClass(null);
     }
@@ -57,9 +59,8 @@ public class MteSenseBaseCase extends MteSenseExtent{
         if (driverType == null) {
             driverType = props.get("mte.test.platform");
         }
-        initWebDriver(driverType);
-        if(driver==null){
-            System.out.println("driver initial failed");
+        if (driver==null){
+            initWebDriver(driverType);
         }
         asBaseCore = new MteSenseCore(driver);
         if(!driverType.equals("ios")&&!driverType.equals("android")){
@@ -69,7 +70,7 @@ public class MteSenseBaseCase extends MteSenseExtent{
         sense.setMteSenseCore(asBaseCore);
         
 //        proxy.newHar("w3dev.somerslab.ibm.com");
-        extent = new ExtentReports(props.get("mte.reportFile.path"), NetworkMode.OFFLINE);
+
     }
 
     public void beforeClass(String driverType, DesiredCapabilities capabilities, String url) {

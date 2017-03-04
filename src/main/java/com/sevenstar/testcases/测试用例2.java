@@ -1,15 +1,15 @@
 package com.sevenstar.testcases;
 
 import com.mte.base.MSAssert;
-import com.sevenstar.task.测试任务;
 import com.sevenstar.task.前台公用任务;
 import com.sevenstar.task.后台公用任务;
+import com.sevenstar.task.测试任务;
 import org.testng.annotations.*;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-public class 测试用例 extends 七星彩基础用例 {
+public class 测试用例2 extends 七星彩基础用例 {
 
     //定义任务
     private 测试任务 测试;
@@ -26,7 +26,7 @@ public class 测试用例 extends 七星彩基础用例 {
     public void setUp() throws Exception {
 	    //用例初始化
         beforeClass();
-        test = getExtent().startTest(testCaseName, "示例用例");
+        test = getExtent().startTest(testCaseName, "示例用例2");
         asBaseCore.initialTest(testCaseName,test);
 
         //任务列初始化
@@ -48,7 +48,7 @@ public class 测试用例 extends 七星彩基础用例 {
     }
 
     @Test
-    public void 测试方法1() throws Exception {
+    public void 测试方法3() throws Exception {
 
         测试.快速登录(ht_登录信息.get("总监"),ht_登录信息.get("总监密码"));
 //        后台公用任务集.点击菜单("设置");
@@ -61,11 +61,11 @@ public class 测试用例 extends 七星彩基础用例 {
 //        前台公用任务集.设置录码模式(ht_录码模式);
 //        前台公用任务集.设置交易回水(al_赔率设置,"口口XX");
 //        前台公用任务集.快打下注(al_下注场景,1);
-        MSAssert.verifyEqual("THIS","THAT","CHECK STATUS1");
+        MSAssert.verifyEqual("THAT","THAT","CHECK STATUS1");
     }
 
     @Test
-    public void 测试方法2() throws Exception {
+    public void 测试方法4() throws Exception {
         MSAssert.verifyEqual("THAT","THAT","CHECK STATUS2");
 
     }
