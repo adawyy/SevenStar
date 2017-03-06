@@ -1,9 +1,11 @@
 package com.sevenstar.testcases;
 
 import com.mte.base.MSAssert;
-import com.sevenstar.task.测试任务;
+import com.mte.util.WebDriverTable;
+import com.sevenstar.task.公用任务;
 import com.sevenstar.task.前台公用任务;
 import com.sevenstar.task.后台公用任务;
+import org.openqa.selenium.By;
 import org.testng.annotations.*;
 
 import java.util.ArrayList;
@@ -17,7 +19,7 @@ import java.util.Hashtable;
 public class 测试用例 extends 七星彩基础用例 {
 
     //定义任务
-    private 测试任务 测试;
+    private 公用任务 测试;
 	private 前台公用任务 前台公用任务集;
     private 后台公用任务 后台公用任务集;
 
@@ -35,7 +37,7 @@ public class 测试用例 extends 七星彩基础用例 {
         asBaseCore.initialTest(testCaseName,test);
 
         //任务列初始化
-        测试 =new 测试任务(asBaseCore);
+        测试 = new 公用任务(asBaseCore);
         前台公用任务集 =new 前台公用任务(asBaseCore);
         后台公用任务集 =new 后台公用任务(asBaseCore);
 
@@ -56,7 +58,16 @@ public class 测试用例 extends 七星彩基础用例 {
     public void 测试方法1() throws Exception {
 
         测试.快速登录(ht_登录信息.get("总监"),ht_登录信息.get("总监密码"));
-//        后台公用任务集.点击菜单("设置");
+        后台公用任务集.点击菜单("越级操作");
+        WebDriverTable WT = new WebDriverTable(asBaseCore,By.xpath("//*[@id='memberadmin']/div[3]/table"),1);
+//        System.out.println(WT.获取总记录行数());
+//        System.out.println(WT.获取总列数(2));
+        System.out.println(WT.获取所有列名());
+//        System.out.println(WT.获取列数("信用额度"));
+//        System.out.println(WT.获取单元格值(5,"修改时间"));
+//       System.out.println(WT.获取文字所在行数("AT01(大股东)","账号"));
+        WT.通过条件获取单元格元素("账号","AT01(大股东)","内容").click();
+        //        后台公用任务集.点击菜单("设置");
 //        后台公用任务集.点击设置菜单("定盘");
 //        后台公用任务集.设置定盘数据(ht_定盘信息);
 //        后台公用任务集.设置分批数据(al_分批赔率);
@@ -66,12 +77,12 @@ public class 测试用例 extends 七星彩基础用例 {
 //        前台公用任务集.设置录码模式(ht_录码模式);
 //        前台公用任务集.设置交易回水(al_赔率设置,"口口XX");
 //        前台公用任务集.快打下注(al_下注场景,1);
-        MSAssert.verifyEqual("THIS","THAT","CHECK STATUS1");
+ //       MSAssert.verifyEqual("THIS","THAT","CHECK STATUS1");
     }
 
     @Test
     public void 测试方法2() throws Exception {
-        MSAssert.verifyEqual("THAT","THAT","CHECK STATUS2");
+//        MSAssert.verifyEqual("THAT","THAT","CHECK STATUS2");
 
     }
 

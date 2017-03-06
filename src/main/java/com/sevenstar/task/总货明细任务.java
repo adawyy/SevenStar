@@ -42,7 +42,7 @@ public class 总货明细任务 extends 公用任务 {
 
 
 	public void 点击账号(String 账号名){
-		WT = new WebDriverTable(asCore,By.xpath("//*[@id='memberadmin']/div[3]/table"));
+//		WT = new WebDriverTable(asCore,By.xpath("//*[@id='memberadmin']/div[3]/table"));
 	}
 
 	public void 点击修改账号(String 账号名){

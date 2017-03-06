@@ -44,14 +44,12 @@ public class 测试任务 extends MteSenseBaseTask {
 
 	public void 快速登录(String 用户名,String 密码){
 		登录(用户名,密码);
-
-
-		asCore.skipClick(By.xpath("//input[@id='btn_quickly']"),2);
-		asCore.click(By.xpath("//input[@id='agree']"),1);
-//		asCore.click(公用.同意按钮());
+		asCore.skipClick(公用.快速进入按钮(),2);
+		asCore.click(公用.同意按钮());
 //		asCore.pause(1500);
-//		asCore.click(公用.右下弹框关闭按钮());
+//		asCore.skipClick(公用.右下弹框关闭按钮(),2);
 //		asCore.pause(1000);
+		asCore.waitClickAbleToClick(公用.右下弹框关闭按钮(),5);
 	}
 
 	public void 写入总表数据(String 文件,String sheet名,String 表名,String 列名,String 值){

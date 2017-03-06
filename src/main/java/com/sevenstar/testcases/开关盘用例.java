@@ -13,6 +13,7 @@ import java.util.Hashtable;
 /**
  * 创建人 Jackson
  * 时间 2017/2/18
+ * 此用例用于测试开盘 关盘
  */
 
 public class 开关盘用例 extends 七星彩基础用例 {
