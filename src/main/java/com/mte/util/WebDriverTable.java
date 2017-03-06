@@ -1,9 +1,7 @@
 package com.mte.util;
 
 import com.mte.base.MteSenseCore;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -11,11 +9,17 @@ import java.util.List;
 public class WebDriverTable {
 
     private By tabBy = null;
-    private WebElement table = null;
-    private List<WebElement> tabRows = null;
-    private List<WebElement> tabCols = null;
-    private List<String> colNames = null;
     private List<WebElement> tables = null;
+    private WebElement table = null;
+
+    private WebElement thead = null;
+    private List<WebElement> tCols = null;
+
+    private WebElement tbody = null;
+    private List<WebElement> tRows = null;
+
+    private List<String> colNames = null;
+
 //    private Logger logger = Logger.getLogger(WebDriverTable.class);
 
     public WebDriverTable(MteSenseCore asCore, By tabFinder) {
@@ -25,17 +29,57 @@ public class WebDriverTable {
             //error
         }
         this.table = tables.get(0);
-        this.tabRows = table.findElements(By.tagName("tbody")).get(0)
+        this.thead = table.findElements(By.tagName("thead")).get(0);
+        if(null == thead){
+            //error
+        }
+        this.tbody = table.findElements(By.tagName("tbody")).get(0);
+        if(null == tbody){
+            //error
+        }
+
+        this.tCols = table.findElements(By.xpath("//thead/tr[2]/td"));
+        if (null == tCols || tCols.size() == 0) {
+            //error
+        }
+
+        this.tRows = table.findElements(By.tagName("tbody")).get(0)
                 .findElements(By.tagName("tr"));
-        if (null == tabRows || tabRows.size() == 0) {
+        if (null == tRows || tRows.size() == 0) {
             //error
         }
-        this.tabCols = table.findElements(By.xpath("//thead/tr[2]/td"));
-        if (null == tabCols || tabCols.size() == 0) {
-            //error
-        }
+
     }
 
+
+    public WebDriverTable(MteSenseCore asCore, By tabFinder,int index) {
+        this.tabBy = tabFinder;
+        this.tables = asCore.findElements(tabBy);
+        if (null == tables || tables.size() == 0) {
+            //error
+        }
+        this.table = tables.get(0);
+        this.thead = table.findElements(By.tagName("thead")).get(0);
+        if(null == thead){
+            //error
+        }
+        this.tbody = table.findElements(By.tagName("tbody")).get(0);
+        if(null == tbody){
+            //error
+        }
+
+        this.tCols = table.findElements(By.xpath("//thead/tr['"+index+"']/td"));
+        if (null == tCols || tCols.size() == 0) {
+            //error
+        }
+
+        this.tRows = table.findElements(By.tagName("tbody")).get(0)
+                .findElements(By.tagName("tr"));
+        if (null == tRows || tRows.size() == 0) {
+            //error
+        }
+
+    }
     /**
      * to get the whole web table element.
      *
@@ -69,7 +113,7 @@ public class WebDriverTable {
      * @return the row count of the table.
      */
     public int rowCount() {
-        return tabRows.size();
+        return tRows.size();
     }
 
     /**
@@ -80,7 +124,7 @@ public class WebDriverTable {
      * @return the column count of the row in table.
      */
     public int colCount(int rowNum) {
-        return tabRows.get(rowNum - 1).findElements(By.xpath("td")).size();
+        return tRows.get(rowNum - 1).findElements(By.xpath("td")).size();
     }
 
 
@@ -102,7 +146,7 @@ public class WebDriverTable {
      * @return the table cell WebElement.
      */
     public WebElement childItem(int row, int col, String type, int index) {
-        List<WebElement> cells = tabRows.get(row - 1).findElements(
+        List<WebElement> cells = tRows.get(row - 1).findElements(
                 By.xpath("td"));
         return (type.contains("cell")) ? cells.get(col - 1) : childsGetter(
                 cells.get(col - 1), type).get(index - 1);

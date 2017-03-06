@@ -33,7 +33,7 @@ public abstract class MteSenseExtent {
             test.log(LogStatus.FAIL, result.getThrowable());
         }
         if(test==null){
-            System.out.println("ASDQQWE");
+            System.out.println("No test for ExtendReport");
         }
         extent.endTest(test);
         extent.flush();

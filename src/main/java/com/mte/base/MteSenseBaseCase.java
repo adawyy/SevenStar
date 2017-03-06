@@ -20,7 +20,6 @@ import org.sikuli.script.Screen;
 public class MteSenseBaseCase extends MteSenseExtent{
 
 
-
     protected WebDriver driver = null;
 
     private MteSense sense = new MteSense();
