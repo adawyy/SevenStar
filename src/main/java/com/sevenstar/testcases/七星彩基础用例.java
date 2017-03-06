@@ -1,17 +1,13 @@
 package com.sevenstar.testcases;
 
-import java.io.File;
-
 import com.sevenstar.data.Datamgr;
-import net.lightbody.bmp.BrowserMobProxy;
-import net.lightbody.bmp.BrowserMobProxyServer;
-
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.sikuli.script.Screen;
-
 import com.mte.base.MteSenseBaseCase;
 import com.mte.util.PropUtil;
+
+/**
+ * 创建人 Jackson
+ * 时间 2017/2/18
+ */
 
 public class 七星彩基础用例 extends MteSenseBaseCase {
 

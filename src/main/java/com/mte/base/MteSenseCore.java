@@ -86,12 +86,17 @@ public class MteSenseCore {
         region = new Region(0,0,width,height);
     }
 
+    /**
+     * 手机端试用
+     */
+
     public Set<String> getContextHandles() {
 
         return ((AppiumDriver) driver).getContextHandles();
     }
 
     /**
+     * Appium Driver
      * @param name String context name
      */
 
@@ -158,12 +163,11 @@ public class MteSenseCore {
      *
      */
 
-
     /**
-     * wait for the specified element appears with timeout setting.
+     * 检查元素是否在一段时间内的页面中出现
      *
-     * @param locator the element locator on the page
-     * @param timeout second
+     * @param locator By.xpath("//$[@id='q']")
+     * @param timeout 5
      */
 
     public boolean isElementPresent(By locator, long timeout) {
@@ -186,6 +190,13 @@ public class MteSenseCore {
 
         return isFine;
     }
+
+    /**
+     * 检查元素是否不在一段时间内的页面中出现
+     *
+     * @param locator By.xpath("//$[@id='q']")
+     * @param timeout 5
+     */
 
     public boolean isElementNotPresent(By locator, long timeout) {
 
@@ -211,10 +222,11 @@ public class MteSenseCore {
 
 
     /**
-     * wait for the specified element appears with timeout setting.
+     * 检查元素是否在马上的页面中出现
      *
-     * @param locator the element locator on the page
+     * @param locator By.xpath("//$[@id='q']")
      */
+
     public boolean isElementPresent(By locator) {
         return isElementPresent(locator, 0);
     }

@@ -10,6 +10,11 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+/**
+ * 创建人 Jackson
+ * 时间 2017/2/18
+ */
+
 public class 开关盘用例 extends 七星彩基础用例 {
 
     //定义任务

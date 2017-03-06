@@ -6,6 +6,11 @@ import com.mte.util.datamgr.GetData;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+/**
+ * 创建人 Jackson
+ * 时间 2017/2/18
+ */
+
 public class Datamgr {
 
 	String ExeclInput;

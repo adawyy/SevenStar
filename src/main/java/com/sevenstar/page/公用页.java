@@ -4,7 +4,11 @@ import com.mte.base.MteSenseBasePage;
 import com.mte.base.MteSenseCore;
 import com.mte.base.MteSenseLocator;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+
+/**
+ * 创建人 Jackson
+ * 时间 2017/2/18
+ */
 
 public class 公用页 extends MteSenseBasePage {
 

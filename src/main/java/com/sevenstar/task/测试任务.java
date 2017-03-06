@@ -10,6 +10,11 @@ import org.openqa.selenium.By;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+/**
+ * 创建人 Jackson
+ * 时间 2017/2/18
+ */
+
 public class 测试任务 extends MteSenseBaseTask {
 
 	private 测试页 公用 = null;

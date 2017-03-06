@@ -5,6 +5,11 @@ import com.mte.base.MteSenseCore;
 import com.mte.base.MteSenseLocator;
 import org.openqa.selenium.By;
 
+/**
+ * 创建人 Jackson
+ * 时间 2017/2/18
+ */
+
 public class 测试页 extends MteSenseBasePage {
 
 	MteSenseLocator locator = new MteSenseLocator("object/测试.yaml");

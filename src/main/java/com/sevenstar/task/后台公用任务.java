@@ -7,6 +7,11 @@ import org.openqa.selenium.By;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+/**
+ * 创建人 Jackson
+ * 时间 2017/2/18
+ */
+
 public class 后台公用任务 extends 公用任务 {
 
 
@@ -20,13 +25,28 @@ public class 后台公用任务 extends 公用任务 {
 		// TODO Auto-generated method stub
 	}
 
+	/**
+	 * 点击后台的总菜单
+	 * @param 选项 总货明细，贡献度，分类账，报表，开奖号码。。。
+	 */
+
 	public void 点击菜单(String 选项){
 		asCore.click(By.xpath("//*[@id='nav']//a/span[text()='"+选项+"']"));
 	}
 
+	/**
+	 * 点击后台的设置页菜单
+	 * @param 选项 基本设置，开盘设置，赔率变动设置，定盘。。。
+	 */
+
 	public void 点击设置菜单(String 选项){
 		asCore.click(By.xpath("//*[@id='guide_setting']/div[2]/a[text()='"+选项+"']"));
 	}
+
+	/**
+	 * 设置后台的定盘数据
+	 * @param ht 详情见ST_1.xls中的赔率设置-定盘信息[口口XX]
+	 */
 
 	public void 设置定盘数据(Hashtable<String,String> ht){
 		String 类别=ht.get("类别");
@@ -49,6 +69,11 @@ public class 后台公用任务 extends 公用任务 {
 		写入总表数据("赔率计算","定盘赔率上限",赔率上限);
 	}
 
+	/**
+	 * 设置后台的分批赔率
+	 * @param al 详情见ST_1.xls中的赔率设置-分批赔率[口口XX]
+	 */
+
 	public void 设置分批数据(ArrayList<Hashtable<String,String>> al){
 		int size = al.size();
 		asCore.pause(1000);
@@ -69,6 +94,11 @@ public class 后台公用任务 extends 公用任务 {
 		asCore.click(By.xpath("//input[@value='确定']"));
 	}
 
+	/**
+	 * 关盘
+	 * @param 关盘密码 输入关盘密码 ccc0000
+	 */
+
 	public void 关盘(String 关盘密码){
 		if(asCore.getText(By.xpath("//*[@id='systime']")).equals("已封盘")){
 			//什么都不做
@@ -85,11 +115,22 @@ public class 后台公用任务 extends 公用任务 {
 		}
 	}
 
+	/**
+	 * 开盘 默认设置当前时间一分钟后开盘
+	 * @param 七位号码 1234567
+	 * @param 开盘密码 ccc0000
+	 */
+
 	//默认设置一分钟后开盘
 	public void 开盘(String 七位号码,String 开盘密码){
 		设置开奖号码(七位号码);
 		开盘设置(开盘密码);
 	}
+
+	/**
+	 * 设置开奖号码，并结账
+	 * @param 七位号码 1234567
+	 */
 
 	public void 设置开奖号码(String 七位号码){
 		点击菜单("开奖号码");
@@ -109,6 +150,11 @@ public class 后台公用任务 extends 公用任务 {
 		asCore.pause(2000);
 		asCore.click(By.xpath("//input[@value='确定']"));
 	}
+
+	/**
+	 * 设置开盘选项
+	 * @param 开盘密码 ccc0000
+	 */
 
 	public void 开盘设置(String 开盘密码){
 		点击菜单("设置");

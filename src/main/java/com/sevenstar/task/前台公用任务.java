@@ -10,6 +10,11 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+/**
+ * 创建人 Jackson
+ * 时间 2017/2/18
+ */
+
 public class 前台公用任务 extends 公用任务 {
 
 	
@@ -18,13 +23,29 @@ public class 前台公用任务 extends 公用任务 {
 		// TODO Auto-generated constructor stub
 	}
 
+
+	/**
+	 * 点击总菜单
+	 * @param 选项 换线路，下注明细，历史账单，会员资料。。。
+	 */
+
 	public void 点击菜单(String 选项){
 		asCore.click(By.xpath("//*[@id='nav']//a/span[text()='"+选项+"']"));
 	}
 
+	/**
+	 * 点击副菜单，选择下注方式
+	 * @param 选项 二字定，快打，快选，赔率变动表。。。
+	 */
+
 	public void 点击副菜单(String 选项){
 		asCore.click(By.xpath("//*[@id='subnav']/a[text()='"+选项+"']"));
 	}
+
+	/**
+	 * 选择录码模式
+	 * @param ht 详情查看ST_1.xls中会员资料-录码模式一
+	 */
 
 	public void 设置录码模式(Hashtable<String,String> ht){
 		String tp1=ht.get("模式一");
@@ -55,6 +76,11 @@ public class 前台公用任务 extends 公用任务 {
 //		asCore.click(By.xpath("//input[@value='确定']"));
 	}
 
+	/**
+	 * 设置所有类别中的交易回水
+	 * @param al 详情查看ST_1.xls中会员资料-赔率设置
+	 */
+
 	public void 设置所有交易回水(ArrayList<Hashtable<String,String>> al){
 		int size = al.size();
 		int i = 0;
@@ -66,6 +92,11 @@ public class 前台公用任务 extends 公用任务 {
 		asCore.click(By.xpath("//input[@value='提交']"));
 		asCore.click(By.xpath("//input[@value='确定']"));
 	}
+
+	/**
+	 * 设置单个类别中的交易回水
+	 * @param al 详情查看ST_1.xls中会员资料-赔率设置
+	 */
 
 	public void 设置交易回水(ArrayList<Hashtable<String,String>> al,String 类别){
 		int size = al.size();
@@ -86,7 +117,13 @@ public class 前台公用任务 extends 公用任务 {
 		asCore.click(By.xpath("//input[@value='提交']"));
 		asCore.click(By.xpath("//input[@value='确定']"));
 	}
-	
+
+	/**
+	 * 快打下注
+	 * @param 下注信息 详情查看ST_1.xls中下注信息-下注场景一
+	 * @param 次数 选择下几次注，不能超过excel中表列数
+	*/
+
 	public void 快打下注(ArrayList<Hashtable<String,String>> 下注信息,int 次数){
 		double finalodds = 0;
 		点击副菜单("快打");

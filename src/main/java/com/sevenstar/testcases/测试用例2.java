@@ -9,6 +9,11 @@ import org.testng.annotations.*;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+/**
+ * 创建人 Jackson
+ * 时间 2017/2/18
+ */
+
 public class 测试用例2 extends 七星彩基础用例 {
 
     //定义任务

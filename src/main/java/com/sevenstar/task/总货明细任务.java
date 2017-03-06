@@ -1,12 +1,9 @@
 package com.sevenstar.task;
 
-import com.mte.base.MteSenseBaseTask;
 import com.mte.base.MteSenseCore;
 import com.mte.util.WebDriverTable;
-import com.mte.util.datamgr.ExcelFile;
 import com.sevenstar.data.Datamgr;
 import com.sevenstar.page.公用页;
-import com.sevenstar.page.测试页;
 import org.openqa.selenium.By;
 
 import java.util.ArrayList;
@@ -17,7 +14,7 @@ import java.util.Hashtable;
  * 时间 2017/2/18
  */
 
-public class 超级操作任务 extends 公用任务 {
+public class 总货明细任务 extends 公用任务 {
 
 	private 公用页 公用 = null;
 
@@ -27,13 +24,20 @@ public class 超级操作任务 extends 公用任务 {
 
 	WebDriverTable WT = null;
 
-	public 超级操作任务(MteSenseCore senseCore) {
+	/**
+	 * 总货明细页面的任务定义
+	 * @param senseCore
+	 * driver
+	 */
+
+	public 总货明细任务(MteSenseCore senseCore) {
 		super(senseCore);
 		公用 = new 公用页(asCore);
 
 		总表.设置数据文件("datapool/ST_汇总.xls");
 		al_赔率计算 = 总表.获取数据("Summary","赔率计算");
 		// TODO Auto-generated constructor stub
+
 	}
 
 
