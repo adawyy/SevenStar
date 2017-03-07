@@ -77,6 +77,24 @@ public class Datamgr {
 		return al;
 	}
 
+	public ArrayList<Hashtable<String,String>> 获取各级设置信息(String 表名){
+		ArrayList<Hashtable<String, String>> al;
+		al = new ArrayList<Hashtable<String, String>>();
+		try {
+			al = GetData.getGroupData(this.ExeclInput, "各级设置", 表名);
+			//		ht = al.get(0);
+			if (al.size() > 0) {
+
+			} else {
+				System.out.println("no Data found from excel!");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return al;
+	}
+
 	public ArrayList<Hashtable<String,String>> 获取下注信息(String 表名){
 		ArrayList<Hashtable<String, String>> al;
 		al = new ArrayList<Hashtable<String, String>>();

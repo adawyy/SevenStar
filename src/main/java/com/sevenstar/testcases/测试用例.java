@@ -59,14 +59,16 @@ public class 测试用例 extends 七星彩基础用例 {
 
         测试.快速登录(ht_登录信息.get("总监"),ht_登录信息.get("总监密码"));
         后台公用任务集.点击菜单("越级操作");
-        WebDriverTable WT = new WebDriverTable(asBaseCore,By.xpath("//*[@id='memberadmin']/div[3]/table"),1);
+//        WebDriverTable WT = new WebDriverTable(asBaseCore,By.xpath("//*[@id='memberadmin']/div[3]/table"),1);
+
 //        System.out.println(WT.获取总记录行数());
 //        System.out.println(WT.获取总列数(2));
-        System.out.println(WT.获取所有列名());
+ //       System.out.println(WT.获取所有列名());
 //        System.out.println(WT.获取列数("信用额度"));
 //        System.out.println(WT.获取单元格值(5,"修改时间"));
 //       System.out.println(WT.获取文字所在行数("AT01(大股东)","账号"));
-        WT.通过条件获取单元格元素("账号","AT01(大股东)","内容").click();
+ //      WT.通过条件获取单元格元素("账号","AT01(大股东)","内容").findElement(By.tagName("a")).click();
+//        WT.通过条件获取单元格元素("账号","AT01(大股东)","内容").click();
         //        后台公用任务集.点击菜单("设置");
 //        后台公用任务集.点击设置菜单("定盘");
 //        后台公用任务集.设置定盘数据(ht_定盘信息);

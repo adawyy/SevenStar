@@ -1,5 +1,6 @@
 package com.mte.util;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.mte.base.MteSenseCore;
@@ -26,43 +27,20 @@ public class WebDriverTable {
     private By tabBy = null;
     private WebElement table = null;
     private List<WebElement> tabRows = null;
+    private WebElement tabRows_thead = null;
+    private WebElement tabRows_thead_tr = null;
     private List<WebElement> tabRows_thead_td = null;
-    private List<WebElement> tabRows_tbody = null;
+    private List<WebElement> tabRows_tbody_tr = null;
     private List<WebElement> tables = null;
     private Logger logger = Logger.getLogger(WebDriverTable.class);
 
     /**
-     * construct with parameters initialize.
      *
-     * @param driver
-     *            the WebDriver instance.
-     * @param tabFinder
-     *            the By locator of the table.
-     * @param tbodyOrtHead
-     *            choice of table body and head to operate.
+     * @param driver asCore
+     * @param tabFinder table的xpath地址  //*[@id='memberadmin']/div[3]/table
+     * @param index 1 or 2  ： 基于列名是在thead第一个tr还是第二个tr
      */
-    public WebDriverTable(MteSenseCore driver, By tabFinder, String tbodyOrtHead) {
-        this.tabBy = tabFinder;
-        this.tables = driver.findElements(tabBy);
-        if (null == tables || tables.size() == 0) {
-            logger.debug("the table " + tabFinder.toString() + "was not found!");
-        }
-        this.table = tables.get(0);
-        this.tabRows = table.findElements(By.tagName(tbodyOrtHead)).get(0)
-                .findElements(By.tagName("tr"));
-        if (null == tabRows || tabRows.size() == 0) {
-            logger.debug("the table " + tabFinder.toString() + "is empty!");
-        }
-    }
 
-    /**
-     * construct with parameters initialize.
-     *
-     * @param driver
-     *            the WebDriver instance.
-     * @param tabFinder
-     *            the By locator of the table.
-     */
     public WebDriverTable(MteSenseCore driver, By tabFinder,int index) {
         this.tabBy = tabFinder;
         this.tables = driver.findElements(tabBy);
@@ -74,9 +52,11 @@ public class WebDriverTable {
         if (null == tabRows || tabRows.size() == 0) {
             logger.debug("the table " + tabFinder.toString() + "is empty!");
         }
-        System.out.println(table.getText());
-        this.tabRows_thead_td = table.findElements(By.xpath("//thead/tr["+index+"]")).get(0).findElements(By.tagName("td"));
-        this.tabRows_tbody = table.findElements(By.tagName("tbody")).get(0).findElements(By.tagName("tr"));
+        this.tabRows_thead = table.findElements(By.tagName("thead")).get(0);
+        this.tabRows_thead_tr = tabRows_thead.findElements(By.tagName("tr")).get(index-1);
+        this.tabRows_thead_td = tabRows_thead_tr.findElements(By.tagName("td"));
+
+        this.tabRows_tbody_tr = table.findElements(By.tagName("tbody")).get(0).findElements(By.tagName("tr"));
 
     }
 
@@ -103,6 +83,7 @@ public class WebDriverTable {
      *
      * @return the first table body element.
      */
+
     public WebElement 获取tbody对象() {
         return this.table.findElements(By.tagName("tbody")).get(0);
     }
@@ -113,7 +94,7 @@ public class WebDriverTable {
      * @return the row count of the table.
      */
     public int 获取总记录行数() {
-        return tabRows_tbody.size();
+        return tabRows_tbody_tr.size();
     }
 
     /**
@@ -133,10 +114,15 @@ public class WebDriverTable {
      */
 
     public List<String> 获取所有列名(){
-        List<String> result = null;
-        System.out.println(table.findElements(By.xpath("//thead/tr[1]")).get(0).getText());
+        List<String> result = new ArrayList<String>();
+  //      System.out.println(table.findElements(By.tagName("thead")).get(0).findElements(By.tagName("tr")).get(0).getText());
+        System.out.println(tabRows_thead_td.size());
+        System.out.println(tabRows_thead_td.get(1).getText());
         for (int i = 0; i < this.tabRows_thead_td.size(); i++) {
-            result.add(tabRows_thead_td.get(i).getText());
+            System.out.println(tabRows_thead_td.get(i).getText());
+            if(tabRows_thead_td.get(i).getText()!=null){
+                result.add(tabRows_thead_td.get(i).getText());
+            }
         }
         return result;
     }
@@ -144,7 +130,7 @@ public class WebDriverTable {
     /**
      * 根据列名获取到表的列的序列
      * @param 列名 单号。。。
-     * @return 列的序列
+     * @return 列的序列 从1开始
      */
 
     public int 获取列数(String 列名){
@@ -175,7 +161,7 @@ public class WebDriverTable {
      */
 
     public List<WebElement> 获取单行所有元素(int 第几行){
-        List<WebElement> row = tabRows_tbody.get(第几行).findElements(By.tagName("<td>"));
+        List<WebElement> row = tabRows_tbody_tr.get(第几行).findElements(By.tagName("<td>"));
         return row;
     }
 
@@ -192,7 +178,7 @@ public class WebDriverTable {
         int 列数 = 获取列数(列名);
 
         for (int i = 1; i < 获取总记录行数(); i++) {
-            row = tabRows_tbody.get(i).findElements(By.tagName("td"));
+            row = tabRows_tbody_tr.get(i).findElements(By.tagName("td"));
  //           System.out.println(row.get(列数).getText());
             if(row.get(列数).getText().equals(文字)){
                 result = i;
@@ -205,7 +191,7 @@ public class WebDriverTable {
      *
      * @param 条件列名 账号
      * @param 条件文字 AT001
-     * @param 目标列名 修改
+     * @param 目标列名 内容
      * @return 目标元素 修改
      */
 
@@ -213,14 +199,17 @@ public class WebDriverTable {
         WebElement result = null;
         List<WebElement> row = null;
         int 条件列数 = 获取列数(条件列名);
+        System.out.println(条件列数);
         int 目标列数 = 获取列数(目标列名);
+        System.out.println(目标列数);
 
-        for (int i = 1; i < 获取总记录行数(); i++) {
-            row = tabRows_tbody.get(i).findElements(By.tagName("td"));
- //           System.out.println(row.get(条件列数).getText());
-            if(row.get(条件列数).getText().equals(条件文字)){
-                System.out.println(目标列数);
-                result = row.get(目标列数);
+        for (int i = 0; i < 获取总记录行数(); i++) {
+            row = tabRows_tbody_tr.get(i).findElements(By.tagName("td"));
+            System.out.println(row.get(条件列数-1).getText());
+            if(row.get(条件列数-1).getText().contains(条件文字)){
+                result = 获取单元格对象(i+2,目标列数,"cell",0);
+                System.out.println(result.getText());
+                break;
             }
         }
         return result;
