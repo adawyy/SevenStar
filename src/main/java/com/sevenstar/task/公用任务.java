@@ -66,6 +66,26 @@ public class 公用任务 extends MteSenseBaseTask {
 //		asCore.pause(1500);
 //		asCore.skipClick(公用.右下弹框关闭按钮(),2);
 //		asCore.pause(1000);
+		asCore.pause(1500);
+		asCore.waitClickAbleToClick(公用.右下弹框关闭按钮(),5);
+	}
+
+	public void 可靠登录(String 用户名,String 原密码, String 新密码, String ExcelFile, String tableName){
+		登录(用户名,原密码);
+		asCore.skipClick(公用.快速进入按钮(),2);
+		asCore.click(公用.同意按钮());
+		asCore.pause(2000);
+		if(asCore.isElementPresent(By.xpath("//*[@id='oldPwd']"))){
+			asCore.sendKeys(By.xpath("//*[@id='oldPwd']"),原密码);
+			asCore.sendKeys(By.xpath("//*[@id='newPwd']"),新密码);
+			asCore.sendKeys(By.xpath("//*[@id='repeatNewPwd']"),新密码);
+			asCore.click(By.xpath("//*[@id='btn-submit']"));
+			//修改密码成功，需要重新登录才生效。
+			asCore.click(By.xpath("//input[@value='确定']"));
+			登录(用户名,原密码);
+			asCore.skipClick(公用.快速进入按钮(),2);
+			asCore.click(公用.同意按钮());
+		}
 		asCore.waitClickAbleToClick(公用.右下弹框关闭按钮(),5);
 	}
 

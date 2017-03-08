@@ -1,5 +1,6 @@
 package com.mte.base;
 
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 import org.testng.asserts.Assertion;
 
@@ -29,20 +30,20 @@ public class MSAssert{
 		MSAssert.test = test;
 	}
 
-	public static void AssertTrue(boolean status,String details){
+	public static void assertTrue(boolean status,String details){
 		if(status == true){
 			getTest().log(LogStatus.PASS, "<B>"+details+"</B>");
 		}else{
-			getTest().log(LogStatus.PASS, "<B>"+details+"</B>");
+			getTest().log(LogStatus.FAIL, "<B>"+details+"</B>");
 		}
-		softAssert.assertTrue(status, details);
+		Assert.assertTrue(status, details);
 	}
 	
 	public static void verifyTrue(boolean status,String details){
 		if(status == true){
 			getTest().log(LogStatus.PASS, "<B>"+details+"</B>");
 		}else{
-			getTest().log(LogStatus.PASS, "<B>"+details+"</B>");
+			getTest().log(LogStatus.FAIL, "<B>"+details+"</B>");
 		}
 		softAssert.assertTrue(status, details);
 	}
@@ -56,6 +57,15 @@ public class MSAssert{
 		softAssert.assertEquals(actual, expected,details);
 	}
 
+	public static void assertEqual(String actual,String expected,String details){
+		if(actual.equals(expected)){
+			getTest().log(LogStatus.PASS, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [实际]:"+actual);
+		}else{
+			getTest().log(LogStatus.FAIL, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [实际]:"+actual);
+		}
+		Assert.assertEquals(actual,expected,details);
+	}
+
 	public static void verifyEqual(Double actual,Double expected,String details){
 		if(actual.equals(expected)){
 			getTest().log(LogStatus.PASS, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [实际]:"+actual);
@@ -63,6 +73,15 @@ public class MSAssert{
 			getTest().log(LogStatus.FAIL, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [实际]:"+actual);
 		}
 		softAssert.assertEquals(actual, expected,details);
+	}
+
+	public static void assertEqual(Double actual,Double expected,String details){
+		if(actual.equals(expected)){
+			getTest().log(LogStatus.PASS, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [实际]:"+actual);
+		}else{
+			getTest().log(LogStatus.FAIL, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [实际]:"+actual);
+		}
+		Assert.assertEquals(actual,expected,details);
 	}
 	
 	public static void verifyContains(String main,String expected,String details){
@@ -78,6 +97,17 @@ public class MSAssert{
 		softAssert.assertTrue(main.contains(expected));
 	}
 
-
+	public static void assertContains(String main,String expected,String details){
+		if(main==null){
+			getTest().log(LogStatus.FAIL, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [全部字符]: Null");
+		}else{
+			if(main.contains(expected)){
+				getTest().log(LogStatus.PASS, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [全部字符]:"+main);
+			}else{
+				getTest().log(LogStatus.FAIL, "<B>"+details+"</B>" + "<br>[期望]:"+expected+" [全部字符]:"+main);
+			}
+		}
+		Assert.assertTrue(main.contains(expected),details);
+	}
 	
 }

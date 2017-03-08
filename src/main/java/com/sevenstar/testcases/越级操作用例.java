@@ -25,7 +25,7 @@ public class 越级操作用例 extends 七星彩基础用例 {
 
     //定义数据集
     ArrayList<Hashtable<String,String>> al_登录信息= null;
-    Hashtable<String,String> ht_登录信息,ht_大股东设置,ht_股东设置,ht_总代理设置,ht_代理设置,ht_用户设置 = null;
+    Hashtable<String,String> ht_登录信息,ht_大股东设置,ht_股东设置,ht_总代理设置,ht_代理设置,ht_会员设置 = null;
 
     private String testCaseName = this.getClass().getSimpleName();
 	
@@ -49,7 +49,7 @@ public class 越级操作用例 extends 七星彩基础用例 {
         ht_股东设置 = 用例表.获取各级设置信息("股东设置").get(0);
         ht_总代理设置 = 用例表.获取各级设置信息("总代理设置").get(0);
         ht_代理设置 = 用例表.获取各级设置信息("代理设置").get(0);
-        ht_用户设置 = 用例表.获取各级设置信息("用户设置").get(0);
+        ht_会员设置 = 用例表.获取各级设置信息("会员设置").get(0);
     }
 
     @Test
@@ -79,11 +79,10 @@ public class 越级操作用例 extends 七星彩基础用例 {
 
         越级操作任务集.点击账号(ht_登录信息.get("代理"),"代理");
         越级操作任务集.点击修改账号(ht_登录信息.get("会员"),"会员");
-        越级操作任务集.修改账号信息(ht_用户设置);
+        越级操作任务集.修改账号信息(ht_会员设置);
         越级操作任务集.点击父账号(ht_登录信息.get("代理"),"代理");
 
     }
-
 
     @AfterClass
     public void tearDown() throws Exception {

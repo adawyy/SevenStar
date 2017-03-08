@@ -180,6 +180,21 @@ public class 后台公用任务 extends 公用任务 {
 	}
 
 
+	public void 设置拦货金额(Hashtable<String,String> ht){
+		String 角色 = ht.get("角色");
+		String 类别 = ht.get("类别");
+		String 拦货金额 = ht.get("拦货金额");
+		String 贡献度 = ht.get("贡献度占成上限");
+		asCore.selectByValue(By.xpath("//select[@name='contribution_rate']"),贡献度);
+		asCore.sendKeys(By.xpath("//tbody[@id='tbody']//td[preceding-sibling::td[text()='"+类别+"']]/input[@_name='hold_money']"),拦货金额);
+		asCore.click(By.xpath("//*[@id='form']//input[@value='提交']"));
+//		"如果庄家先吃满，则不以所设成数来分配，以实际分配到拦货中金额为准，你同意吗？"
+		asCore.click(By.xpath("//input[@value='确定']"));
+		//保存成功!
+		asCore.click(By.xpath("//input[@value='确定']"));
+	}
+
+
 
 	public void 赔率变动设置(Hashtable<String,String> ht){
 
