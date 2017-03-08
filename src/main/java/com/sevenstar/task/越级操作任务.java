@@ -17,7 +17,7 @@ import java.util.Hashtable;
  * 时间 2017/2/18
  */
 
-public class 超级操作任务 extends 公用任务 {
+public class 越级操作任务 extends 公用任务 {
 
 	private 公用页 公用 = null;
 
@@ -27,7 +27,7 @@ public class 超级操作任务 extends 公用任务 {
 
 	WebDriverTable WT = null;
 
-	public 超级操作任务(MteSenseCore senseCore) {
+	public 越级操作任务(MteSenseCore senseCore) {
 		super(senseCore);
 		公用 = new 公用页(asCore);
 
@@ -97,6 +97,11 @@ public class 超级操作任务 extends 公用任务 {
 		asCore.click(By.xpath("//*[@id='btn_search']"));
 	}
 
+	/**
+	 * 修改账号信息
+	 * @param ht 详情查看ST_1.xls 中的各级信息
+	 */
+
 	public void 修改账号信息(Hashtable<String,String> ht){
 		String type = ht.get("类别");
 		asCore.pause(1000);
@@ -114,6 +119,12 @@ public class 超级操作任务 extends 公用任务 {
 			asCore.sendKeys(By.xpath("//input[@name='login_pwd']"),ht.get("密码"));
 		}
 
+		if(ht.get("贡献度占成上限").equals("空")){
+
+		}else{
+			asCore.selectByValue(By.xpath("//select[@name='contribution_max_limit']"),ht.get("贡献度占成上限"));
+		}
+
 		if(ht.get("代号").equals("空")){
 
 		}else{
@@ -128,6 +139,26 @@ public class 超级操作任务 extends 公用任务 {
 
 		asCore.selectByValue(By.xpath("//select[@name='parent_hold_rate']"),ht.get("上级"));
 		asCore.selectByValue(By.xpath("//select[@name='self_hold_rate']"),ht.get("本级"));
+
+		String 上级分成 = String.valueOf(Integer.parseInt(ht.get("上级"))*0.1);
+
+		if(ht.get("角色").equals("大股东")){
+			写入总表数据("分成比例","总监",上级分成);
+		}else if(ht.get("角色").equals("股东")){
+			写入总表数据("分成比例","大股东",上级分成);
+		}else if(ht.get("角色").equals("总代理")){
+			写入总表数据("分成比例","股东",上级分成);
+		}else if(ht.get("角色").equals("代理")){
+			写入总表数据("分成比例","总代理",上级分成);
+		}else if(ht.get("角色").equals("用户")){
+			写入总表数据("分成比例","代理",上级分成);
+		}
+
+		if(ht.get("信用额度").equals("空")){
+
+		}else{
+			asCore.sendKeys(By.xpath("//input[@name='credit']"),ht.get("信用额度"));
+		}
 
 		if(ht.get("单注上限").equals("空")){
 
@@ -145,12 +176,24 @@ public class 超级操作任务 extends 公用任务 {
 
 		}else {
 			asCore.selectByValue(By.xpath("//tbody[@id='tbody']//td[preceding-sibling::td[text()='"+type+"']]/select[@_name='return_water']"),ht.get("福利"));
-		}
+
+			if(ht.get("角色").equals("大股东")){
+				写入总表数据("赚水比例","总监",ht.get("福利"));
+			}else if(ht.get("角色").equals("股东")){
+				写入总表数据("赚水比例","大股东",ht.get("福利"));
+			}else if(ht.get("角色").equals("总代理")){
+				写入总表数据("赚水比例","股东",ht.get("福利"));
+			}else if(ht.get("角色").equals("代理")){
+				写入总表数据("赚水比例","总代理",ht.get("福利"));
+			}else if(ht.get("角色").equals("用户")){
+				写入总表数据("赚水比例","代理",ht.get("福利"));
+			}
+				刷新总表数据();
+			}
 
 		asCore.click(By.xpath("//input[@type='submit' and @value='提交']"));
 		asCore.click(By.xpath("//input[@value='确定']"));
 	}
-
 
 
 	public static void main(String[] args) {
