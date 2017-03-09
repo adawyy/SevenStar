@@ -1,8 +1,10 @@
 package com.sevenstar.task;
 
+import com.mte.base.MteSenseAlert;
 import com.mte.util.datamgr.ExcelFile;
 import com.sevenstar.data.Datamgr;
 import com.sevenstar.page.公用页;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import com.mte.base.MteSenseBaseTask;
 import com.mte.base.MteSenseCore;
@@ -70,7 +72,7 @@ public class 公用任务 extends MteSenseBaseTask {
 		asCore.waitClickAbleToClick(公用.右下弹框关闭按钮(),5);
 	}
 
-	public void 可靠登录(String 用户名,String 原密码, String 新密码, String ExcelFile, String tableName){
+	public void 可靠登录(String 用户名,String 原密码, String 新密码,String 角色, String ExcelFile, String tableName){
 		登录(用户名,原密码);
 		asCore.skipClick(公用.快速进入按钮(),2);
 		asCore.click(公用.同意按钮());
@@ -81,10 +83,17 @@ public class 公用任务 extends MteSenseBaseTask {
 			asCore.sendKeys(By.xpath("//*[@id='repeatNewPwd']"),新密码);
 			asCore.click(By.xpath("//*[@id='btn-submit']"));
 			//修改密码成功，需要重新登录才生效。
-			asCore.click(By.xpath("//input[@value='确定']"));
+//			Alert alert = asCore.switchTo().alert();
+//			MteSenseAlert msa = new MteSenseAlert(alert);
+//			msa.accept();
+			asCore.chooseOKOnAlert(2);
+			写入总表数据(ExcelFile,"登录信息",tableName,角色+"密码",新密码);
+			写入总表数据(ExcelFile,"登录信息",tableName,角色+"新密码",原密码);
 			登录(用户名,原密码);
 			asCore.skipClick(公用.快速进入按钮(),2);
 			asCore.click(公用.同意按钮());
+
+
 		}
 		asCore.waitClickAbleToClick(公用.右下弹框关闭按钮(),5);
 	}
@@ -105,7 +114,6 @@ public class 公用任务 extends MteSenseBaseTask {
 	/**
 	 * 写入到ST_汇总.xls的数据，用于数据计算，文件默认ST_汇总.xls
 	 * @param sheet名 Summary
-	 * @param 文件 ST_汇总.xls
 	 * @param 表名 分批赔率
 	 * @param 列名 开始金额
 	 * @param 值 1000

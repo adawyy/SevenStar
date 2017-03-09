@@ -56,22 +56,22 @@ public class 拦货金额用例 extends 七星彩基础用例 {
 
     @Test(groups = {"Demo"})
     public void 拦货金额方法() throws Exception {
-        公用.可靠登录(ht_登录信息.get("大股东"),ht_登录信息.get("大股东密码"),ht_登录信息.get("大股东新密码"),excelFile,tableName);
+        公用.可靠登录(ht_登录信息.get("大股东"),ht_登录信息.get("大股东密码"),ht_登录信息.get("大股东新密码"),"大股东",excelFile,tableName);
         后台公用任务集.点击菜单("设置");
         后台公用任务集.设置拦货金额(ht_大股东拦货金额);
 
         公用.跳转页(后台地址);
-        公用.可靠登录(ht_登录信息.get("股东"),ht_登录信息.get("股东密码"),ht_登录信息.get("股东新密码"),excelFile,tableName);
+        公用.可靠登录(ht_登录信息.get("股东"),ht_登录信息.get("股东密码"),ht_登录信息.get("股东新密码"),"股东",excelFile,tableName);
         后台公用任务集.点击菜单("设置");
         后台公用任务集.设置拦货金额(ht_股东拦货金额);
 
         公用.跳转页(后台地址);
-        公用.可靠登录(ht_登录信息.get("总代理"),ht_登录信息.get("总代理密码"),ht_登录信息.get("总代理新密码"),excelFile,tableName);
+        公用.可靠登录(ht_登录信息.get("总代理"),ht_登录信息.get("总代理密码"),ht_登录信息.get("总代理新密码"),"总代理",excelFile,tableName);
         后台公用任务集.点击菜单("设置");
         后台公用任务集.设置拦货金额(ht_总代理拦货金额);
 
         公用.跳转页(后台地址);
-        公用.可靠登录(ht_登录信息.get("代理"),ht_登录信息.get("代理密码"),ht_登录信息.get("代理新密码"),excelFile,tableName);
+        公用.可靠登录(ht_登录信息.get("代理"),ht_登录信息.get("代理密码"),ht_登录信息.get("代理新密码"),"代理",excelFile,tableName);
         后台公用任务集.点击菜单("设置");
         后台公用任务集.设置拦货金额(ht_代理拦货金额);
     }
