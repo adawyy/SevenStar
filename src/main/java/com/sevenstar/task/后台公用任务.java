@@ -70,28 +70,80 @@ public class 后台公用任务 extends 公用任务 {
 	}
 
 	/**
+	 * 根据类别点击分批赔率
+	 * @param 类别 口口XX
+	 */
+
+	public void 点击分批赔率(String 类别){
+		asCore.click(By.xpath("//td[preceding-sibling::td[text()='"+类别+"']]/a[2]"));
+	}
+
+	/**
+	 * 删除所有分批数据
+	 */
+	public void 删除所有分批数据(){
+		asCore.click(By.xpath("//*[@id='selectAll']"));
+		asCore.click(By.xpath("//input[@value='删除']"));
+		asCore.click(By.xpath("//input[@value='确定']"));
+		//操作成功!
+		asCore.click(By.xpath("//input[@value='确定']"));
+		asCore.pause(500);
+		asCore.click(By.xpath("//input[@value='新增分批']"));
+	}
+
+	/**
+	 * 新增分批赔率
+	 * @param 批次 10
+	 * @param 第一批金额 1000
+	 * @param 循环递增 500
+	 */
+
+	public void 新增分批赔率(String 批次,String 第一批金额,String 循环递增){
+		//设置10批
+		asCore.sendKeys(By.xpath("//input[@name='batch_count']"),批次);
+		//设置第一批截止金额放
+		asCore.sendKeys(By.xpath("//input[@name='first_batch_end_money']"),第一批金额);
+		//设置下批截止金额循环递增
+		asCore.sendKeys(By.xpath("//input[@name='increment_money']"),循环递增);
+
+		asCore.click(By.xpath("//input[@value='提交']"));
+		//保存成功
+		asCore.click(By.xpath("//input[@value='确定']"));
+	}
+
+	/**
 	 * 设置后台的分批赔率
 	 * @param al 详情见ST_1.xls中的赔率设置-分批赔率[口口XX]
 	 */
 
 	public void 设置分批数据(ArrayList<Hashtable<String,String>> al){
 		int size = al.size();
+		String 类别 = al.get(0).get("类别");
 		asCore.pause(1000);
-		asCore.click(By.xpath("//*[@id='1']/td[8]/a[2]"));
+//		asCore.click(By.xpath("//td[preceding-sibling::td[text()='"+类别+"']]/a[2]"));
+		asCore.click(By.xpath("//*[@id='selectAll']"));
+		asCore.pause(500);
 		asCore.click(By.xpath("//*[@id='selectAll']"));
 		int i=0;
 		while(i<size){
-			if(!(i==size-1)){
-				asCore.sendKeys(By.xpath("//input[@name='end_money"+i+"']"),al.get(i).get("截止金额"));
+			if(al.get(i).get("是否放出").equals("是")){
+				asCore.click(By.xpath("//input[@name='is_use"+i+"']"));
 			}
+
+			asCore.sendKeys(By.xpath("//input[@name='end_money"+i+"']"),al.get(i).get("截止金额"));
+
 			asCore.sendKeys(By.xpath("//input[@name='odds_limit"+i+"']"),al.get(i).get("赔率上限"));
-			if(i==0){
-				写入总表数据("赔率计算","总监赔率",al.get(i).get("赔率上限"));
-			}
+//			if(i==0){
+//				写入总表数据("赔率计算","总监赔率",al.get(i).get("赔率上限"));
+//			}
+			写入总表行数据("分批赔率","是否放出",al.get(i).get("是否放出"),String.valueOf(i+1));
+			写入总表行数据("分批赔率","截止金额",al.get(i).get("截止金额"),String.valueOf(i+1));
+			写入总表行数据("分批赔率","赔率上限",al.get(i).get("赔率上限"),String.valueOf(i+1));
 			i++;
 		}
 		asCore.click(By.xpath("//input[@value='编辑']"));
 		asCore.click(By.xpath("//input[@value='确定']"));
+		刷新总表数据();
 	}
 
 	/**
@@ -179,6 +231,10 @@ public class 后台公用任务 extends 公用任务 {
 		asCore.click(By.xpath("//input[@value='确定']"));
 	}
 
+	/**
+	 * 设置各级的拦货金额
+	 * @param ht 设置summary表中的具体拦货金额数据 方便计算
+	 */
 
 	public void 设置拦货金额(Hashtable<String,String> ht){
 		String 角色 = ht.get("角色");
@@ -192,6 +248,8 @@ public class 后台公用任务 extends 公用任务 {
 		asCore.click(By.xpath("//input[@value='确定']"));
 		//保存成功!
 		asCore.click(By.xpath("//input[@value='确定']"));
+		写入总表数据("拦货金额上限",角色,拦货金额);
+		刷新总表数据();
 	}
 
 

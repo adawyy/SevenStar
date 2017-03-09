@@ -89,13 +89,27 @@ public class 公用任务 extends MteSenseBaseTask {
 			asCore.chooseOKOnAlert(2);
 			写入总表数据(ExcelFile,"登录信息",tableName,角色+"密码",新密码);
 			写入总表数据(ExcelFile,"登录信息",tableName,角色+"新密码",原密码);
-			登录(用户名,原密码);
+			登录(用户名,新密码);
 			asCore.skipClick(公用.快速进入按钮(),2);
 			asCore.click(公用.同意按钮());
 
 
 		}
 		asCore.waitClickAbleToClick(公用.右下弹框关闭按钮(),5);
+	}
+
+	/**
+	 * 写入到总表的数据，用于数据计算
+	 * @param 文件 ST_汇总.xls
+	 * @param sheet名 Summary
+	 * @param 表名 分批赔率
+	 * @param 列名 开始金额
+	 * @param 值 1000
+	 * @param 行数 1
+	 */
+
+	public void 写入总表数据(String 文件,String sheet名,String 表名,String 列名,String 值,String 行数){
+		ExcelFile.writeExcel(文件,sheet名,表名,列名,值,行数);
 	}
 
 	/**
@@ -132,6 +146,18 @@ public class 公用任务 extends MteSenseBaseTask {
 
 	public void 写入总表数据(String 表名,String 列名,String 值){
 		写入总表数据("Summary",表名,列名,值);
+	}
+
+	/**
+	 * 写入到ST_汇总.xls的数据，用于数据计算，文件默认ST_汇总.xls，sheet默认Summary
+	 * @param 表名 分批赔率
+	 * @param 列名 开始金额
+	 * @param 值 1000
+	 * @param 行数 2
+	 */
+
+	public void 写入总表行数据(String 表名,String 列名,String 值,String 行数){
+		写入总表数据("./datapool/ST_汇总.xls","Summary",表名,列名,值,行数);
 	}
 
 	/**
