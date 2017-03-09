@@ -55,18 +55,25 @@ public class 后台公用任务 extends 公用任务 {
 		String 单注上限=ht.get("单注上限");
 		String 单项上限=ht.get("单项上限");
 		String 赔率下限=ht.get("赔率下限");
-		String 排序=ht.get("排序");
 
-		asCore.sendKeys(By.xpath("//*[@id='1']/td[2]/input[3]"),最小下注);
-		asCore.sendKeys(By.xpath("//*[@id='1']/td[3]/input"),赔率上限);
-		asCore.sendKeys(By.xpath("//*[@id='1']/td[4]/input"),单注上限);
-		asCore.sendKeys(By.xpath("//*[@id='1']/td[5]/input"),单项上限);
-		asCore.sendKeys(By.xpath("//*[@id='1']/td[6]/input"),赔率下限);
+		asCore.sendKeys(By.xpath("//td[preceding-sibling::td[text()='"+类别+"']]/input[@_name='min_bet']"),最小下注);
+		asCore.sendKeys(By.xpath("//td[preceding-sibling::td[text()='"+类别+"']]/input[@_name='odds_max_limit']"),赔率上限);
+		asCore.sendKeys(By.xpath("//td[preceding-sibling::td[text()='"+类别+"']]/input[@_name='one_bet_limit']"),单注上限);
+		asCore.sendKeys(By.xpath("//td[preceding-sibling::td[text()='"+类别+"']]/input[@_name='one_item_limit']"),单项上限);
+		asCore.sendKeys(By.xpath("//td[preceding-sibling::td[text()='"+类别+"']]/input[@_name='odds_min_limit']"),赔率下限);
 
 		//点提交
+//		asCore.click(By.xpath("//input[@value='提交' and @type='submit']"));
 		asCore.click(By.xpath("//*[@id='st_handicap']/div[3]/form/div[2]/input"));
 		asCore.click(By.xpath("//input[@type='button' and @value='确定']"));
 		写入总表数据("赔率计算","定盘赔率上限",赔率上限);
+
+		写入总表数据("定盘信息","类别",类别);
+		写入总表数据("定盘信息","最小下注",最小下注);
+		写入总表数据("定盘信息","赔率上限",赔率上限);
+		写入总表数据("定盘信息","单注上限",单注上限);
+		写入总表数据("定盘信息","赔率下限",赔率下限);
+
 	}
 
 	/**

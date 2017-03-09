@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ed9d953-dc91-462d-a225-7c4bef380e17" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/分批赔率用例.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/报表任务.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datapool/ST_汇总 - 副本.xls" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datapool/ST_1.xls" afterPath="$PROJECT_DIR$/datapool/ST_1.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datapool/ST_汇总.xls" afterPath="$PROJECT_DIR$/datapool/ST_汇总.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/task/公用任务.class" afterPath="$PROJECT_DIR$/target/classes/com/sevenstar/task/公用任务.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/task/后台公用任务.class" afterPath="$PROJECT_DIR$/target/classes/com/sevenstar/task/后台公用任务.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/testcases/分批赔率用例.class" afterPath="$PROJECT_DIR$/target/classes/com/sevenstar/testcases/分批赔率用例.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sevenstar/testcases/示例用例.class" afterPath="$PROJECT_DIR$/target/classes/com/sevenstar/testcases/示例用例.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ExtentReport.html" afterPath="$PROJECT_DIR$/report/ExtentReport.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/公用任务.java" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/公用任务.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java" afterPath="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,7 +52,7 @@
       <file leaf-file-name="越级操作用例.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/越级操作用例.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="679">
+            <state relative-caret-position="541">
               <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
               <folding />
             </state>
@@ -60,8 +62,8 @@
       <file leaf-file-name="开关盘用例.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/开关盘用例.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="792">
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,8 +72,8 @@
       <file leaf-file-name="拦货金额用例.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/拦货金额用例.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1205">
-              <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state relative-caret-position="113">
+              <caret line="56" column="28" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -80,44 +82,38 @@
       <file leaf-file-name="七星彩基础用例.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/七星彩基础用例.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
+            <state relative-caret-position="378">
               <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="公用任务.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/公用任务.java">
+      <file leaf-file-name="示例用例.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-              <folding>
-                <element signature="e#3330#3331#0" expanded="true" />
-                <element signature="e#3362#3363#0" expanded="true" />
-                <element signature="e#3564#3565#0" expanded="true" />
-                <element signature="e#3622#3623#0" expanded="true" />
-                <marker date="1489045375775" expanded="false" signature="71:306" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExcelFile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/ExcelFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="1224" column="23" lean-forward="false" selection-start-line="1224" selection-start-column="23" selection-end-line="1224" selection-end-column="23" />
+            <state relative-caret-position="-182">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="示例用例.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java">
+      <file leaf-file-name="前台公用任务.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/前台公用任务.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="24" column="65" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="65" />
+            <state relative-caret-position="203">
+              <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="报表任务.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/报表任务.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -126,38 +122,35 @@
       <file leaf-file-name="后台公用任务.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="142">
+              <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
               <folding>
                 <element signature="method#后台公用任务#0;class#后台公用任务#0" expanded="false" />
-                <element signature="method#设置定盘数据#0;class#后台公用任务#0" expanded="false" />
-                <element signature="e#1698#1699#0" expanded="true" />
-                <element signature="e#1780#1781#0" expanded="true" />
                 <element signature="method#关盘#0;class#后台公用任务#0" expanded="false" />
                 <element signature="method#开盘#0;class#后台公用任务#0" expanded="false" />
                 <element signature="method#设置开奖号码#0;class#后台公用任务#0" expanded="false" />
                 <element signature="method#开盘设置#0;class#后台公用任务#0" expanded="false" />
-                <marker date="1489046450999" expanded="true" signature="321:369" ph="{...}" />
+                <marker date="1489048819355" expanded="true" signature="321:369" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="分批赔率用例.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/分批赔率用例.java">
+      <file leaf-file-name="总货明细任务.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/总货明细任务.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="370">
+              <caret line="44" column="2" lean-forward="false" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="测试用例.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/测试用例.java">
+      <file leaf-file-name="分批赔率用例.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/分批赔率用例.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+            <state relative-caret-position="306">
+              <caret line="52" column="28" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -200,7 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/data/前台登录页.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/data/数据管理.java" />
         <option value="$PROJECT_DIR$/object/公共-后台.yaml" />
@@ -230,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/page/测试页.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/七星彩基础用例.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/测试用例2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/task/前台公用任务.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseCore.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/开关盘用例.java" />
@@ -249,8 +240,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/越级操作用例.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/拦货金额用例.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/task/公用任务.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/分批赔率用例.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/task/报表任务.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java" />
       </list>
     </option>
   </component>
@@ -457,7 +450,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -737,6 +729,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -750,16 +743,6 @@
     <property name="last_opened_file_path" value="C:/apache-tomcat-8.5.11/webapps/realservice" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.sevenstar.testcases" />
-      <recent name="com.sevenstar.task" />
-      <recent name="com.sevenstar.page" />
-      <recent name="com.sevenstar.data" />
-      <recent name="com.mte.util" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar\object" />
       <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar\driver" />
@@ -767,41 +750,18 @@
       <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar\src\main\java\com\sevenstar\task" />
       <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar\src\main\java\com\sevenstar\page" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sevenstar.task" />
+      <recent name="com.sevenstar.testcases" />
+      <recent name="com.sevenstar.page" />
+      <recent name="com.sevenstar.data" />
+      <recent name="com.mte.util" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell\Desktop\IdeaProjects\SevenStar" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.开关盘用例.关开盘方法">
-    <configuration default="false" name="越级操作用例.超级操作测试" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.sevenstar.testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="SevenStar" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="com.sevenstar.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.越级操作用例" />
-      <option name="METHOD_NAME" value="超级操作测试" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="TestNG.示例用例.示例方法">
     <configuration default="false" name="拦货金额用例.关开盘方法" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -915,6 +875,39 @@
       <option name="PACKAGE_NAME" value="com.sevenstar.testcases" />
       <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.开关盘用例" />
       <option name="METHOD_NAME" value="关开盘方法" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="示例用例.示例方法" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sevenstar.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="SevenStar" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.sevenstar.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.sevenstar.testcases.示例用例" />
+      <option name="METHOD_NAME" value="示例方法" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1337,19 +1330,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.越级操作用例.超级操作测试" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.拦货金额用例.关开盘方法" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.拦货金额用例.拦货金额方法" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.分批赔率用例.分批赔率方法" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.开关盘用例.关开盘方法" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.拦货金额用例.关开盘方法" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.拦货金额用例.拦货金额方法" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.分批赔率用例.分批赔率方法" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.开关盘用例.关开盘方法" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.示例用例.示例方法" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.开关盘用例.关开盘方法" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.分批赔率用例.分批赔率方法" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.拦货金额用例.拦货金额方法" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.拦货金额用例.关开盘方法" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.越级操作用例.超级操作测试" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.示例用例.示例方法" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.开关盘用例.关开盘方法" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.分批赔率用例.分批赔率方法" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.拦货金额用例.拦货金额方法" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.拦货金额用例.关开盘方法" />
       </list>
     </recent_temporary>
   </component>
@@ -1413,25 +1406,11 @@
       <workItem from="1488966602037" duration="10000" />
       <workItem from="1489021979786" duration="1410000" />
       <workItem from="1489023590599" duration="15435000" />
+      <workItem from="1489047306438" duration="2211000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="分批赔率用例_分批赔率方法 - 2017.03.09 at 15h 06m 48s.xml">
-      <configuration name="分批赔率用例.分批赔率方法" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="分批赔率用例_分批赔率方法 - 2017.03.09 at 15h 07m 45s.xml">
-      <configuration name="分批赔率用例.分批赔率方法" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="分批赔率用例_分批赔率方法 - 2017.03.09 at 15h 16m 51s.xml">
-      <configuration name="分批赔率用例.分批赔率方法" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="分批赔率用例_分批赔率方法 - 2017.03.09 at 15h 19m 15s.xml">
-      <configuration name="分批赔率用例.分批赔率方法" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="分批赔率用例_分批赔率方法 - 2017.03.09 at 15h 24m 51s.xml">
-      <configuration name="分批赔率用例.分批赔率方法" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="分批赔率用例_分批赔率方法 - 2017.03.09 at 15h 47m 28s.xml">
       <configuration name="分批赔率用例.分批赔率方法" configurationId="TestNG" />
     </history-entry>
@@ -1447,9 +1426,24 @@
     <history-entry file="拦货金额用例_拦货金额方法 - 2017.03.09 at 11h 37m 33s.xml">
       <configuration name="拦货金额用例.拦货金额方法" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="示例用例_示例方法 - 2017.03.09 at 16h 37m 23s.xml">
+      <configuration name="示例用例.示例方法" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="示例用例_示例方法 - 2017.03.09 at 16h 39m 10s.xml">
+      <configuration name="示例用例.示例方法" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="示例用例_示例方法 - 2017.03.09 at 16h 40m 44s.xml">
+      <configuration name="示例用例.示例方法" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="示例用例_示例方法 - 2017.03.09 at 16h 41m 09s.xml">
+      <configuration name="示例用例.示例方法" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="示例用例_示例方法 - 2017.03.09 at 16h 42m 54s.xml">
+      <configuration name="示例用例.示例方法" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263011000" />
+    <option name="totallyTimeSpent" value="265222000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1515,13 +1509,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/ExtentManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseAssistant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -1697,22 +1684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/前台公用任务.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="36" column="19" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="73" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/总货明细任务.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="44" column="2" lean-forward="false" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/测试任务.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -1747,7 +1718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1771,7 +1741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-72">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1817,23 +1786,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/测试用例.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
+        <state relative-caret-position="1314">
           <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="24" column="65" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/util/datamgr/ExcelFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
+        <state relative-caret-position="21600">
           <caret line="1224" column="23" lean-forward="false" selection-start-line="1224" selection-start-column="23" selection-end-line="1224" selection-end-column="23" />
           <folding />
         </state>
@@ -1841,8 +1802,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/公用任务.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        <state relative-caret-position="2538">
+          <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
           <folding>
             <element signature="e#3330#3331#0" expanded="true" />
             <element signature="e#3362#3363#0" expanded="true" />
@@ -1855,58 +1816,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/七星彩基础用例.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
+        <state relative-caret-position="378">
           <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/拦货金额用例.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1205">
-          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/开关盘用例.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="792">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <element signature="method#后台公用任务#0;class#后台公用任务#0" expanded="false" />
-            <element signature="method#设置定盘数据#0;class#后台公用任务#0" expanded="false" />
-            <element signature="e#1698#1699#0" expanded="true" />
-            <element signature="e#1780#1781#0" expanded="true" />
-            <element signature="method#关盘#0;class#后台公用任务#0" expanded="false" />
-            <element signature="method#开盘#0;class#后台公用任务#0" expanded="false" />
-            <element signature="method#设置开奖号码#0;class#后台公用任务#0" expanded="false" />
-            <element signature="method#开盘设置#0;class#后台公用任务#0" expanded="false" />
-            <marker date="1489046450999" expanded="true" signature="321:369" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/越级操作用例.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
+        <state relative-caret-position="541">
           <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/拦货金额用例.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="56" column="28" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/分批赔率用例.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="52" column="28" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/总货明细任务.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="44" column="2" lean-forward="false" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/报表任务.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/前台公用任务.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/task/后台公用任务.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+          <folding>
+            <element signature="method#后台公用任务#0;class#后台公用任务#0" expanded="false" />
+            <element signature="method#关盘#0;class#后台公用任务#0" expanded="false" />
+            <element signature="method#开盘#0;class#后台公用任务#0" expanded="false" />
+            <element signature="method#设置开奖号码#0;class#后台公用任务#0" expanded="false" />
+            <element signature="method#开盘设置#0;class#后台公用任务#0" expanded="false" />
+            <marker date="1489048819355" expanded="true" signature="321:369" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/示例用例.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
