@@ -52,6 +52,8 @@ public class 前台公用任务 extends 公用任务 {
 		String tp2=ht.get("模式二");
 		String tp3=ht.get("模式三");
 
+		System.out.println(tp1+tp2+tp3);
+
 		if(tp1.equals("自动")){
 			asCore.click(By.xpath("//input[@name='input_mode' and @value='0']"));
 		}else{
