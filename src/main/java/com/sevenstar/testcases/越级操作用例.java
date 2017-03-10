@@ -31,6 +31,7 @@ public class 越级操作用例 extends 七星彩基础用例 {
 	
 	@BeforeClass
     public void setUp() throws Exception {
+
 	    //用例初始化
         beforeClass();
         test = getExtent().startTest(testCaseName, "超级操作用例的描述");
@@ -81,7 +82,6 @@ public class 越级操作用例 extends 七星彩基础用例 {
         越级操作任务集.点击修改账号(ht_登录信息.get("会员"),"会员");
         越级操作任务集.修改账号信息(ht_会员设置);
         越级操作任务集.点击父账号(ht_登录信息.get("代理"),"代理");
-
     }
 
     @AfterClass

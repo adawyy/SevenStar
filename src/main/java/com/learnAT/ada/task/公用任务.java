@@ -1,13 +1,11 @@
-package com.sevenstar.task;
+package com.learnAT.ada.task;
 
-import com.mte.base.MteSenseAlert;
+import com.mte.base.MteSenseBaseTask;
+import com.mte.base.MteSenseCore;
 import com.mte.util.datamgr.ExcelFile;
 import com.sevenstar.data.Datamgr;
 import com.sevenstar.page.公用页;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import com.mte.base.MteSenseBaseTask;
-import com.mte.base.MteSenseCore;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
