@@ -103,15 +103,13 @@ public class 前台公用任务 extends 公用任务 {
 		int i = 0;
 		while(i<size){
 			if(al.get(i).get("类别").equals(类别)){
-//				System.out.println("循环设置交易回水"+i);
-				asCore.selectByValue(By.xpath("//*[@id='1']"),al.get(i).get("交易回水"));
+				asCore.selectByValue(By.xpath("//td[preceding-sibling::td[text()='"+类别+"']]/select[@_name='return_water']"),al.get(i).get("交易回水"));
 				写入总表数据("赔率计算","会员静态回水",al.get(i).get("交易回水"));
-//				asCore.selectByValue(By.xpath("//*[@id='tbody']/tr[2]/td[8]/select"),al.get(i).get("赔率"));
 			}
 			i++;
 		}
 		asCore.pause(500);
-		String 会员静态赔率 = asCore.getSelectedText(By.xpath("//*[@id='tbody']/tr[2]/td[8]/select"));
+		String 会员静态赔率 = asCore.getSelectedText(By.xpath("//td[preceding-sibling::td[text()='"+类别+"']]/select[@_name='odds_limit']"));
 		写入总表数据("赔率计算","会员静态赔率",会员静态赔率);
 		刷新总表数据();
 		asCore.click(By.xpath("//input[@value='提交']"));
@@ -137,11 +135,33 @@ public class 前台公用任务 extends 公用任务 {
 			asCore.clear(By.xpath("//*[@id='betno']"));
 			asCore.clear(By.xpath("//*[@id='betmoney']"));
 			asCore.pause(500);
-			System.out.println("用户最终赔率为:"+finalodds);
-			System.out.println("预计用户最终赔率为:"+al_赔率计算.get(0).get("会员最终赔率"));
-			MSAssert.verifyEqual(String.valueOf(finalodds),al_赔率计算.get(0).get("会员最终赔率"),"验证最终赔率是否正确");
+			验证最终赔率(String.valueOf(finalodds));
 			i++;
 		}
+	}
+
+	/**
+	 * 验证赔率上限
+	 * 将summary表中的代理赔率和会员资料中的上限赔率比较
+	 */
+	public void 验证赔率上限(String 类别){
+		刷新总表数据();
+		al_单次赔率 = 总表.获取数据("Summary","单次赔率");
+		asCore.pause(200);
+		String 代理单次赔率 = al_单次赔率.get(0).get("代理");
+		String 赔率上限 = asCore.getText(By.xpath("//td[preceding-sibling::td[text()='"+类别+"']][2]"));
+		MSAssert.verifyEqual(String.valueOf(赔率上限),代理单次赔率,"验证单次赔率上限是否和Excel中的计算一致");
+	}
+
+	/**
+	 * 验证最终赔率
+	 * @param 实际最终赔率 80
+	 */
+
+	public void 验证最终赔率(String 实际最终赔率){
+		刷新总表数据();
+		al_赔率计算 = 总表.获取数据("Summary","赔率计算");
+		MSAssert.verifyEqual(实际最终赔率,al_赔率计算.get(0).get("会员最终赔率"),"验证最终赔率是否正确");
 	}
 
 	public static void main(String[] args) {

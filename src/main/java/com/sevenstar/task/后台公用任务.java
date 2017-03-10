@@ -31,6 +31,7 @@ public class 后台公用任务 extends 公用任务 {
 	 */
 
 	public void 点击菜单(String 选项){
+		asCore.pause(500);
 		asCore.click(By.xpath("//*[@id='nav']//a/span[text()='"+选项+"']"));
 	}
 
@@ -40,6 +41,7 @@ public class 后台公用任务 extends 公用任务 {
 	 */
 
 	public void 点击设置菜单(String 选项){
+		asCore.pause(500);
 		asCore.click(By.xpath("//*[@id='guide_setting']/div[2]/a[text()='"+选项+"']"));
 	}
 
@@ -230,7 +232,7 @@ public class 后台公用任务 extends 公用任务 {
 		//等待开盘页面出现
 		asCore.pause(4000);
 		//开盘
-		asCore.sendKeys(By.xpath("//input[@name='open_datetime']"), DateTimeUtil.addMinutesByFormatter(1,"yyyy-MM-dd HH:mm:ss"));
+		asCore.sendKeys(By.xpath("//input[@name='open_datetime']"), DateTimeUtil.addSecondsByFormatter(10,"yyyy-MM-dd HH:mm:ss"));
 		asCore.sendKeys(By.xpath("//input[@name='close_datetime']"), DateTimeUtil.addDaysByFormatter(1,"yyyy-MM-dd HH:mm:ss"));
 		asCore.click(By.xpath("//input[@name='is_open']"));
 		asCore.sendKeys(By.xpath("//*[@id='bd_serverinfo']/table/tbody/tr/td[9]/input"),开盘密码);

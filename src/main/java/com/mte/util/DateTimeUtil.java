@@ -72,6 +72,20 @@ public class DateTimeUtil {
      * @param minute       days after or before current date, use + and - to add.
      * @param dateFormat the formatter of date, such as:yyyy-MM-dd HH:mm:ss:SSS.
      */
+    public static String addSecondsByFormatter(int second, String dateFormat) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date());
+        cal.add(Calendar.SECOND, second);
+        SimpleDateFormat formatter = new SimpleDateFormat(dateFormat);
+        return formatter.format(cal.getTime());
+    }
+
+    /**
+     * get specified time string in specified date format.
+     *
+     * @param minute       days after or before current date, use + and - to add.
+     * @param dateFormat the formatter of date, such as:yyyy-MM-dd HH:mm:ss:SSS.
+     */
     public static String addMinutesByFormatter(int minute, String dateFormat) {
         Calendar cal = Calendar.getInstance();
         cal.setTime(new Date());

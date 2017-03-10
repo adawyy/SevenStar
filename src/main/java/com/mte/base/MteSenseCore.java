@@ -647,6 +647,7 @@ public class MteSenseCore {
         try {
             if (isElementPresent(by, timeout)) {
                 driver.findElement(by).click();
+                test.log(LogStatus.INFO,"点击"+by.toString());
                 isSucceed = true;
             }
         } catch (Exception e) {

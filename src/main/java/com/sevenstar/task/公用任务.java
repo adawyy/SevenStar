@@ -23,14 +23,14 @@ public class 公用任务 extends MteSenseBaseTask {
 
 	Datamgr 总表 = new Datamgr();
 
-	ArrayList<Hashtable<String,String>> al_赔率计算 = null;
+	ArrayList<Hashtable<String,String>> al_赔率计算,al_单次赔率 = null;
 
 	public 公用任务(MteSenseCore senseCore) {
 		super(senseCore);
 		公用 = new 公用页(asCore);
 
 		总表.设置数据文件("datapool/ST_汇总.xls");
-		al_赔率计算 = 总表.获取数据("Summary","赔率计算");
+
 		// TODO Auto-generated constructor stub
 	}
 
@@ -95,6 +95,10 @@ public class 公用任务 extends MteSenseBaseTask {
 
 		}
 		asCore.waitClickAbleToClick(公用.右下弹框关闭按钮(),5);
+	}
+
+	public void 等待开盘(int 秒){
+		asCore.pause(秒*1000);
 	}
 
 	/**
