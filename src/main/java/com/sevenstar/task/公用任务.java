@@ -23,7 +23,7 @@ public class 公用任务 extends MteSenseBaseTask {
 
 	Datamgr 总表 = new Datamgr();
 
-	ArrayList<Hashtable<String,String>> al_赔率计算,al_单次赔率 = null;
+	ArrayList<Hashtable<String,String>> al_赔率计算,al_单次赔率,al_下注信息 = null;
 
 	public 公用任务(MteSenseCore senseCore) {
 		super(senseCore);
@@ -68,7 +68,7 @@ public class 公用任务 extends MteSenseBaseTask {
 //		asCore.pause(1500);
 //		asCore.skipClick(公用.右下弹框关闭按钮(),2);
 //		asCore.pause(1000);
-		asCore.pause(1500);
+		asCore.pause(2000);
 		asCore.waitClickAbleToClick(公用.右下弹框关闭按钮(),5);
 	}
 

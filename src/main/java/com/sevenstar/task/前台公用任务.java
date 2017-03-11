@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.IntSummaryStatistics;
 
 /**
  * 创建人 Jackson
@@ -52,7 +53,7 @@ public class 前台公用任务 extends 公用任务 {
 		String tp2=ht.get("模式二");
 		String tp3=ht.get("模式三");
 
-		System.out.println(tp1+tp2+tp3);
+//		System.out.println(tp1+tp2+tp3);
 
 		if(tp1.equals("自动")){
 			asCore.click(By.xpath("//input[@name='input_mode' and @value='0']"));
@@ -137,7 +138,22 @@ public class 前台公用任务 extends 公用任务 {
 			asCore.clear(By.xpath("//*[@id='betno']"));
 			asCore.clear(By.xpath("//*[@id='betmoney']"));
 			asCore.pause(500);
+
+			//写入下注金额
+			写入总表数据("下注信息","下注金额",下注信息.get(i).get("金额"));
+			刷新总表数据();
+
+			//验证赔率
 			验证最终赔率(String.valueOf(finalodds));
+
+			//写入历史数据
+			刷新总表数据();
+			al_下注信息=总表.获取数据("Summary","下注信息");
+			String 已有金额 = al_下注信息.get(0).get("已有金额");
+			String 新已有金额 = String.valueOf(Double.parseDouble(已有金额)+Double.parseDouble(下注信息.get(i).get("金额")));
+			写入总表数据("下注信息","已有金额",新已有金额);
+			刷新总表数据();
+
 			i++;
 		}
 	}
