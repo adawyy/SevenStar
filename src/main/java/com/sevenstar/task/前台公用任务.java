@@ -169,7 +169,7 @@ public class 前台公用任务 extends 公用任务 {
 		asCore.pause(200);
 		String 代理单次赔率 = al_单次赔率.get(0).get("代理");
 		String 赔率上限 = asCore.getText(By.xpath("//td[preceding-sibling::td[text()='"+类别+"']][2]"));
-		MSAssert.verifyEqual(String.valueOf(赔率上限),代理单次赔率,"验证单次赔率上限是否和Excel中的计算一致");
+		MSAssert.verifyEqual(Double.parseDouble(赔率上限),截取小数点后两位(代理单次赔率),"验证单次赔率上限是否和Excel中的计算一致");
 	}
 
 	/**
@@ -180,11 +180,8 @@ public class 前台公用任务 extends 公用任务 {
 	public void 验证最终赔率(String 实际最终赔率){
 		刷新总表数据();
 		al_赔率计算 = 总表.获取数据("Summary","赔率计算");
-		Double 最终赔率 = Double.parseDouble(al_赔率计算.get(0).get("会员最终赔率"));
-		BigDecimal bd = new BigDecimal(最终赔率);
-		最终赔率 = bd.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
-//		System.out.println(最终赔率);
-		MSAssert.verifyEqual(Double.parseDouble(实际最终赔率),最终赔率,"验证最终赔率是否正确");
+
+		MSAssert.verifyEqual(Double.parseDouble(实际最终赔率),截取小数点后两位(al_赔率计算.get(0).get("会员最终赔率")),"验证最终赔率是否正确");
 	}
 
 	public static void main(String[] args) {

@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import com.mte.base.MteSenseBaseTask;
 import com.mte.base.MteSenseCore;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -184,6 +185,13 @@ public class 公用任务 extends MteSenseBaseTask {
 		写入总表数据("下注信息","下注金额","0");
 		刷新总表数据();
 
+	}
+
+	public Double 截取小数点后两位(String 原数据){
+		Double 数据 = Double.parseDouble(原数据);
+		BigDecimal bd = new BigDecimal(数据);
+		Double 结果 = bd.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+		return 结果;
 	}
 
 

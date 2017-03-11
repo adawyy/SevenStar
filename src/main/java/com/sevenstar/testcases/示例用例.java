@@ -46,7 +46,6 @@ public class 示例用例 extends 七星彩基础用例 {
         越级操作任务集 =new 越级操作任务(asBaseCore);
 
         //读取数据
-        //读取数据
         excelFile = "datapool/ST_1.xls";
         tableName = "登录组一";
 
