@@ -9,7 +9,10 @@ import org.testng.annotations.AfterSuite;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+
+import java.lang.reflect.Method;
 
 public abstract class MteSenseExtent {
 
@@ -26,6 +29,14 @@ public abstract class MteSenseExtent {
     protected ExtentTest test = null;
 
     public PropUtil props = new PropUtil("./config/mtesense.properties");
+
+
+    @BeforeMethod
+    protected void startTest(Method method) throws Exception {
+        String testName = method.getName();
+ //       System.out.println("Executing test: " + testName);
+        test.log(LogStatus.INFO,"<B><font color='blue'>开始执行方法:"+testName+"</font></B>");
+    }
 
     @AfterMethod
     protected void afterEachTest(ITestResult result) {

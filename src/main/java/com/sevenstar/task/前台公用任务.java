@@ -7,6 +7,7 @@ import org.apache.xpath.SourceTree;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.IntSummaryStatistics;
@@ -179,7 +180,11 @@ public class 前台公用任务 extends 公用任务 {
 	public void 验证最终赔率(String 实际最终赔率){
 		刷新总表数据();
 		al_赔率计算 = 总表.获取数据("Summary","赔率计算");
-		MSAssert.verifyEqual(实际最终赔率,al_赔率计算.get(0).get("会员最终赔率"),"验证最终赔率是否正确");
+		Double 最终赔率 = Double.parseDouble(al_赔率计算.get(0).get("会员最终赔率"));
+		BigDecimal bd = new BigDecimal(最终赔率);
+		最终赔率 = bd.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+//		System.out.println(最终赔率);
+		MSAssert.verifyEqual(Double.parseDouble(实际最终赔率),最终赔率,"验证最终赔率是否正确");
 	}
 
 	public static void main(String[] args) {

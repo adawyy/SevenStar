@@ -1772,6 +1772,7 @@ public class MteSenseCore {
             if (isElementPresent(by, timeout)) {
                 clear(by);
                 driver.findElement(by).sendKeys(text);
+                test.log(LogStatus.INFO,"填入数据"+text+"到"+by.toString());
  //               logger.debug("input text [ " + text + " ] to element [ " + by.toString() + " ]");
                 isSucceed = true;
             }

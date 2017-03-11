@@ -175,5 +175,16 @@ public class 公用任务 extends MteSenseBaseTask {
 		// TODO Auto-generated method stub
 	}
 
+	/**
+	 * 总表数据初始化
+	 */
+	public void 总表数据初始化(){
+		写入总表数据("赔率计算","赔率变动设置","0");
+		写入总表数据("下注信息","已有金额","0");
+		写入总表数据("下注信息","下注金额","0");
+		刷新总表数据();
+
+	}
+
 
 }
