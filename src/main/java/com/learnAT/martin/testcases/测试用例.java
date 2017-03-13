@@ -43,10 +43,10 @@ public class 测试用例 extends 七星彩基础用例 {
 //        点击登录
         asBaseCore.click(By.xpath("//input[@id='btn-submit']"));
 
-//        快速进入/同意声明
+//        快速进入/同意声
+        asBaseCore.pause(2000);
         asBaseCore.click(By.xpath("//a[@id='btn_quickly']"));
         asBaseCore.click(By.xpath("//input[@id='agree']"));
-
 //        点击设置/赔率变动设置
         asBaseCore.click(By.xpath("//ul[@id='nav']//span[text()='设置']"));
         asBaseCore.click(By.xpath("//div[@id='guide_setting']//a[text()='赔率变动设置']"));
@@ -59,8 +59,8 @@ public class 测试用例 extends 七星彩基础用例 {
         asBaseCore.click(By.xpath("//input[@class='btn' and @value='提交']"));
         asBaseCore.click(By.xpath("//input[@value='确定']"));
 
-
 //        添加34XX号码赔率变动
+        asBaseCore.pause(2000);
         asBaseCore.sendKeys(By.xpath("//input[@id='bet_no']"),"34XX");
         asBaseCore.sendKeys(By.xpath("//input[@id='odds_limit']"),"95");
         asBaseCore.sendKeys(By.xpath("//input[@id='one_item_limit']"),"200");
@@ -69,6 +69,7 @@ public class 测试用例 extends 七星彩基础用例 {
         asBaseCore.click(By.xpath("//input[@value='确定']"));
 
 //        修改34XX上限
+        asBaseCore.pause(2000);
         asBaseCore.clear(By.xpath("//tbody[@id='tbody']/tr[@bet_no='34XX']/td[5]/input"));
         asBaseCore.sendKeys(By.xpath("//tbody[@id='tbody']/tr[@bet_no='34XX']/td[5]/input"),"1000");
         asBaseCore.click(By.xpath("//form[@id='form3']//input[@value='编辑']"));
@@ -76,6 +77,7 @@ public class 测试用例 extends 七星彩基础用例 {
 
 
 //        点击全选删除
+        asBaseCore.pause(2000);
         asBaseCore.click(By.xpath("//form[@id='form3']//thead//input[@type='checkbox']"));
         asBaseCore.click(By.xpath("//form[@id='form3']//input[@value='删除']"));
 
