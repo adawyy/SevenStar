@@ -21,6 +21,7 @@ public class 示例用例 extends 七星彩基础用例 {
 	private 前台公用任务 前台公用任务集;
     private 后台公用任务 后台公用任务集;
     private 越级操作任务 越级操作任务集;
+    private 报表任务 报表任务集;
 
     //定义数据集
     ArrayList<Hashtable<String,String>> al_登录信息, al_定盘信息, al_分批赔率, al_录码模式, al_赔率设置, al_下注场景 = null;
@@ -44,6 +45,7 @@ public class 示例用例 extends 七星彩基础用例 {
         前台公用任务集 =new 前台公用任务(asBaseCore);
         后台公用任务集 =new 后台公用任务(asBaseCore);
         越级操作任务集 =new 越级操作任务(asBaseCore);
+        报表任务集 = new 报表任务(asBaseCore);
 
         //读取数据
         excelFile = "datapool/ST_1.xls";
@@ -162,6 +164,23 @@ public class 示例用例 extends 七星彩基础用例 {
         前台公用任务集.设置录码模式(ht_录码模式);
         前台公用任务集.设置交易回水(al_赔率设置,"口口XX");
         前台公用任务集.快打下注(al_下注场景,5);
+    }
+
+    @Test(dependsOnMethods = { "开盘测试" })
+    public void 结账前报表验证() throws Exception {
+        公用.跳转页(后台地址);
+        公用.快速登录(ht_登录信息.get("总监"),ht_登录信息.get("总监密码"));
+        后台公用任务集.点击菜单("报表");
+        报表任务集.验证报表(ht_登录信息.get("大股东"),"大股东","5",false);
+        报表任务集.点击账号名(ht_登录信息.get("大股东"),"大股东");
+        报表任务集.验证报表(ht_登录信息.get("股东"),"股东","5",false);
+        报表任务集.点击账号名(ht_登录信息.get("股东"),"股东");
+        报表任务集.验证报表(ht_登录信息.get("总代理"),"总代理","5",false);
+        报表任务集.点击账号名(ht_登录信息.get("总代理"),"总代理");
+        报表任务集.验证报表(ht_登录信息.get("代理"),"代理","5",false);
+        报表任务集.点击账号名(ht_登录信息.get("代理"),"代理");
+        报表任务集.验证报表(ht_登录信息.get("会员"),"会员","5",false);
+        报表任务集.点击账号名(ht_登录信息.get("会员"),"会员");
     }
 
     @AfterTest

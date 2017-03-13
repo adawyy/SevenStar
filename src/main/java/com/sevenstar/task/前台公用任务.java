@@ -132,13 +132,24 @@ public class 前台公用任务 extends 公用任务 {
 
 		int i = 0;
 		while(i<次数){
+
+			//首先写入历史数据
+			刷新总表数据();
+			al_下注信息=总表.获取数据("Summary","下注信息");
+			String 已有金额 = al_下注信息.get(0).get("已有金额");
+			String 上次下注金额 = al_下注信息.get(0).get("下注金额");
+			String 新已有金额 = String.valueOf(Double.parseDouble(已有金额)+Double.parseDouble(上次下注金额));
+			写入总表数据("下注信息","已有金额",新已有金额);
+			刷新总表数据();
+
+			//开始下注
 			asCore.sendKeys(By.xpath("//*[@id='betno']"),下注信息.get(i).get("号码"));
 			asCore.sendKeys(By.xpath("//*[@id='betmoney']"),下注信息.get(i).get("金额"));
 			finalodds = Double.valueOf(asCore.getText(By.xpath("//*[@id='limit_odds']"),5));
 			asCore.click(By.xpath("//input[@value='确认下注']"));
 			asCore.clear(By.xpath("//*[@id='betno']"));
 			asCore.clear(By.xpath("//*[@id='betmoney']"));
-			asCore.pause(500);
+			asCore.pause(1000);
 
 			//写入下注金额
 			写入总表数据("下注信息","下注金额",下注信息.get(i).get("金额"));
@@ -146,14 +157,6 @@ public class 前台公用任务 extends 公用任务 {
 
 			//验证赔率
 			验证最终赔率(String.valueOf(finalodds));
-
-			//写入历史数据
-			刷新总表数据();
-			al_下注信息=总表.获取数据("Summary","下注信息");
-			String 已有金额 = al_下注信息.get(0).get("已有金额");
-			String 新已有金额 = String.valueOf(Double.parseDouble(已有金额)+Double.parseDouble(下注信息.get(i).get("金额")));
-			写入总表数据("下注信息","已有金额",新已有金额);
-			刷新总表数据();
 
 			i++;
 		}

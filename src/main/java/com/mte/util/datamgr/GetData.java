@@ -145,7 +145,7 @@ public class GetData {
 				String[] sa = (String[]) temp.get(j);
 				String fieldName = sa[0];
 				String fieldValue = sa[1];
-//				System.out.println("field"+fieldValue);
+	//			System.out.println(title+" - "+i+" - "+fieldName+" - "+fieldValue);
 				ht.put(fieldName, fieldValue);
 			}
 			result.add(ht);

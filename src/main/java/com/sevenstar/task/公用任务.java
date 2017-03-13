@@ -70,7 +70,7 @@ public class 公用任务 extends MteSenseBaseTask {
 //		asCore.skipClick(公用.右下弹框关闭按钮(),2);
 //		asCore.pause(1000);
 		asCore.pause(2000);
-		asCore.waitClickAbleToClick(公用.右下弹框关闭按钮(),5);
+//		asCore.waitClickAbleToClick(公用.右下弹框关闭按钮(),5);
 	}
 
 	public void 可靠登录(String 用户名,String 原密码, String 新密码,String 角色, String ExcelFile, String tableName){
@@ -194,5 +194,12 @@ public class 公用任务 extends MteSenseBaseTask {
 		return 结果;
 	}
 
+	public String 取整(String 原数据){
+		Double 数据 = Double.parseDouble(原数据);
+		BigDecimal bd = new BigDecimal(数据);
+		Double 临时数据 = bd.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+		int 结果 = (int)Math.ceil(临时数据);
+		return String.valueOf(结果);
+	}
 
 }
