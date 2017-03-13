@@ -183,6 +183,16 @@ public class 示例用例 extends 七星彩基础用例 {
         报表任务集.点击账号名(ht_登录信息.get("会员"),"会员");
     }
 
+    @Test(dependsOnMethods = { "结账前报表验证" })
+    public void 关盘结账() throws Exception {
+
+    }
+
+    @Test(dependsOnMethods = { "关盘结账" })
+    public void 结账后报表验证() throws Exception {
+
+    }
+
     @AfterTest
     public void tearDown() throws Exception {
         afterClass();

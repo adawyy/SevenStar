@@ -7,6 +7,5 @@
             <class name="com.sevenstar.testcases.示例用例">
             </class>
         </classes>
-
     </test> <!-- Default test -->
 </suite> <!-- Default suite -->
