@@ -58,7 +58,7 @@ public class 测试用例 extends 七星彩基础用例 {
         asBaseCore.click(By.xpath("//input[@value='确定']"));
         //清除34xx的单项上限5000
         asBaseCore.pause(2000);
-        asBaseCore.clear(By.xpath("//tbody[@id='tbody']//input[@value='5000']"));
+        asBaseCore.clear(By.xpath("//tbody[@id='tbody']//input[@value='5000']")); // 两个框都清除了
         //输入34xx新的单项上限10000
         asBaseCore.sendKeys(By.xpath("//tbody[@id='tbody']/tr[@bet_no='34XX']/td[5]/input"),"10000");
         //点击编辑/确定

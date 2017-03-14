@@ -54,6 +54,7 @@ public class ExcelFile {
 	
 	public static void resetSummarySheetFormula(){
 		resetSheetFormula("datapool/ST_汇总.xls", "Summary");
+		resetSheetFormula("datapool/ST_汇总.xls", "History");
 	}
 	
 	public static void resetSheetFormula(String fileName, String sheetName){

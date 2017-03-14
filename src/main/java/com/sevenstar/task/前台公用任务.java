@@ -123,15 +123,18 @@ public class 前台公用任务 extends 公用任务 {
 	/**
 	 * 快打下注
 	 * @param 下注信息 详情查看ST_1.xls中下注信息-下注场景一
-	 * @param 次数 选择下几次注，不能超过excel中表列数
+	 * @param 次数_ 选择下几次注，不能超过excel中表列数
 	*/
 
-	public void 快打下注(ArrayList<Hashtable<String,String>> 下注信息,int 次数){
-		double finalodds = 0;
+	public void 快打下注(ArrayList<Hashtable<String,String>> 下注信息,String 会员,String 次数_){
+		double 最终赔率 = 0;
 		点击副菜单("快打");
-
+		int 次数 = Integer.parseInt(次数_);
 		int i = 0;
 		while(i<次数){
+
+			String 下单号码 = 下注信息.get(i).get("号码");
+			String 下注金额 = 下注信息.get(i).get("金额");
 
 			//首先写入历史数据
 			刷新总表数据();
@@ -143,24 +146,49 @@ public class 前台公用任务 extends 公用任务 {
 			刷新总表数据();
 
 			//开始下注
-			asCore.sendKeys(By.xpath("//*[@id='betno']"),下注信息.get(i).get("号码"));
-			asCore.sendKeys(By.xpath("//*[@id='betmoney']"),下注信息.get(i).get("金额"));
-			finalodds = Double.valueOf(asCore.getText(By.xpath("//*[@id='limit_odds']"),5));
+			asCore.sendKeys(By.xpath("//*[@id='betno']"),下单号码);
+			asCore.sendKeys(By.xpath("//*[@id='betmoney']"),下注金额);
+			最终赔率 = Double.valueOf(asCore.getText(By.xpath("//*[@id='limit_odds']"),5));
 			asCore.click(By.xpath("//input[@value='确认下注']"));
 			asCore.clear(By.xpath("//*[@id='betno']"));
 			asCore.clear(By.xpath("//*[@id='betmoney']"));
 			asCore.pause(1000);
 
-			//写入下注金额
-			写入总表数据("下注信息","下注金额",下注信息.get(i).get("金额"));
+			//写入总表Summary下注金额
+			写入总表数据("下注信息","下注金额",下注金额);
 			刷新总表数据();
 
 			//验证赔率
-			验证最终赔率(String.valueOf(finalodds));
+			验证最终赔率(String.valueOf(最终赔率));
+
+			//写入历史注单
+			刷新总表数据();
+			ht_总共回水总额 = 总表.获取数据("Summary","总共回水总额").get(0);
+			String 单次回水总额 = ht_总共回水总额.get("总额");
+			String 实收下线 = ht_总共回水总额.get("实收下线");
+			String 会员最终回水比率 = al_赔率计算.get(0).get("会员最终回水比率");
+			String 赔率上限 = al_赔率计算.get(0).get("定盘赔率上限");
+
+			写入总表数据("./datapool/ST_汇总.xls","History","下注历史信息","次数",String.valueOf(i+1),String.valueOf(i+1));
+			写入总表数据("./datapool/ST_汇总.xls","History","下注历史信息","会员",会员,String.valueOf(i+1));
+			写入总表数据("./datapool/ST_汇总.xls","History","下注历史信息","号码",下单号码,String.valueOf(i+1));
+			写入总表数据("./datapool/ST_汇总.xls","History","下注历史信息","下注金额",下注金额,String.valueOf(i+1));
+			写入总表数据("./datapool/ST_汇总.xls","History","下注历史信息","最终赔率",取小数点后两位(String.valueOf(最终赔率)),String.valueOf(i+1));
+			写入总表数据("./datapool/ST_汇总.xls","History","下注历史信息","会员最终回水比率",取小数点后两位(会员最终回水比率),String.valueOf(i+1));
+			写入总表数据("./datapool/ST_汇总.xls","History","下注历史信息","下线回水",取小数点后两位(单次回水总额),String.valueOf(i+1));
+			写入总表数据("./datapool/ST_汇总.xls","History","下注历史信息","实收下线",取小数点后两位(实收下线),String.valueOf(i+1));
+			写入总表数据("./datapool/ST_汇总.xls","History","下注历史信息","赔率上限",赔率上限,String.valueOf(i+1));
+			刷新总表数据();
 
 			i++;
 		}
 	}
+
+//	public void 注单记录(int 次数){
+//		String 注单编号,号码,赔率,金额,状态;
+//
+//
+//	}
 
 	/**
 	 * 验证赔率上限

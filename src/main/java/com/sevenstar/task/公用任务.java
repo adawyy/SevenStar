@@ -25,6 +25,7 @@ public class 公用任务 extends MteSenseBaseTask {
 	Datamgr 总表 = new Datamgr();
 
 	ArrayList<Hashtable<String,String>> al_赔率计算,al_单次赔率,al_下注信息 = null;
+	Hashtable<String,String> ht_总共回水总额 = null;
 
 	public 公用任务(MteSenseCore senseCore) {
 		super(senseCore);
@@ -183,6 +184,7 @@ public class 公用任务 extends MteSenseBaseTask {
 		写入总表数据("赔率计算","赔率变动设置","0");
 		写入总表数据("下注信息","已有金额","0");
 		写入总表数据("下注信息","下注金额","0");
+		写入总表数据("下注信息","下注次数","0");
 		刷新总表数据();
 
 	}
@@ -192,6 +194,11 @@ public class 公用任务 extends MteSenseBaseTask {
 		BigDecimal bd = new BigDecimal(数据);
 		Double 结果 = bd.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
 		return 结果;
+	}
+
+	public String 取小数点后两位(String 原数据){
+		Double D = 截取小数点后两位(原数据);
+		return String.valueOf(D);
 	}
 
 	public String 取整(String 原数据){

@@ -96,7 +96,7 @@ public class 后台公用任务 extends 公用任务 {
 		asCore.click(By.xpath("//input[@value='确定']"));
 		//操作成功!
 		asCore.click(By.xpath("//input[@value='确定']"));
-		asCore.pause(500);
+		asCore.pause(1000);
 		asCore.click(By.xpath("//input[@value='新增分批']"));
 	}
 
