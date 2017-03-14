@@ -110,7 +110,7 @@ public class 报表任务 extends 公用任务 {
 		return By.xpath("//td[preceding-sibling::td/a[contains(text(),'"+名称+"')]][11]");
 	}
 
-	public void 验证报表(String 账号名,String 角色,String 笔数,boolean 是否结账){
+	public void 验证报表(String 账号名,String 角色,String 笔数,boolean 是否结账,boolean 是否中奖){
 
 		刷新总表数据();
 
@@ -152,6 +152,7 @@ public class 报表任务 extends 公用任务 {
 		String ex_会员总投 = ht_总拦货金额.get("总值加此次");
 
 		String ex_本级总投 = ht_下级总投金额.get(角色);
+
 //		System.out.println(ex_本级总投);
 
 		String ex_上级占成总额 = ht_总拦货金额.get(角色上级);

@@ -1,10 +1,9 @@
 package com.sevenstar.testcases;
 
+import com.sevenstar.task.*;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import com.sevenstar.task.*;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -14,7 +13,7 @@ import java.util.Hashtable;
  * 时间 2017/2/18
  */
 
-public class 示例用例 extends 七星彩基础用例 {
+public class 场景用例 extends 七星彩基础用例 {
 
     //定义任务
     private 公用任务 公用;
