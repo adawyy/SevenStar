@@ -3,14 +3,10 @@ package com.sevenstar.task;
 
 import com.mte.base.MSAssert;
 import com.mte.base.MteSenseCore;
-import org.apache.xpath.SourceTree;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.IntSummaryStatistics;
 
 /**
  * 创建人 Jackson
@@ -136,15 +132,6 @@ public class 前台公用任务 extends 公用任务 {
 			String 下单号码 = 下注信息.get(i).get("号码");
 			String 下注金额 = 下注信息.get(i).get("金额");
 
-			//首先写入历史数据
-			刷新总表数据();
-			al_下注信息=总表.获取数据("Summary","下注信息");
-			String 已有金额 = al_下注信息.get(0).get("已有金额");
-			String 上次下注金额 = al_下注信息.get(0).get("下注金额");
-			String 新已有金额 = String.valueOf(Double.parseDouble(已有金额)+Double.parseDouble(上次下注金额));
-			写入总表数据("下注信息","已有金额",新已有金额);
-			刷新总表数据();
-
 			//开始下注
 			asCore.sendKeys(By.xpath("//*[@id='betno']"),下单号码);
 			asCore.sendKeys(By.xpath("//*[@id='betmoney']"),下注金额);
@@ -160,6 +147,18 @@ public class 前台公用任务 extends 公用任务 {
 
 			//验证赔率
 			验证最终赔率(String.valueOf(最终赔率));
+
+			//累加盈亏总金额到SUmmary表
+			盈亏累加();
+
+			//写入已有金额，并清空已有金额
+			刷新总表数据();
+			al_下注信息=总表.获取数据("Summary","下注信息");
+			String 已有金额 = al_下注信息.get(0).get("已有金额");
+			String 上次下注金额 = al_下注信息.get(0).get("下注金额");
+			String 新已有金额 = String.valueOf(Double.parseDouble(已有金额)+Double.parseDouble(上次下注金额));
+			写入总表数据("下注信息","已有金额",新已有金额);
+			刷新总表数据();
 
 			//写入历史注单
 			刷新总表数据();
@@ -178,6 +177,9 @@ public class 前台公用任务 extends 公用任务 {
 			写入总表数据("./datapool/ST_汇总.xls","History","下注历史信息","下线回水",取小数点后两位(单次回水总额),String.valueOf(i+1));
 			写入总表数据("./datapool/ST_汇总.xls","History","下注历史信息","实收下线",取小数点后两位(实收下线),String.valueOf(i+1));
 			写入总表数据("./datapool/ST_汇总.xls","History","下注历史信息","赔率上限",赔率上限,String.valueOf(i+1));
+
+			//下注金额清空
+			写入总表数据("下注信息","下注金额","0");
 			刷新总表数据();
 
 			i++;
@@ -189,6 +191,34 @@ public class 前台公用任务 extends 公用任务 {
 //
 //
 //	}
+
+	public void 盈亏累加(){
+		ht_未中奖此次占成计算盈亏 = 总表.获取数据("Summary","未中奖此次占成计算盈亏").get(0);
+		ht_未中奖总占成计算盈亏 = 总表.获取数据("Summary","未中奖总占成计算盈亏").get(0);
+
+		Double 此次总监盈亏 = 截取小数点后两位(ht_未中奖此次占成计算盈亏.get("总监"));
+		Double 此次大股东盈亏 = 截取小数点后两位(ht_未中奖此次占成计算盈亏.get("大股东"));
+		Double 此次股东盈亏 = 截取小数点后两位(ht_未中奖此次占成计算盈亏.get("股东"));
+		Double 此次总代理盈亏 = 截取小数点后两位(ht_未中奖此次占成计算盈亏.get("总代理"));
+		Double 此次代理盈亏 = 截取小数点后两位(ht_未中奖此次占成计算盈亏.get("代理"));
+		Double 此次会员盈亏 = 截取小数点后两位(ht_未中奖此次占成计算盈亏.get("会员"));
+
+		String 总监总盈亏 = String.valueOf(截取小数点后两位(ht_未中奖总占成计算盈亏.get("总监"))+此次总监盈亏);
+		String 大股东总盈亏 = String.valueOf(截取小数点后两位(ht_未中奖总占成计算盈亏.get("大股东"))+此次大股东盈亏);
+		String 股东总盈亏 = String.valueOf(截取小数点后两位(ht_未中奖总占成计算盈亏.get("股东"))+此次股东盈亏);
+		String 总代理总盈亏 = String.valueOf(截取小数点后两位(ht_未中奖总占成计算盈亏.get("总代理"))+此次总代理盈亏);
+		String 代理总盈亏 = String.valueOf(截取小数点后两位(ht_未中奖总占成计算盈亏.get("代理"))+此次代理盈亏);
+		String 会员总盈亏 = String.valueOf(截取小数点后两位(ht_未中奖总占成计算盈亏.get("会员"))+此次会员盈亏);
+
+		写入总表数据("未中奖总占成计算盈亏","总监",总监总盈亏);
+		写入总表数据("未中奖总占成计算盈亏","大股东",大股东总盈亏);
+		写入总表数据("未中奖总占成计算盈亏","股东",股东总盈亏);
+		写入总表数据("未中奖总占成计算盈亏","总代理",总代理总盈亏);
+		写入总表数据("未中奖总占成计算盈亏","代理",代理总盈亏);
+		写入总表数据("未中奖总占成计算盈亏","会员",会员总盈亏);
+
+		刷新总表数据();
+	}
 
 	/**
 	 * 验证赔率上限

@@ -112,6 +112,8 @@ public class 报表任务 extends 公用任务 {
 
 	public void 验证报表(String 账号名,String 角色,String 笔数,boolean 是否结账){
 
+		刷新总表数据();
+
 		String ac_会员笔数 = asCore.getText(get_会员笔数(账号名));
 		String ac_会员总投 = asCore.getText(get_会员总投(账号名));
 		String ac_会员盈亏 = asCore.getText(get_会员盈亏(账号名));

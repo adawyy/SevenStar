@@ -93,11 +93,13 @@ public class 后台公用任务 extends 公用任务 {
 	public void 删除所有分批数据(){
 		asCore.click(By.xpath("//*[@id='selectAll']"));
 		asCore.click(By.xpath("//input[@value='删除']"));
+		asCore.pause(1000);
 		asCore.click(By.xpath("//input[@value='确定']"));
 		//操作成功!
 		asCore.click(By.xpath("//input[@value='确定']"));
 		asCore.pause(1000);
 		asCore.click(By.xpath("//input[@value='新增分批']"));
+		asCore.pause(1000);
 	}
 
 	/**
@@ -117,7 +119,9 @@ public class 后台公用任务 extends 公用任务 {
 
 		asCore.click(By.xpath("//input[@value='提交']"));
 		//保存成功
+		asCore.pause(1000);
 		asCore.click(By.xpath("//input[@value='确定']"));
+		asCore.pause(1000);
 	}
 
 	/**
@@ -202,6 +206,7 @@ public class 后台公用任务 extends 公用任务 {
 		asCore.sendKeys(By.xpath("//*[@id='ball5']"),七位号码.substring(4,5));
 		asCore.sendKeys(By.xpath("//*[@id='ball6']"),七位号码.substring(5,6));
 		asCore.sendKeys(By.xpath("//*[@id='ball7']"),七位号码.substring(6,7));
+		asCore.pause(1000);
 		asCore.click(By.xpath("//*[@id='btnCheckout']"));
 		asCore.click(By.xpath("//input[@value='确定']"));
 		asCore.pause(2000);
