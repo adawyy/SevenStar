@@ -52,7 +52,7 @@ public class 示例用例 extends 七星彩基础用例 {
         //读取数据
         excelFile = "datapool/ST_1.xls";
         tableName = "登录组一";
-        次数 = "1";
+        次数 = "5";
         是否中奖 = true;
 
         用例表.设置数据文件("datapool/ST_1.xls");

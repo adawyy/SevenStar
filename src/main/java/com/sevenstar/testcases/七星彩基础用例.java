@@ -4,6 +4,8 @@ import com.sevenstar.data.Datamgr;
 import com.mte.base.MteSenseBaseCase;
 import com.mte.util.PropUtil;
 
+import java.util.Hashtable;
+
 /**
  * 创建人 Jackson
  * 时间 2017/2/18
@@ -15,6 +17,8 @@ public class 七星彩基础用例 extends MteSenseBaseCase {
 
     Datamgr 总表 = new Datamgr();
 
+    Datamgr 场景表 = new Datamgr();
+
     public PropUtil 配置文件 = new PropUtil("./config/sevenstar.properties");
 
     protected String 浏览器类型 = 配置文件.get("sevenstar.browserType");
@@ -22,9 +26,12 @@ public class 七星彩基础用例 extends MteSenseBaseCase {
     protected String 前台地址 = 配置文件.get("sevenstar.frontendUrl");
 
     protected String 后台地址 = 配置文件.get("sevenstar.backendUrl");
+
+    protected Hashtable<String,String> ht_场景设置 = null;
     
     public 七星彩基础用例(){
         总表.设置数据文件("datapool/ST_汇总.xls");
+        场景表.设置数据文件("datapool/ST_场景设置.xls");
     }
 
 	public static void main(String[] args) {
