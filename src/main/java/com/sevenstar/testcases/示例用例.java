@@ -52,8 +52,8 @@ public class 示例用例 extends 七星彩基础用例 {
         //读取数据
         excelFile = "datapool/ST_1.xls";
         tableName = "登录组一";
-        次数 = "5";
-        是否中奖 = false;
+        次数 = "1";
+        是否中奖 = true;
 
         用例表.设置数据文件("datapool/ST_1.xls");
         al_登录信息 = 用例表.获取登录信息("登录组一");
@@ -167,7 +167,7 @@ public class 示例用例 extends 七星彩基础用例 {
         前台公用任务集.验证赔率上限("口口XX");
         前台公用任务集.设置录码模式(ht_录码模式);
         前台公用任务集.设置交易回水(al_赔率设置,"口口XX");
-        前台公用任务集.快打下注(al_下注场景,ht_登录信息.get("会员"),次数);
+        前台公用任务集.快打下注(al_下注场景,ht_登录信息.get("会员"),次数,是否中奖);
     }
 
     @Test(dependsOnMethods = { "开盘测试" })
@@ -191,7 +191,7 @@ public class 示例用例 extends 七星彩基础用例 {
     public void 关盘结账() throws Exception {
         后台公用任务集.点击菜单("设置");
         后台公用任务集.关盘("ccc0000");
-        后台公用任务集.设置开奖号码("7654321");
+        后台公用任务集.设置开奖号码("7954321");
     }
 
     @Test(dependsOnMethods = { "关盘结账" })

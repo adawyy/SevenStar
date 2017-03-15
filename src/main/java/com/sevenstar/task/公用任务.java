@@ -26,6 +26,7 @@ public class 公用任务 extends MteSenseBaseTask {
 
 	ArrayList<Hashtable<String,String>> al_赔率计算,al_单次赔率,al_下注信息 = null;
 	Hashtable<String,String> ht_总共回水总额,ht_未中奖此次占成计算盈亏, ht_未中奖总占成计算盈亏 = null;
+	Hashtable<String,String> ht_中奖此次占成计算盈亏, ht_中奖总占成计算盈亏 = null;
 
 	public 公用任务(MteSenseCore senseCore) {
 		super(senseCore);
@@ -191,6 +192,12 @@ public class 公用任务 extends MteSenseBaseTask {
 		写入总表数据("未中奖总占成计算盈亏","股东","0");
 		写入总表数据("未中奖总占成计算盈亏","总代理","0");
 		写入总表数据("未中奖总占成计算盈亏","代理","0");
+		写入总表数据("中奖总占成计算盈亏","总监","0");
+		写入总表数据("中奖总占成计算盈亏","大股东","0");
+		写入总表数据("中奖总占成计算盈亏","股东","0");
+		写入总表数据("中奖总占成计算盈亏","总代理","0");
+		写入总表数据("中奖总占成计算盈亏","代理","0");
+		写入总表数据("中奖总占成计算盈亏","会员","0");
 
 		//清空历史注单信息
 

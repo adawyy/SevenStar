@@ -24,7 +24,8 @@ public class 报表任务 extends 公用任务 {
 
 	ArrayList<Hashtable<String,String>> al_赔率计算 = null;
 	Hashtable<String,String> ht_总拦货金额,ht_下级总投金额,ht_总总投金额,ht_总计算赚水,ht_各级总赚水= null;
-	Hashtable<String,String> ht_未中奖总占成盈亏,ht_未中奖总盈亏,ht_未中奖各级盈亏= null;
+	Hashtable<String,String> ht_未中奖总占成盈亏,ht_未中奖总盈亏,ht_未中奖各级盈亏,ht_未中奖总占成计算盈亏= null;
+	Hashtable<String,String> ht_中奖总占成盈亏,ht_中奖总盈亏,ht_中奖各级盈亏,ht_中奖总占成计算盈亏= null;
 
 	/**
 	 * 总货明细页面的任务定义
@@ -169,19 +170,44 @@ public class 报表任务 extends 公用任务 {
 		String ex_上上级总投 = ht_总总投金额.get(角色上上级);
 		String ex_上上级盈亏 = null;
 
-		if(是否中奖){
+		if(是否结账){
 
-		}else{
-			ht_未中奖总占成盈亏 = 总表.获取数据("Summary","未中奖总占成盈亏").get(0);
-			ht_未中奖总盈亏 = 总表.获取数据("Summary","未中奖总盈亏").get(0);
-			ht_未中奖各级盈亏 = 总表.获取数据("Summary","未中奖各级盈亏").get(0);
+			if(是否中奖){
+				ht_中奖总占成盈亏 = 总表.获取数据("Summary","中奖总占成盈亏").get(0);
+				ht_中奖总盈亏 = 总表.获取数据("Summary","中奖总盈亏").get(0);
+				ht_中奖各级盈亏 = 总表.获取数据("Summary","中奖各级盈亏").get(0);
+				ht_中奖总占成计算盈亏 = 总表.获取数据("Summary","中奖总占成计算盈亏").get(0);
 
-			ex_会员盈亏 = ht_未中奖总占成盈亏.get("会员");
-			ex_本级盈亏 = "-"+ht_未中奖各级盈亏.get(角色上级);
+				ex_会员盈亏 = ht_中奖总占成盈亏.get("会员");
 
-			ex_上级占成盈亏 = ht_未中奖总占成盈亏.get(角色上级);
-			ex_上级盈亏 = ht_未中奖总盈亏.get(角色上级);
-			ex_上上级盈亏 = ht_未中奖各级盈亏.get(角色上上级);
+				if(Double.parseDouble(ht_中奖各级盈亏.get(角色上级))<0){
+					ex_本级盈亏 = String.valueOf(-Double.parseDouble(ht_中奖各级盈亏.get(角色上级)));
+				}else{
+					ex_本级盈亏 = "-"+ht_中奖各级盈亏.get(角色上级);
+				}
+
+				ex_上级占成盈亏 = ht_中奖总占成盈亏.get(角色上级);
+				ex_上级盈亏 = ht_中奖总盈亏.get(角色上级);
+				ex_上上级盈亏 = ht_中奖各级盈亏.get(角色上上级);
+
+			}else{
+				ht_未中奖总占成盈亏 = 总表.获取数据("Summary","未中奖总占成盈亏").get(0);
+				ht_未中奖总盈亏 = 总表.获取数据("Summary","未中奖总盈亏").get(0);
+				ht_未中奖各级盈亏 = 总表.获取数据("Summary","未中奖各级盈亏").get(0);
+				ht_未中奖总占成计算盈亏 = 总表.获取数据("Summary","未中奖总占成计算盈亏").get(0);
+
+				ex_会员盈亏 = "-"+String.valueOf(Double.parseDouble(ht_未中奖总占成计算盈亏.get("总监"))
+						+ Double.parseDouble(ht_未中奖总占成计算盈亏.get("大股东"))
+						+ Double.parseDouble(ht_未中奖总占成计算盈亏.get("股东"))
+						+ Double.parseDouble(ht_未中奖总占成计算盈亏.get("总代理"))
+						+ Double.parseDouble(ht_未中奖总占成计算盈亏.get("代理"))
+						+ Double.parseDouble(ht_总计算赚水.get("赚水总金额")));
+
+				ex_本级盈亏 = "-"+ht_未中奖各级盈亏.get(角色上级);
+				ex_上级占成盈亏 = ht_未中奖总占成盈亏.get(角色上级);
+				ex_上级盈亏 = ht_未中奖总盈亏.get(角色上级);
+				ex_上上级盈亏 = ht_未中奖各级盈亏.get(角色上上级);
+			}
 		}
 
 		MSAssert.verifyEqual(ac_会员笔数, ex_会员笔数, "检查会员笔数");
