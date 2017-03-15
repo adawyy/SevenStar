@@ -24,6 +24,7 @@ public class 报表任务 extends 公用任务 {
 
 	ArrayList<Hashtable<String,String>> al_赔率计算 = null;
 	Hashtable<String,String> ht_总拦货金额,ht_下级总投金额,ht_总总投金额,ht_总计算赚水,ht_各级总赚水= null;
+	Hashtable<String,String> ht_未中奖总占成盈亏,ht_未中奖总盈亏,ht_未中奖各级盈亏= null;
 
 	/**
 	 * 总货明细页面的任务定义
@@ -37,12 +38,7 @@ public class 报表任务 extends 公用任务 {
 		前台任务 = new 前台公用任务(asCore);
 
 		总表.设置数据文件("datapool/ST_汇总.xls");
-		al_赔率计算 = 总表.获取数据("Summary","赔率计算");
-		ht_总拦货金额 = 总表.获取数据("Summary","总拦货金额").get(0);
-		ht_下级总投金额 = 总表.获取数据("Summary","下级总投金额").get(0);
-		ht_总总投金额 = 总表.获取数据("Summary","总总投金额").get(0);
-		ht_总计算赚水 = 总表.获取数据("Summary","总计算赚水").get(0);
-		ht_各级总赚水 = 总表.获取数据("Summary","各级总赚水").get(0);
+
 		// TODO Auto-generated constructor stub
 
 	}
@@ -113,6 +109,13 @@ public class 报表任务 extends 公用任务 {
 	public void 验证报表(String 账号名,String 角色,String 笔数,boolean 是否结账,boolean 是否中奖){
 
 		刷新总表数据();
+		al_赔率计算 = 总表.获取数据("Summary","赔率计算");
+		ht_总拦货金额 = 总表.获取数据("Summary","总拦货金额").get(0);
+		ht_下级总投金额 = 总表.获取数据("Summary","下级总投金额").get(0);
+		ht_总总投金额 = 总表.获取数据("Summary","总总投金额").get(0);
+		ht_总计算赚水 = 总表.获取数据("Summary","总计算赚水").get(0);
+		ht_各级总赚水 = 总表.获取数据("Summary","各级总赚水").get(0);
+
 
 		String ac_会员笔数 = asCore.getText(get_会员笔数(账号名));
 		String ac_会员总投 = asCore.getText(get_会员总投(账号名));
@@ -150,27 +153,60 @@ public class 报表任务 extends 公用任务 {
 
 		String ex_会员笔数 = 笔数;
 		String ex_会员总投 = ht_总拦货金额.get("总值加此次");
+		String ex_会员盈亏 = null;
 
 		String ex_本级总投 = ht_下级总投金额.get(角色);
+		String ex_本级盈亏 = null;
 
 //		System.out.println(ex_本级总投);
 
 		String ex_上级占成总额 = ht_总拦货金额.get(角色上级);
+		String ex_上级占成盈亏 = null;
 		String ex_上级赚水 = ht_各级总赚水.get(角色上级);
+		String ex_上级盈亏 = null;
+
 //		System.out.println(ex_上级赚水);
 		String ex_上上级总投 = ht_总总投金额.get(角色上上级);
+		String ex_上上级盈亏 = null;
 
-		if(!是否结账) {
-			MSAssert.verifyEqual(ac_会员笔数, ex_会员笔数, "检查会员笔数");
-			MSAssert.verifyEqual(ac_会员总投, 取整(ex_会员总投), "检查会员总投");
+		if(是否中奖){
+
+		}else{
+			ht_未中奖总占成盈亏 = 总表.获取数据("Summary","未中奖总占成盈亏").get(0);
+			ht_未中奖总盈亏 = 总表.获取数据("Summary","未中奖总盈亏").get(0);
+			ht_未中奖各级盈亏 = 总表.获取数据("Summary","未中奖各级盈亏").get(0);
+
+			ex_会员盈亏 = ht_未中奖总占成盈亏.get("会员");
+			ex_本级盈亏 = "-"+ht_未中奖各级盈亏.get(角色上级);
+
+			ex_上级占成盈亏 = ht_未中奖总占成盈亏.get(角色上级);
+			ex_上级盈亏 = ht_未中奖总盈亏.get(角色上级);
+			ex_上上级盈亏 = ht_未中奖各级盈亏.get(角色上上级);
+		}
+
+		MSAssert.verifyEqual(ac_会员笔数, ex_会员笔数, "检查会员笔数");
+		MSAssert.verifyEqual(ac_会员总投, 取整(ex_会员总投), "检查会员总投");
+
+		if(!角色.equals("会员")){
+			MSAssert.verifyEqual(ac_本级总投, 取整(ex_本级总投), "检查" + 角色 + "总投");
+		}
+		MSAssert.verifyEqual(ac_上级占成总额, 取整(ex_上级占成总额), "检查上级" + 角色上级 + "占成金额");
+		MSAssert.verifyEqual(ac_上级赚水, 取整(ex_上级赚水), "检查上级" + 角色上级 + "赚水");
+		MSAssert.verifyEqual(ac_上上级总投, 取整(ex_上上级总投), "检查上上级" + 角色上上级 + "总投");
+
+		if(是否结账) {
+			MSAssert.verifyEqual(ac_会员盈亏, 取整(ex_会员盈亏), "检查会员盈亏");
 			if(!角色.equals("会员")){
-				MSAssert.verifyEqual(ac_本级总投, 取整(ex_本级总投), "检查" + 角色 + "总投");
+				MSAssert.verifyEqual(ac_本级盈亏, 取整(ex_本级盈亏), "检查本级" + 角色 + "盈亏");
 			}
-
-			MSAssert.verifyEqual(ac_上级占成总额, 取整(ex_上级占成总额), "检查上级" + 角色上级 + "占成金额");
-			MSAssert.verifyEqual(ac_上级赚水, 取整(ex_上级赚水), "检查上级" + 角色上级 + "赚水");
-
-			MSAssert.verifyEqual(ac_上上级总投, 取整(ex_上上级总投), "检查上上级" + 角色上上级 + "总投");
+			if(角色.equals("大股东")){
+				MSAssert.verifyEqual(ac_上级占成盈亏, 取整(ex_上级盈亏), "上级" + 角色上级 + "占成盈亏");
+				MSAssert.verifyEqual(ac_上级总盈亏,取整(ex_上级占成盈亏), "检查上级" + 角色上级 + "盈亏");
+			}else {
+				MSAssert.verifyEqual(ac_上级占成盈亏, 取整(ex_上级占成盈亏), "上级" + 角色上级 + "占成盈亏");
+				MSAssert.verifyEqual(ac_上级总盈亏, 取整(ex_上级盈亏), "检查上级" + 角色上级 + "盈亏");
+			}
+			MSAssert.verifyEqual(ac_上上级盈亏, 取整(ex_上上级盈亏), "检查上上级" + 角色上上级 + "盈亏");
 		}
 	}
 

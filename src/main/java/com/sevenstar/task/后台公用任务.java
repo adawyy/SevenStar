@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 创建人 Jackson
@@ -199,6 +201,9 @@ public class 后台公用任务 extends 公用任务 {
 
 	public void 设置开奖号码(String 七位号码){
 		点击菜单("开奖号码");
+		asCore.pause(1000);
+		String isOpened = asCore.findElement(By.xpath("//*[@id='thousand_no']")).getAttribute("value");
+		if(isOpened.length()==0){
 		asCore.sendKeys(By.xpath("//*[@id='thousand_no']"),七位号码.substring(0,1));
 		asCore.sendKeys(By.xpath("//*[@id='hundred_no']"),七位号码.substring(1,2));
 		asCore.sendKeys(By.xpath("//*[@id='ten_no']"),七位号码.substring(2,3));
@@ -215,7 +220,7 @@ public class 后台公用任务 extends 公用任务 {
 		asCore.click(By.xpath("//input[@value='确定']"));
 		asCore.pause(2000);
 		asCore.click(By.xpath("//input[@value='确定']"));
-	}
+	}}
 
 	/**
 	 * 设置开盘选项
@@ -266,7 +271,14 @@ public class 后台公用任务 extends 公用任务 {
 		刷新总表数据();
 	}
 
-
+	public boolean isNumeric(String str){
+		Pattern pattern = Pattern.compile("[0-9]*");
+		Matcher isNum = pattern.matcher(str);
+		if( !isNum.matches() ){
+			return false;
+		}
+		return true;
+	}
 
 	public void 赔率变动设置(Hashtable<String,String> ht){
 
