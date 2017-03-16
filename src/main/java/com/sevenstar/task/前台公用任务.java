@@ -3,6 +3,7 @@ package com.sevenstar.task;
 
 import com.mte.base.MSAssert;
 import com.mte.base.MteSenseCore;
+import com.relevantcodes.extentreports.ExtentTest;
 import org.openqa.selenium.By;
 
 import java.util.ArrayList;
@@ -16,8 +17,8 @@ import java.util.Hashtable;
 public class 前台公用任务 extends 公用任务 {
 
 	
-	public 前台公用任务(MteSenseCore senseCore) {
-		super(senseCore);
+	public 前台公用任务(MteSenseCore senseCore,ExtentTest test) {
+		super(senseCore,test);
 		// TODO Auto-generated constructor stub
 	}
 

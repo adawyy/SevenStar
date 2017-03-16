@@ -4,6 +4,7 @@ import com.mte.base.MteSenseBaseTask;
 import com.mte.base.MteSenseCore;
 import com.mte.util.WebDriverTable;
 import com.mte.util.datamgr.ExcelFile;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.sevenstar.data.Datamgr;
 import com.sevenstar.page.公用页;
 import com.sevenstar.page.测试页;
@@ -27,8 +28,8 @@ public class 越级操作任务 extends 公用任务 {
 
 	WebDriverTable WT = null;
 
-	public 越级操作任务(MteSenseCore senseCore) {
-		super(senseCore);
+	public 越级操作任务(MteSenseCore senseCore,ExtentTest test) {
+		super(senseCore,test);
 		公用 = new 公用页(asCore);
 
 		总表.设置数据文件("datapool/ST_汇总.xls");

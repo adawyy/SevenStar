@@ -38,9 +38,9 @@ public class 越级操作用例 extends 七星彩基础用例 {
         asBaseCore.initialTest(testCaseName,test);
 
         //任务列初始化
-        公用 = new 公用任务(asBaseCore);
-        后台公用任务集 =new 后台公用任务(asBaseCore);
-        越级操作任务集 =new 越级操作任务(asBaseCore);
+        公用 = new 公用任务(asBaseCore,test);
+        后台公用任务集 =new 后台公用任务(asBaseCore,test);
+        越级操作任务集 =new 越级操作任务(asBaseCore,test);
 
         //读取数据
         用例表.设置数据文件("datapool/ST_1.xls");

@@ -2,6 +2,7 @@ package com.sevenstar.task;
 
 import com.mte.base.MteSenseCore;
 import com.mte.util.WebDriverTable;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.sevenstar.data.Datamgr;
 import com.sevenstar.page.公用页;
 import org.openqa.selenium.By;
@@ -24,8 +25,8 @@ public class 分类账任务 extends 公用任务 {
 
 	WebDriverTable WT = null;
 
-	public 分类账任务(MteSenseCore senseCore) {
-		super(senseCore);
+	public 分类账任务(MteSenseCore senseCore,ExtentTest test) {
+		super(senseCore,test);
 		公用 = new 公用页(asCore);
 
 		总表.设置数据文件("datapool/ST_汇总.xls");

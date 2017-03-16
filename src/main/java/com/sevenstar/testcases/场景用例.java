@@ -23,6 +23,7 @@ public class 场景用例 extends 七星彩基础用例 {
     private 报表任务 报表任务集;
     private String 次数;
     private boolean 是否中奖;
+
     //定义数据集
     ArrayList<Hashtable<String,String>> al_登录信息, al_定盘信息, al_分批赔率, al_录码模式, al_赔率设置, al_下注场景 = null;
     Hashtable<String,String> ht_场景设置 = null;
@@ -42,14 +43,14 @@ public class 场景用例 extends 七星彩基础用例 {
         asBaseCore.initialTest(testCaseName,test);
 
         //任务列初始化
-        公用 =new 公用任务(asBaseCore);
-        前台公用任务集 =new 前台公用任务(asBaseCore);
-        后台公用任务集 =new 后台公用任务(asBaseCore);
-        越级操作任务集 =new 越级操作任务(asBaseCore);
-        报表任务集 = new 报表任务(asBaseCore);
+        公用 =new 公用任务(asBaseCore,test);
+        前台公用任务集 =new 前台公用任务(asBaseCore,test);
+        后台公用任务集 =new 后台公用任务(asBaseCore,test);
+        越级操作任务集 =new 越级操作任务(asBaseCore,test);
+        报表任务集 = new 报表任务(asBaseCore,test);
 
         //场景初始化
-        ht_场景设置 = 场景表.获取场景设置("多次下注中奖场景").get(0);
+        ht_场景设置 = 场景表.获取场景设置("单次下注未中奖场景").get(0);
 
         //读取数据
         excelFile = "datapool/"+ht_场景设置.get("excelFile");
@@ -94,7 +95,9 @@ public class 场景用例 extends 七星彩基础用例 {
 
     @Test(dependsOnMethods = { "关盘测试" })
     public void 分批赔率测试(){
+        后台公用任务集.点击菜单("设置");
         后台公用任务集.点击设置菜单("定盘");
+        System.out.println(ht_场景设置.get("类型"));
         后台公用任务集.点击分批赔率(ht_场景设置.get("类型"));
         后台公用任务集.删除所有分批数据();
         后台公用任务集.新增分批赔率("10","1000","1000");

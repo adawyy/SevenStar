@@ -3,6 +3,7 @@ package com.sevenstar.task;
 import com.mte.base.MSAssert;
 import com.mte.base.MteSenseCore;
 import com.mte.util.WebDriverTable;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.sevenstar.data.Datamgr;
 import com.sevenstar.page.公用页;
 import org.openqa.selenium.By;
@@ -33,10 +34,10 @@ public class 报表任务 extends 公用任务 {
 	 * driver
 	 */
 
-	public 报表任务(MteSenseCore senseCore) {
-		super(senseCore);
+	public 报表任务(MteSenseCore senseCore,ExtentTest test) {
+		super(senseCore,test);
 		公用 = new 公用页(asCore);
-		前台任务 = new 前台公用任务(asCore);
+		前台任务 = new 前台公用任务(asCore,test);
 
 		总表.设置数据文件("datapool/ST_汇总.xls");
 
