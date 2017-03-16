@@ -49,6 +49,7 @@ public class MteSense {
     int waitTimeout = Integer.valueOf(props.get("mte.timeOut.second"));
     int scriptTimeout = Integer.valueOf(props.get("mte.pauseTime.second"));
 
+
     protected static MteSenseCore mteSenseCore = null;
     
     protected static BrowserMobProxy proxy ;

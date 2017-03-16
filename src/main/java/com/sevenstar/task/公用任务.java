@@ -67,7 +67,7 @@ public class 公用任务 extends MteSenseBaseTask {
 	 */
 
 	public void 快速登录(String 用户名,String 密码){
-
+		asCore.log_Task("开始快速登录");
 //		test.log(LogStatus.INFO,"<B><font color='Green'>开始快速登陆</font></B>");
 		登录(用户名,密码);
 		asCore.skipClick(公用.快速进入按钮(),2);

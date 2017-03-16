@@ -104,6 +104,7 @@ public class 越级操作任务 extends 公用任务 {
 	 */
 
 	public void 修改账号信息(Hashtable<String,String> ht){
+		asCore.log_Task("开始修改"+ht.get("角色")+"账号信息");
 		String type = ht.get("类别");
 		asCore.pause(1000);
 		if(ht.get("是否启用").equals("启用")){

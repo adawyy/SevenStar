@@ -1,5 +1,6 @@
 package com.sevenstar.task;
 
+import com.mte.base.MSAssert;
 import com.mte.base.MteSenseCore;
 import com.mte.util.DateTimeUtil;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -73,7 +74,10 @@ public class 后台公用任务 extends 公用任务 {
 		//点提交
 //		asCore.click(By.xpath("//input[@value='提交' and @type='submit']"));
 		asCore.click(By.xpath("//*[@id='st_handicap']/div[3]/form/div[2]/input"));
+		MSAssert.verifyTrue(asCore.isTextContentsDisplayed("保存成功",2),"保存成功出现");
 		asCore.click(By.xpath("//input[@type='button' and @value='确定']"));
+
+
 		写入总表数据("赔率计算","定盘赔率上限",赔率上限);
 
 		写入总表数据("定盘信息","类别",类别);
@@ -97,6 +101,7 @@ public class 后台公用任务 extends 公用任务 {
 	 * 删除所有分批数据
 	 */
 	public void 删除所有分批数据(){
+		asCore.log_Task("执行删除之前所有分批数据");
 		asCore.click(By.xpath("//*[@id='selectAll']"));
 		asCore.click(By.xpath("//input[@value='删除']"));
 		asCore.pause(1000);
@@ -116,6 +121,7 @@ public class 后台公用任务 extends 公用任务 {
 	 */
 
 	public void 新增分批赔率(String 批次,String 第一批金额,String 循环递增){
+		asCore.log_Task("新增分批赔率,批次和金额默认固定(10,1000,1000)");
 		//设置10批
 		asCore.sendKeys(By.xpath("//input[@name='batch_count']"),批次);
 		//设置第一批截止金额放
@@ -125,6 +131,7 @@ public class 后台公用任务 extends 公用任务 {
 
 		asCore.click(By.xpath("//input[@value='提交']"));
 		//保存成功
+		MSAssert.verifyTrue(asCore.isTextContentsDisplayed("保存成功",2),"保存成功出现");
 		asCore.pause(1000);
 		asCore.click(By.xpath("//input[@value='确定']"));
 		asCore.pause(1000);
@@ -136,7 +143,7 @@ public class 后台公用任务 extends 公用任务 {
 	 */
 
 	public void 设置分批数据(ArrayList<Hashtable<String,String>> al){
-//		test.log(LogStatus.INFO,"<B><font color='Green'>开始设置分批赔率任务</font></B>");
+		asCore.log_Task("开始设置分批赔率任务");
 		int size = al.size();
 		String 类别 = al.get(0).get("类别");
 		asCore.pause(1000);
@@ -172,9 +179,9 @@ public class 后台公用任务 extends 公用任务 {
 	 */
 
 	public void 关盘(String 关盘密码){
-//		test.log(LogStatus.INFO,"<B><font color='Green'>开始关盘任务</font></B>");
+		asCore.log_Task("开始关盘");
 		if(asCore.getText(By.xpath("//*[@id='systime']")).equals("已封盘")){
-//			test.log(LogStatus.INFO,"<B>已是关盘状态，不做任何操作</B>");
+			asCore.log_Task("已是关盘状态，不做任何操作");
 			asCore.pause(500);
 		}else {
 			点击菜单("设置");
@@ -182,8 +189,9 @@ public class 后台公用任务 extends 公用任务 {
 			asCore.click(By.xpath("//*[@id='bd_serverinfo']/table/tbody/tr/td[7]/label[2]/input"));
 			asCore.sendKeys(By.xpath("//input[@name='open_pwd']"), 关盘密码);
 			asCore.click(By.xpath("//*[@id='btnOpenClose']"));
+			MSAssert.verifyTrue(asCore.isTextContentsDisplayed("确定执行此操作吗",2),"检查弹框文本");
 			asCore.click(By.xpath("//input[@value='确定']"));
-			if (asCore.isTextContentsDisplayed("当前期尚未开盘，不能进行关盘")) {
+			if (asCore.isTextContentsDisplayed("当前期尚未开盘，不能进行关盘",2)) {
 				asCore.click(By.xpath("//input[@value='确定']"));
 			}
 		}
@@ -207,6 +215,7 @@ public class 后台公用任务 extends 公用任务 {
 	 */
 
 	public void 设置开奖号码(String 七位号码){
+		asCore.log_Task("设置七位开奖号码："+七位号码);
 		点击菜单("开奖号码");
 		asCore.pause(1000);
 		String isOpened = asCore.findElement(By.xpath("//*[@id='thousand_no']")).getAttribute("value");
@@ -235,6 +244,7 @@ public class 后台公用任务 extends 公用任务 {
 	 */
 
 	public void 开盘设置(String 开盘密码){
+		asCore.log_Task("准备开盘,设置开盘时间在10秒后");
 		点击菜单("设置");
 		点击设置菜单("开盘设置");
 		//提交期号
@@ -263,10 +273,12 @@ public class 后台公用任务 extends 公用任务 {
 	 */
 
 	public void 设置拦货金额(Hashtable<String,String> ht){
+
 		String 角色 = ht.get("角色");
 		String 类别 = ht.get("类别");
 		String 拦货金额 = ht.get("拦货金额");
 		String 贡献度 = ht.get("贡献度占成上限");
+		asCore.log_Task("设置"+角色+"拦货金额"+类别+"为"+拦货金额);
 		asCore.selectByValue(By.xpath("//select[@name='contribution_rate']"),贡献度);
 		asCore.sendKeys(By.xpath("//tbody[@id='tbody']//td[preceding-sibling::td[text()='"+类别+"']]/input[@_name='hold_money']"),拦货金额);
 		asCore.click(By.xpath("//*[@id='form']//input[@value='提交']"));

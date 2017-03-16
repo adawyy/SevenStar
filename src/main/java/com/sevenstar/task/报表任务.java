@@ -109,7 +109,7 @@ public class 报表任务 extends 公用任务 {
 	}
 
 	public void 验证报表(String 账号名,String 角色,String 笔数,boolean 是否结账,boolean 是否中奖){
-
+		asCore.log_Task("准备验证报表，是否结账："+是否结账+" 是否中奖："+是否中奖);
 		刷新总表数据();
 		al_赔率计算 = 总表.获取数据("Summary","赔率计算");
 		ht_总拦货金额 = 总表.获取数据("Summary","总拦货金额").get(0);

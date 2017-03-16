@@ -47,11 +47,11 @@ public class 前台公用任务 extends 公用任务 {
 	 */
 
 	public void 设置录码模式(Hashtable<String,String> ht){
+
 		String tp1=ht.get("模式一");
 		String tp2=ht.get("模式二");
 		String tp3=ht.get("模式三");
-
-//		System.out.println(tp1+tp2+tp3);
+		asCore.log_Task("设置录码模式分别为"+tp1+","+tp2+","+tp3);
 
 		if(tp1.equals("自动")){
 			asCore.click(By.xpath("//input[@name='input_mode' and @value='0']"));
@@ -100,6 +100,7 @@ public class 前台公用任务 extends 公用任务 {
 	 */
 
 	public void 设置交易回水(ArrayList<Hashtable<String,String>> al,String 类别){
+		asCore.log_Task("开始设置会员交易回水");
 		int size = al.size();
 		int i = 0;
 		while(i<size){
@@ -125,10 +126,14 @@ public class 前台公用任务 extends 公用任务 {
 	*/
 
 	public void 快打下注(ArrayList<Hashtable<String,String>> 下注信息,String 会员,String 次数_,boolean 是否中奖){
+
 		double 最终赔率 = 0;
 		点击副菜单("快打");
 		int 次数 = Integer.parseInt(次数_);
 		int i = 0;
+
+		asCore.log_Task("开始快打下注，笔数为"+次数);
+
 		while(i<次数){
 
 			String 下单号码 = 下注信息.get(i).get("号码");

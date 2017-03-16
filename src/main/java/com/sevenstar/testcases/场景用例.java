@@ -3,6 +3,7 @@ package com.sevenstar.testcases;
 import com.sevenstar.task.*;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -34,12 +35,13 @@ public class 场景用例 extends 七星彩基础用例 {
     String excelFile,tableName = null;
 
 	private String testCaseName = this.getClass().getSimpleName();
-	
-	@BeforeTest
-    public void setUp() throws Exception {
+
+    @Parameters({"测试场景"})
+    @BeforeTest
+    public void setUp(String 测试场景) throws Exception {
 	    //用例初始化
         beforeClass();
-        test = extent.startTest(testCaseName, "示例用例");
+        test = extent.startTest(testCaseName, 测试场景);
         asBaseCore.initialTest(testCaseName,test);
 
         //任务列初始化
@@ -50,13 +52,13 @@ public class 场景用例 extends 七星彩基础用例 {
         报表任务集 = new 报表任务(asBaseCore);
 
         //场景初始化
-        ht_场景设置 = 场景表.获取场景设置("单次下注未中奖场景").get(0);
+        ht_场景设置 = 场景表.获取场景设置(测试场景).get(0);
 
         //读取数据
         excelFile = "datapool/"+ht_场景设置.get("excelFile");
         tableName = ht_场景设置.get("登录信息");
         次数 = ht_场景设置.get("下注次数");
-        是否中奖 = ht_场景设置.get("是否中奖").equals("是")?true:false;
+        是否中奖 = ht_场景设置.get("是否中奖").equals("是");
 
         用例表.设置数据文件(excelFile);
         al_登录信息 = 用例表.获取登录信息(ht_场景设置.get("登录信息"));
@@ -97,7 +99,6 @@ public class 场景用例 extends 七星彩基础用例 {
     public void 分批赔率测试(){
         后台公用任务集.点击菜单("设置");
         后台公用任务集.点击设置菜单("定盘");
-        System.out.println(ht_场景设置.get("类型"));
         后台公用任务集.点击分批赔率(ht_场景设置.get("类型"));
         后台公用任务集.删除所有分批数据();
         后台公用任务集.新增分批赔率("10","1000","1000");
@@ -176,7 +177,7 @@ public class 场景用例 extends 七星彩基础用例 {
     }
 
     @Test(dependsOnMethods = { "开盘测试" })
-    public void 结账前报表验证() throws Exception {
+    public void 结账前报表验证()  {
         公用.跳转页(后台地址);
         公用.快速登录(ht_登录信息.get("总监"),ht_登录信息.get("总监密码"));
         后台公用任务集.点击菜单("报表");
@@ -193,14 +194,14 @@ public class 场景用例 extends 七星彩基础用例 {
     }
 
     @Test(dependsOnMethods = { "结账前报表验证" })
-    public void 关盘结账() throws Exception {
+    public void 关盘结账(){
         后台公用任务集.点击菜单("设置");
         后台公用任务集.关盘(ht_场景设置.get("关盘密码"));
         后台公用任务集.设置开奖号码(ht_场景设置.get("开盘七位号码"));
     }
 
     @Test(dependsOnMethods = { "关盘结账" })
-    public void 结账后报表验证() throws Exception {
+    public void 结账后报表验证() {
         后台公用任务集.点击菜单("报表");
         报表任务集.验证报表(ht_登录信息.get("大股东"),"大股东",次数,true,是否中奖);
         报表任务集.点击账号名(ht_登录信息.get("大股东"),"大股东");

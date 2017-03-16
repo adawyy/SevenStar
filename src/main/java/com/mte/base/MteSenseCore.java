@@ -644,10 +644,13 @@ public class MteSenseCore {
      */
     public void click(By by, long timeout) {
         boolean isSucceed = false;
+        if(props.get("mte.debug").equals("true")){
+            test.log(LogStatus.INFO,"尝试点击"+by.toString());
+        }
         try {
             if (isElementPresent(by, timeout)) {
                 driver.findElement(by).click();
-                test.log(LogStatus.INFO,"点击"+by.toString());
+//                test.log(LogStatus.INFO,"点击"+by.toString());
                 isSucceed = true;
             }
         } catch (Exception e) {
@@ -1768,11 +1771,14 @@ public class MteSenseCore {
      */
     public void sendKeys(By by, String text, long timeout) {
         boolean isSucceed = false;
+        if(props.get("mte.debug").equals("true")){
+            test.log(LogStatus.INFO,"尝试填入数据"+text+"到"+by.toString());
+        }
         try {
             if (isElementPresent(by, timeout)) {
                 clear(by);
                 driver.findElement(by).sendKeys(text);
-                test.log(LogStatus.INFO,"填入数据"+text+"到"+by.toString());
+//                test.log(LogStatus.INFO,"填入数据"+text+"到"+by.toString());
  //               logger.debug("input text [ " + text + " ] to element [ " + by.toString() + " ]");
                 isSucceed = true;
             }
