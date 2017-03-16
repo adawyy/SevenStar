@@ -70,6 +70,7 @@ public class MteSenseCore {
     public void initialTest(String testCaseName,ExtentTest test) {
         this.testCaseName = testCaseName;
         this.test = test;
+//        loadConfig(new File("C:\HelloWorld\extent-config.xml"));
         msAssert =  new MSAssert(test);
     }
 

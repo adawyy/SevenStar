@@ -12,6 +12,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import java.io.File;
 import java.lang.reflect.Method;
 
 public abstract class MteSenseExtent {
@@ -60,6 +61,7 @@ public abstract class MteSenseExtent {
 //            System.out.println("Test suite is about to started");
 //        }
         extent = ExtentManager.getReporter(props.get("mte.reportFile.path"));
+        extent.loadConfig(new File(props.get("mte.reportFile.config")));
     }
 
 //    @AfterMethod
