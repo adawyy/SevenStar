@@ -26,16 +26,13 @@ public class 公用任务 extends MteSenseBaseTask {
 
 	Datamgr 总表 = new Datamgr();
 
-	protected ExtentTest test = null;
-
 	ArrayList<Hashtable<String,String>> al_赔率计算,al_单次赔率,al_下注信息 = null;
 	Hashtable<String,String> ht_总共回水总额,ht_未中奖此次占成计算盈亏, ht_未中奖总占成计算盈亏 = null;
 	Hashtable<String,String> ht_中奖此次占成计算盈亏, ht_中奖总占成计算盈亏 = null;
 
-	public 公用任务(MteSenseCore senseCore,ExtentTest test) {
+	public 公用任务(MteSenseCore senseCore) {
 		super(senseCore);
 		公用 = new 公用页(asCore);
-		this.test = test;
 		总表.设置数据文件("datapool/ST_汇总.xls");
 
 		// TODO Auto-generated constructor stub
@@ -70,7 +67,8 @@ public class 公用任务 extends MteSenseBaseTask {
 	 */
 
 	public void 快速登录(String 用户名,String 密码){
-		test.log(LogStatus.INFO,"<B><font color='Green'>开始快速登陆</font></B>");
+
+//		test.log(LogStatus.INFO,"<B><font color='Green'>开始快速登陆</font></B>");
 		登录(用户名,密码);
 		asCore.skipClick(公用.快速进入按钮(),2);
 		asCore.click(公用.同意按钮());
@@ -82,7 +80,7 @@ public class 公用任务 extends MteSenseBaseTask {
 	}
 
 	public void 可靠登录(String 用户名,String 原密码, String 新密码,String 角色, String ExcelFile, String tableName){
-		test.log(LogStatus.INFO,"<B><font color='Green'>开始可靠登陆</font></B>");
+//		test.log(LogStatus.INFO,"<B><font color='Green'>开始可靠登陆</font></B>");
 		登录(用户名,原密码);
 		asCore.skipClick(公用.快速进入按钮(),2);
 		asCore.click(公用.同意按钮());
@@ -189,7 +187,7 @@ public class 公用任务 extends MteSenseBaseTask {
 	 * 总表数据初始化
 	 */
 	public void 总表数据初始化(){
-		test.log(LogStatus.INFO,"<B><font color='Green'>开始初始化Excel数据任务</font></B>");
+//		test.log(LogStatus.INFO,"<B><font color='Green'>开始初始化Excel数据任务</font></B>");
 		写入总表数据("赔率计算","赔率变动设置","0");
 		写入总表数据("下注信息","已有金额","0");
 		写入总表数据("下注信息","下注金额","0");

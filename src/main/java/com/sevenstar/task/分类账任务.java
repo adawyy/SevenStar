@@ -25,8 +25,8 @@ public class 分类账任务 extends 公用任务 {
 
 	WebDriverTable WT = null;
 
-	public 分类账任务(MteSenseCore senseCore,ExtentTest test) {
-		super(senseCore,test);
+	public 分类账任务(MteSenseCore senseCore) {
+		super(senseCore);
 		公用 = new 公用页(asCore);
 
 		总表.设置数据文件("datapool/ST_汇总.xls");

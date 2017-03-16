@@ -2061,6 +2061,10 @@ public class MteSenseCore {
     }
 
 
+
+    public void log_Task(String detail){
+        test.log(LogStatus.INFO,"<B><font color='Green'>"+detail+"</font></B>");
+    }
     /**
      * run js functions.
      *

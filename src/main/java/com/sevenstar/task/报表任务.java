@@ -34,10 +34,10 @@ public class 报表任务 extends 公用任务 {
 	 * driver
 	 */
 
-	public 报表任务(MteSenseCore senseCore,ExtentTest test) {
-		super(senseCore,test);
+	public 报表任务(MteSenseCore senseCore) {
+		super(senseCore);
 		公用 = new 公用页(asCore);
-		前台任务 = new 前台公用任务(asCore,test);
+		前台任务 = new 前台公用任务(asCore);
 
 		总表.设置数据文件("datapool/ST_汇总.xls");
 

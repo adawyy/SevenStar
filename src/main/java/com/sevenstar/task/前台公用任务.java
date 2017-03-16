@@ -17,8 +17,8 @@ import java.util.Hashtable;
 public class 前台公用任务 extends 公用任务 {
 
 	
-	public 前台公用任务(MteSenseCore senseCore,ExtentTest test) {
-		super(senseCore,test);
+	public 前台公用任务(MteSenseCore senseCore) {
+		super(senseCore);
 		// TODO Auto-generated constructor stub
 	}
 

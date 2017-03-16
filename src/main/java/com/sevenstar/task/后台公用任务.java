@@ -19,8 +19,8 @@ import java.util.regex.Pattern;
 public class 后台公用任务 extends 公用任务 {
 
 
-	public 后台公用任务(MteSenseCore senseCore,ExtentTest test) {
-		super(senseCore,test);
+	public 后台公用任务(MteSenseCore senseCore) {
+		super(senseCore);
 
 		// TODO Auto-generated constructor stub
 	}
@@ -45,7 +45,7 @@ public class 后台公用任务 extends 公用任务 {
 	 */
 
 	public void 点击设置菜单(String 选项){
-		test.log(LogStatus.INFO,"<B><font color='Green'>开始点击菜单"+选项+"</font></B>");
+//		test.log(LogStatus.INFO,"<B><font color='Green'>开始点击菜单"+选项+"</font></B>");
 		asCore.pause(500);
 		asCore.click(By.xpath("//*[@id='guide_setting']/div[2]/a[text()='"+选项+"']"));
 	}
@@ -56,7 +56,7 @@ public class 后台公用任务 extends 公用任务 {
 	 */
 
 	public void 设置定盘数据(Hashtable<String,String> ht){
-		test.log(LogStatus.INFO,"<B><font color='Green'>开始设置定盘数据任务</font></B>");
+//		test.log(LogStatus.INFO,"<B><font color='Green'>开始设置定盘数据任务</font></B>");
 		String 类别=ht.get("类别");
 		String 最小下注=ht.get("最小下注");
 		String 赔率上限=ht.get("赔率上限");
@@ -136,7 +136,7 @@ public class 后台公用任务 extends 公用任务 {
 	 */
 
 	public void 设置分批数据(ArrayList<Hashtable<String,String>> al){
-		test.log(LogStatus.INFO,"<B><font color='Green'>开始设置分批赔率任务</font></B>");
+//		test.log(LogStatus.INFO,"<B><font color='Green'>开始设置分批赔率任务</font></B>");
 		int size = al.size();
 		String 类别 = al.get(0).get("类别");
 		asCore.pause(1000);
@@ -172,9 +172,9 @@ public class 后台公用任务 extends 公用任务 {
 	 */
 
 	public void 关盘(String 关盘密码){
-		test.log(LogStatus.INFO,"<B><font color='Green'>开始关盘任务</font></B>");
+//		test.log(LogStatus.INFO,"<B><font color='Green'>开始关盘任务</font></B>");
 		if(asCore.getText(By.xpath("//*[@id='systime']")).equals("已封盘")){
-			test.log(LogStatus.INFO,"<B>已是关盘状态，不做任何操作</B>");
+//			test.log(LogStatus.INFO,"<B>已是关盘状态，不做任何操作</B>");
 			asCore.pause(500);
 		}else {
 			点击菜单("设置");
