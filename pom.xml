@@ -12,6 +12,9 @@
  <!--       <suiteXml>
             testng.xml
         </suiteXml>  -->
+        <suiteXml></suiteXml>
+        <browserName></browserName>
+        <sceneName></sceneName>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <build>
