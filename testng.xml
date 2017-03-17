@@ -3,7 +3,7 @@
 
 <suite name="MiniRegression"  parallel="classes" thread-count="1">
     <parameter name="浏览器" value="${browserName}" />
-    <test enabled="false" verbose="2" name="1" preserve-order="true">
+    <test enabled="true" verbose="2" name="0" preserve-order="true">
         <parameter name="测试场景" value="${sceneName}" />
         <classes>
             <class name="com.sevenstar.testcases.场景用例">

@@ -2,10 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ed9d953-dc91-462d-a225-7c4bef380e17" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Regression.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SevenStar-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/MiniRegression/Default test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/MiniRegression/Default test.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-com.sevenstar.testcases.示例用例.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/Default test.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefire4344857326804150508tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefire_06796868204636363587tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefirebooter3934134207111865930.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datapool/ST_汇总.xls" afterPath="$PROJECT_DIR$/datapool/ST_汇总.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ExtentReport.html" afterPath="$PROJECT_DIR$/report/ExtentReport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/MiniRegression/testng-failed.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/MiniRegression/testng-failed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/classes.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/classes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/groups.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/groups.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/methods-alphabetical.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/methods-alphabetical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/methods.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/methods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/testng.xml.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/testng.xml.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/toc.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/MiniRegression/toc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/index.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testng.xml" afterPath="$PROJECT_DIR$/testng.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -83,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testng.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="testng.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+            <state relative-caret-position="216">
+              <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -96,8 +120,8 @@
       <file leaf-file-name="Regression.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Regression.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            <state relative-caret-position="306">
+              <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -113,16 +137,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MteSenseCore.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseCore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MteSenseBaseCase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mte/base/MteSenseBaseCase.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -133,11 +147,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="468">
+              <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SevenStar.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SevenStar.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -229,8 +253,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sevenstar/testcases/场景用例.java" />
         <option value="$PROJECT_DIR$/extent-config.xml" />
         <option value="$PROJECT_DIR$/Regression.xml" />
-        <option value="$PROJECT_DIR$/testng.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/testng.xml" />
       </list>
     </option>
   </component>
@@ -1193,7 +1217,7 @@
       <workItem from="1489487496587" duration="26271000" />
       <workItem from="1489626075363" duration="4670000" />
       <workItem from="1489631175914" duration="14083000" />
-      <workItem from="1489655275583" duration="11353000" />
+      <workItem from="1489655275583" duration="13861000" />
     </task>
     <servers />
   </component>
@@ -1230,7 +1254,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412327000" />
+    <option name="totallyTimeSpent" value="414835000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1307,13 +1331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SevenStar.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1678,26 +1695,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Regression.xml">
+    <entry file="file://$PROJECT_DIR$/SevenStar.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        <state relative-caret-position="468">
+          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Regression.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
           <folding />
         </state>
       </provider>

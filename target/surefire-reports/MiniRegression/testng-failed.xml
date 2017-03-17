@@ -1,18 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [MiniRegression]" parallel="classes">
-  <test name="Default test(failed)" parallel="classes">
+  <parameter name="浏览器" value="${browserName}"/>
+  <test name="1(failed)" parallel="classes">
+    <parameter name="测试场景" value="多次下注中奖场景"/>
     <classes>
-      <class name="com.sevenstar.testcases.示例用例">
+      <class name="com.sevenstar.testcases.场景用例">
         <methods>
-          <include name="afterEachTest"/>
-          <include name="afterSuite"/>
-          <include name="示例方法"/>
-          <include name="示例方法二"/>
-          <include name="tearDown"/>
+          <include name="关盘测试"/>
+          <include name="开盘测试"/>
           <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="beforesuite"/>
+          <include name="setUp"/>
+          <include name="快打下注测试"/>
+          <include name="分批赔率测试"/>
+          <include name="结账前报表验证"/>
+          <include name="关盘结账"/>
+          <include name="设置定盘数据测试"/>
+          <include name="拦货金额测试"/>
+          <include name="结账后报表验证"/>
+          <include name="越级操作测试"/>
         </methods>
-      </class> <!-- com.sevenstar.testcases.示例用例 -->
+      </class> <!-- com.sevenstar.testcases.场景用例 -->
     </classes>
-  </test> <!-- Default test(failed) -->
+  </test> <!-- 1(failed) -->
+  <test name="2(failed)" parallel="classes">
+    <parameter name="测试场景" value="多次下注未中奖场景"/>
+    <classes>
+      <class name="com.sevenstar.testcases.场景用例">
+        <methods>
+          <include name="关盘测试"/>
+          <include name="开盘测试"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="beforesuite"/>
+          <include name="setUp"/>
+          <include name="快打下注测试"/>
+          <include name="分批赔率测试"/>
+          <include name="结账前报表验证"/>
+          <include name="关盘结账"/>
+          <include name="设置定盘数据测试"/>
+          <include name="拦货金额测试"/>
+          <include name="结账后报表验证"/>
+          <include name="越级操作测试"/>
+        </methods>
+      </class> <!-- com.sevenstar.testcases.场景用例 -->
+    </classes>
+  </test> <!-- 2(failed) -->
+  <test name="3(failed)" parallel="classes">
+    <parameter name="测试场景" value="单次下注中奖场景"/>
+    <classes>
+      <class name="com.sevenstar.testcases.场景用例">
+        <methods>
+          <include name="关盘测试"/>
+          <include name="开盘测试"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="beforesuite"/>
+          <include name="setUp"/>
+          <include name="快打下注测试"/>
+          <include name="分批赔率测试"/>
+          <include name="结账前报表验证"/>
+          <include name="关盘结账"/>
+          <include name="设置定盘数据测试"/>
+          <include name="拦货金额测试"/>
+          <include name="结账后报表验证"/>
+          <include name="越级操作测试"/>
+        </methods>
+      </class> <!-- com.sevenstar.testcases.场景用例 -->
+    </classes>
+  </test> <!-- 3(failed) -->
+  <test name="4(failed)" parallel="classes">
+    <parameter name="测试场景" value="单次下注未中奖场景"/>
+    <classes>
+      <class name="com.sevenstar.testcases.场景用例">
+        <methods>
+          <include name="关盘测试"/>
+          <include name="开盘测试"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="beforesuite"/>
+          <include name="setUp"/>
+          <include name="快打下注测试"/>
+          <include name="分批赔率测试"/>
+          <include name="结账前报表验证"/>
+          <include name="关盘结账"/>
+          <include name="设置定盘数据测试"/>
+          <include name="拦货金额测试"/>
+          <include name="结账后报表验证"/>
+          <include name="越级操作测试"/>
+        </methods>
+      </class> <!-- com.sevenstar.testcases.场景用例 -->
+    </classes>
+  </test> <!-- 4(failed) -->
 </suite> <!-- Failed suite [MiniRegression] -->
