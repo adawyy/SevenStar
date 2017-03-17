@@ -9,9 +9,9 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
-        <suiteXml>
+ <!--       <suiteXml>
             testng.xml
-        </suiteXml>
+        </suiteXml>  -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <build>
@@ -32,12 +32,12 @@
                 <version>2.19.1</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <!--                <browser>${browserName}</browser>
-                                        <scene>${sceneName}</scene> -->
-                                    </systemPropertyVariables>
-                                    <suiteXmlFiles>
-                                        <suiteXmlFile>${suiteXml}</suiteXmlFile>
-                                    </suiteXmlFiles>
+                       <browser>${browserName}</browser>
+                       <scene>${sceneName}</scene>
+                    </systemPropertyVariables>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteXml}</suiteXmlFile>
+                    </suiteXmlFiles>
                                 </configuration>
                             </plugin>
                         </plugins>
