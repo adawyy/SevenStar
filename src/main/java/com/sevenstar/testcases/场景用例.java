@@ -36,11 +36,12 @@ public class 场景用例 extends 七星彩基础用例 {
 
 	private String testCaseName = this.getClass().getSimpleName();
 
-    @Parameters({"测试场景"})
+    @Parameters({"浏览器","测试场景"})
     @BeforeTest
-    public void setUp(String 测试场景) throws Exception {
+    public void setUp(String 浏览器,String 测试场景) throws Exception {
+
 	    //用例初始化
-        beforeClass();
+        beforeClass(浏览器);
         test = extent.startTest(testCaseName, 测试场景);
         asBaseCore.initialTest(testCaseName,test);
 
